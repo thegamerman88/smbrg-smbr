@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FASE2ES</name>
+    <events>
+        <event-group description="" sid="234336291148347" title="mario2">
+            <sub-events>
+                <event-block sid="664900841610644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="850824555988510" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="457740185897712" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="399530481989330" title="Animações2">
+                    <sub-events>
+                        <event-block sid="867228700559053">
+                            <conditions>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="550385954008460" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="892620557685693" type="Player">
+                                    <param id="0" name="Animation">&quot;Pulando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="624163558639472">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="524754061243557" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="695565472666960" type="Player">
+                                    <param id="0" name="Animation">&quot;Pulando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="792764085722153">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="399399776871017" type="Player" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="348731079516186">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" name="Is moving" sid="481321455774311" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="867506601982279" type="Player">
+                                            <param id="0" name="Animation">&quot;Andando&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="635755907737796">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="234846674714391" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="365313634151667" type="Player">
+                                            <param id="0" name="Animation">&quot;Parado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="404382805760111">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="235801485020238" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="916326935853527" type="Audio">
+                            <param id="0" name="Audio file">smb_jump-small</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;pulo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="600053508314854" title="pulo2">
+                    <sub-events>
+                        <event-block sid="870846226430426">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="759249637678223" type="System" />
+                                <condition id="-14" name="Compare variable" sid="391930075325677" type="System">
+                                    <param id="0" name="Variable">vencendo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;false&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="600168002178055">
+                                    <conditions>
+                                        <condition id="14" name="On tap" sid="328388639296268" type="Touch" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="337545910687291" type="Player">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="575637533236833">
+                            <conditions>
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="220280292106708" type="System" />
+                                <condition id="-14" name="Compare variable" sid="710658093809371" type="System">
+                                    <param id="0" name="Variable">vencendo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;false&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="130427138896608">
+                                    <conditions>
+                                        <condition id="0" name="On click" sid="557594192934906" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="348537052619911" type="Player">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="356424511749004">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="216643967729297" type="Keyboard">
+                                            <param id="0" name="Key">38</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="116305348728232" type="Player">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="157264030135226">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="940246969724030" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="138877817733599" type="Player">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="814688560734522">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="101285908146440" type="Keyboard">
+                                            <param id="0" name="Key">88</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="254435589553029" type="Player">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="227772677530270">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="666135395703583" type="System">
+                            <param id="0" name="Variable">vencendo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;false&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="135681790127491">
+                            <conditions>
+                                <condition id="8" name="On any button pressed" sid="336360849758474" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="869801561946015" type="Player">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="393006029047889">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="349577107509781" type="Player">
+                            <param id="0" name="Instance variable">mario_corre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;esquerda&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="687465848847343" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="536956310898533">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="656044404143644" type="Player">
+                            <param id="0" name="Instance variable">mario_corre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;direita&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="772104810353485" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="885187922249770">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="356780509020849" type="Player">
+                            <param id="0" name="Object">DIREITA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="231009615311414" type="Player">
+                            <param id="0" name="Instance variable">mario_corre</param>
+                            <param id="1" name="Value">&quot;direita&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="768957831013024">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="939724777081260" type="Player">
+                            <param id="0" name="Object">ESQUERDA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="464852865466598" type="Player">
+                            <param id="0" name="Instance variable">mario_corre</param>
+                            <param id="1" name="Value">&quot;esquerda&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="924309290823689">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="234633124362913" type="Player">
+                            <param id="0" name="Instance variable">mario_corre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;direita&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="115711401586318" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="300054799535960">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="593886354111426" type="Player">
+                            <param id="0" name="Instance variable">mario_corre</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;esquerda&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="661690672238077" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="104350171952516">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="153229468247061" type="Player">
+                            <param id="0" name="Object">PULO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="348709834335645" type="Player">
+                            <param id="0" name="Vector Y">-850</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="278929024618762" title="Tranpolin3">
+            <sub-events>
+                <event-block sid="250927555220398">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="383567319244174" type="Player">
+                            <param id="0" name="Object">Sprite3</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="270853465198071" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Sprite3.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="722061880396734" type="Player">
+                            <param id="0" name="Vector Y">-1450</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="561279776327544" title="checkpoint2">
+            <sub-events>
+                <event-block sid="194958365850825">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="231163025954407" type="Player">
+                            <param id="0" name="Object">morre</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="582178875835764" type="System">
+                            <param id="0" name="Variable">checkpoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="5" name="Is tag playing" sid="559320479332648" type="Audio">
+                            <param id="0" name="Tag">&quot;morte&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="192145741058886" type="Player">
+                            <param id="0" name="Object">Inicio</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="618841255730592" type="Player">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="280834865231269" type="System">
+                            <param id="0" name="Seconds">2.2</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="412960131931597" type="Audio">
+                            <param id="0" name="Tag">&quot;musica&quot;</param>
+                            <param id="1" name="dB">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="492778147186094">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="970382606668747" type="Player">
+                            <param id="0" name="Object">morre</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="223685803878247" type="System">
+                            <param id="0" name="Variable">checkpoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" name="Is tag playing" sid="986053521364229" type="Audio">
+                            <param id="0" name="Tag">&quot;morte&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="797580526970813" type="Player">
+                            <param id="0" name="X">checkpoint.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="847609003359291" type="Player">
+                            <param id="0" name="Y">checkpoint.Y</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="608127863536830" type="Player">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="526001379066017" type="System">
+                            <param id="0" name="Seconds">2.2</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="534539056600254" type="Audio">
+                            <param id="0" name="Tag">&quot;musica&quot;</param>
+                            <param id="1" name="dB">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208330834261680">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="660764432889164" type="Player">
+                            <param id="0" name="Object">checkpoint</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="180014522258701" type="checkpoint">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="813331262532330" type="Audio">
+                            <param id="0" name="Audio file">smb_checkpoint</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;checkpoint&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="276944929468616">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="758649620140806" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="502881742482804" type="Player">
+                            <param id="0" name="Object">Inicio</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="638605538619562" type="System">
+                            <param id="0" name="Variable">vencendo</param>
+                            <param id="1" name="Value">&quot;false&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="565388182125041" type="Player">
+                            <param id="0" name="Jump strength">850</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="591528899677945" type="System">
+                            <param id="0" name="Variable">checkpoint</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="943153947048377">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="711372666192256" type="Player">
+                            <param id="0" name="Object">morre</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="651836200289823" type="System">
+                            <param id="0" name="Variable">checkpoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="155828170591517" type="Player">
+                            <param id="0" name="Object">Inicio</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="356749067040625" type="Player">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="612500647209408" type="Audio">
+                            <param id="0" name="Audio file">smb_mariodie</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="320073675374069" type="Audio">
+                            <param id="0" name="Tag">&quot;musica&quot;</param>
+                            <param id="1" name="dB">-10</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="994893797342667" type="System">
+                            <param id="0" name="Seconds">2.2</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="407723160064360" type="Audio">
+                            <param id="0" name="Tag">&quot;musica&quot;</param>
+                            <param id="1" name="dB">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566440218951096">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="406959238555413" type="Player">
+                            <param id="0" name="Object">morre</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="757215887592553" type="System">
+                            <param id="0" name="Variable">checkpoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="817530220794812" type="Player">
+                            <param id="0" name="X">checkpoint.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="776637615892586" type="Player">
+                            <param id="0" name="Y">checkpoint.Y</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="596277455671655" type="Player">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="374225422174908" type="Audio">
+                            <param id="0" name="Audio file">smb_mariodie</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="472318097953515" type="Audio">
+                            <param id="0" name="Tag">&quot;musica&quot;</param>
+                            <param id="1" name="dB">-10</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="229081821792099" type="System">
+                            <param id="0" name="Seconds">2.2</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="722110649884175" type="Audio">
+                            <param id="0" name="Tag">&quot;musica&quot;</param>
+                            <param id="1" name="dB">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="380100831745379">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="752510390664852" type="Player">
+                            <param id="0" name="Object">checkpoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="252311869856389" type="System">
+                            <param id="0" name="Variable">checkpoint</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="112123844262191" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="156281699176177" type="checkpoint">
+                            <param id="0" name="Animation">&quot;pegado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="502773562999773" title="moeda2">
+            <sub-events>
+                <event-block sid="317515082959593">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="356683445135931" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="667619630302643" type="HUD">
+                            <param id="0" name="Unique ID">69</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="136053383033450" type="HUD">
+                            <param id="0" name="Text">&quot;MOEDAS: &quot; &amp; moeda</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="382405440614947">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="736831645790337" type="Player">
+                            <param id="0" name="Object">moeda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="894398471263405" type="System">
+                            <param id="0" name="Variable">moeda</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="503387671543621" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">200</param>
+                        </action>
+                        <action id="0" name="Play" sid="564245038881438" type="Audio">
+                            <param id="0" name="Audio file">smb_coin</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-1</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="510077764905815" type="moeda" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="739688560369444" title="Score2">
+            <sub-events>
+                <event-block sid="868768611682471">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="102963233568700" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="373963709440719" type="HUD">
+                            <param id="0" name="Unique ID">71</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="565321298634872" type="HUD">
+                            <param id="0" name="Text">&quot;SCORE: &quot; &amp; score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="362685094242715" title="Contador2">
+            <sub-events>
+                <event-block sid="576232159328737">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="621155087427629" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="335589460125155" type="Audio">
+                            <param id="0" name="Audio file">mario-letsgo</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="838630497603545" type="Contador">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="340888522983969" type="System">
+                            <param id="0" name="Seconds">0.926</param>
+                        </action>
+                        <action id="0" name="Play" sid="787079833800835" type="Audio">
+                            <param id="0" name="Audio file">mk64_countdown1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="142260782707534" type="Contador">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="637659865965174" type="System">
+                            <param id="0" name="Seconds">1.011</param>
+                        </action>
+                        <action id="0" name="Play" sid="822313521399982" type="Audio">
+                            <param id="0" name="Audio file">mk64_countdown1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="580478735817444" type="Contador">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="456344243665837" type="System">
+                            <param id="0" name="Seconds">1.011</param>
+                        </action>
+                        <action id="0" name="Play" sid="540945865271544" type="Audio">
+                            <param id="0" name="Audio file">mk64_countdown1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="871428446470047" type="Contador">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="209598903629272" type="System">
+                            <param id="0" name="Seconds">1.011</param>
+                        </action>
+                        <action id="0" name="Play" sid="780352859944450" type="Audio">
+                            <param id="0" name="Audio file">mk64_countdown2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="799648084796843" type="Contador">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="707348962488044" type="System">
+                            <param id="0" name="Seconds">1.574</param>
+                        </action>
+                        <action id="0" name="Play" sid="623020497150273" type="Audio">
+                            <param id="0" name="Audio file">snd_SMB_music_underground</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;musica&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="312778769153717" type="Contador">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="715621025411550" type="Player">
+                            <param id="0" name="Instance variable">mario_corre</param>
+                            <param id="1" name="Value">&quot;direita&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="974325085543562" title="Device3">
+            <sub-events>
+                <event-group description="" sid="563666034246752" title="PC3">
+                    <sub-events>
+                        <event-block sid="443492891970663">
+                            <conditions>
+                                <condition id="4" name="Has gamepads" sid="842172211846346" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="444632502558605" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="803341052886103" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="535335565356598">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Has gamepads" sid="131608400791096" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="589799881795071" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="467705687094901" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="267187495978064">
+                            <conditions>
+                                <condition id="1" name="On gamepad connected" sid="256697136211156" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="525009264544364" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="994034663071179" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="434109358136645">
+                            <conditions>
+                                <condition id="2" name="On gamepad disconnected" sid="137234410020376" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="667531367591868" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="352137155502145" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="335899903000095" title="Mobile3">
+                    <sub-events>
+                        <event-block sid="301443694385734">
+                            <conditions>
+                                <condition id="1" name="On gamepad connected" sid="424946685183726" type="Gamepad" />
+                                <condition id="-20" name="Is on mobile device" sid="659323301568138" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="210185630525884" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="772855530216055">
+                            <conditions>
+                                <condition id="2" name="On gamepad disconnected" sid="974463976373938" type="Gamepad" />
+                                <condition id="-20" name="Is on mobile device" sid="729077672479508" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="644444197068326" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="520585602391669">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="957223681125002" type="System" />
+                                <condition id="4" name="Has gamepads" sid="244715384736518" type="Gamepad" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="218984918551829" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="467169668060993">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="980055815839046" type="System" />
+                                <condition id="4" inverted="1" name="Has gamepads" sid="821738213584045" type="Gamepad" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="970610770343709" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="655688287790564">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="101114480769585" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="579920280505095" type="Dispositivo">
+                            <param id="0" name="Text">Dispositivo.Dispositivo</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="991970092586153">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="389876197184414" type="Player">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">28</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="498218626587267" type="Player">
+                    <param id="0" name="Instance variable">mario_corre</param>
+                    <param id="1" name="Value">&quot;direita&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="288532387990726">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="833900979309723" type="Player">
+                    <param id="0" name="Object">PULO</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="349567958476936" type="PULO">
+                    <param id="0" name="Unique ID">41</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="226926220082253" type="Player">
+                    <param id="0" name="Vector Y">-1500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="620782066337662">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="364275910388163" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set RichPresence" sid="731300362101785" type="DiscordRPC">
+                    <param id="0" name="state">&quot;Jogando&quot;</param>
+                    <param id="1" name="details">&quot;Fase 2 - Mundo 1&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;smbricon&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;mario&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Mario&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

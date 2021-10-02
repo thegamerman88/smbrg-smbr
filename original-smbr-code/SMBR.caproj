@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>SMBR</name>
+    <description>Super Mario Bros. Run</description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.smbr.game</app-id>
+    <unique-id>3i6nvmzluaso9</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Eren Ertuğrul" id="eren_DiscordRPC" version="1.100000024">DiscordRPC</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1654</width>
+        <height>880</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Loading</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="mario direcao">
+            <object-type name="ESQUERDA" sid="938491371148649">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558031311354839" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DIREITA" sid="325762077015391">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="782214077472231" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PULO" sid="612932955143477">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219410031163619" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Extras">
+            <object-type name="Audio" sid="979417880963238">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Keyboard" sid="782788241722333">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="823501891461769">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Touch" sid="531551332784573">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Browser" sid="889845546863479">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="NWjs" sid="882825413913254">
+                <plugin id="NodeWebkit" />
+            </object-type>
+            <object-type name="Gamepad" sid="979792658761916">
+                <plugin id="gamepad" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Objetos de fase">
+            <object-type name="checkpoint" sid="926524504994966">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683807762839858" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.207031" y="0" />
+                                <point x="0.28125" y="0.179688" />
+                                <point x="0.757813" y="0.171875" />
+                                <point x="0.4375" y="0.5" />
+                                <point x="0.291016" y="0.695313" />
+                                <point x="0.297363" y="0.878906" />
+                                <point x="0.334961" y="0.898438" />
+                                <point x="0.339844" y="1" />
+                                <point x="0.152344" y="0.996094" />
+                                <point x="0.152344" y="0.897461" />
+                                <point x="0.199219" y="0.892578" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pegado" pingpong="0" repeatcount="1" repeatto="0" sid="911360996580462" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.203125" y="0" />
+                                <point x="0.5" y="0.1875" />
+                                <point x="0.75" y="0.1875" />
+                                <point x="0.669922" y="0.369141" />
+                                <point x="0.738281" y="0.558594" />
+                                <point x="0.5625" y="0.5625" />
+                                <point x="0.295898" y="0.56543" />
+                                <point x="0.294922" y="0.896484" />
+                                <point x="0.347656" y="0.902344" />
+                                <point x="0.347656" y="1" />
+                                <point x="0.15625" y="1" />
+                                <point x="0.150391" y="0.910156" />
+                                <point x="0.199219" y="0.882813" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="533705709650142" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Tilemap" sid="374674269123164">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="706893888714529">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Leozinho\Documents\aaaa\sheets\chão.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Sprite3" sid="612116410574247">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="547301808947009">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="627123727129202" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="moeda" sid="332125686899763">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758487014899801" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="morre" sid="705544302416763">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="935026842369708" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TilemapCaverna" sid="625789214622472">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="506489363255329">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Leozinho\Documents\aaaa\sheets\chãocaverna.png" />
+                <tiles />
+            </object-type>
+            <object-type name="Freescore" sid="395632995975792">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891314571446694" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Inicio e fim">
+            <object-type name="Fim" sid="886671318504804">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504237778494370" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png">
+                            <image-point name="movemario" x="0" y="1" />
+                            <collision-poly>
+                                <point x="0.171875" y="0" />
+                                <point x="0.932292" y="0.0104167" />
+                                <point x="0.932292" y="1" />
+                                <point x="0.171875" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Inicio" sid="124821951828560">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672249445099366" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png">
+                            <image-point name="movemario" x="-0.333333" y="1" />
+                            <collision-poly>
+                                <point x="0.166667" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.166667" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Menu">
+            <object-folder name="Controles mobile">
+                <object-type name="ArrowDown" sid="189638398007863">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719537678977802" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\butao\seta.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ArrowUp" sid="968374553182904">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999080659655672" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\butao\seta.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="X" sid="664077278303321">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309807072844644" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\butao\X.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="Logo" sid="612804878259249">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="444332713220309" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00568182" y="0.0113636" />
+                                <point x="0.994318" y="0.0113636" />
+                                <point x="0.994318" y="0.988636" />
+                                <point x="0.00568182" y="0.988636" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\sheets\smb.png">
+                            <collision-poly>
+                                <point x="0.00568182" y="0.0113636" />
+                                <point x="0.994318" y="0.0113636" />
+                                <point x="0.994318" y="0.988636" />
+                                <point x="0.00568182" y="0.988636" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MarioMenu" sid="610983395643465">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="mario_corre" sid="504732953402581" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Parado" pingpong="0" repeatcount="1" repeatto="0" sid="225064840099363" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="Andando" pingpong="0" repeatcount="1" repeatto="0" sid="973441736040147" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pulando" pingpong="0" repeatcount="1" repeatto="0" sid="986753797517068" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Select" sid="343353963875130">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="OpcaoSelecionada" sid="250680044490509" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722259402737614" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\sheets\slect.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Opcoes" sid="694835755362744">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="opcao" sid="102440648174970" type="number" />
+                    <instance-variable name="acao" sid="517145559188525" type="string" />
+                </instance-variables>
+                <texture original-source="C:\Users\Leozinho\Documents\aaaa\sheets\NES - Super Mario Bros - Font.png" />
+            </object-type>
+            <object-type name="Sprite2" sid="995675045035853">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890357230875852" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="BackGround">
+            <object-type name="TiledBackground" sid="956730820968180">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Wrap" sid="991919413881873">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\montanhas.png" />
+            </object-type>
+            <object-type name="TiledBackground2" sid="754313650958740">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Wrap" sid="921381625339766">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\nuvens.png" />
+            </object-type>
+            <object-type name="TiledBackground4" sid="129173819079817">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Wrap" sid="659197201932034">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\montanhas.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Player">
+            <object-type name="Player" sid="883244902629675">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="mario_corre" sid="735874898236023" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="600995899926077">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="827463254797185">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="217912070115562">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Parado" pingpong="0" repeatcount="1" repeatto="0" sid="952392227666886" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="Andando" pingpong="0" repeatcount="1" repeatto="0" sid="645846010537959" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pulando" pingpong="0" repeatcount="1" repeatto="0" sid="533406738710061" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Leozinho\Downloads\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Hud">
+            <object-folder name="Power-Ups">
+                <object-type name="SpeedUP" sid="885168722450816">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="PowerUpOne" sid="458048918979061" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656699148314237" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Pictures\Power-Ups\Speed.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Pictures\Power-Ups\Speed Using.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ContadorPWSU" sid="674505362478146">
+                    <plugin id="Spritefont2" />
+                    <instance-variables>
+                        <instance-variable name="Contar" sid="122334242016318" type="string" />
+                        <instance-variable name="Contador" sid="914531058529482" type="number" />
+                    </instance-variables>
+                    <texture original-source="C:\Users\Leozinho\Documents\aaaa\sheets\NES - Super Mario Bros - Font.png" />
+                </object-type>
+            </object-folder>
+            <object-type name="HUD" sid="321245584840486">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Leozinho\Documents\aaaa\sheets\NES - Super Mario Bros - Font.png" />
+            </object-type>
+            <object-type name="Dispositivo" sid="161940358606297">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="Dispositivo" sid="816554058029449" type="string" />
+                </instance-variables>
+                <texture original-source="C:\Users\Leozinho\Documents\aaaa\sheets\NES - Super Mario Bros - Font.png" />
+            </object-type>
+            <object-type name="Contador" sid="697102931658626">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388846133001206" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\sheets\contador\0.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\sheets\contador\1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\sheets\contador\2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\sheets\contador\3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Leozinho\Documents\aaaa\sheets\contador\4.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Loadin">
+            <object-type name="Text2" sid="138698151524612">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="631216528153310">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="MarioLoading" sid="522637264279500">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="mario_corre" sid="470085755931490" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Andando2" pingpong="0" repeatcount="1" repeatto="0" sid="116068968005031" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.123047" y="0.0625" />
+                                <point x="0.882813" y="0.0644531" />
+                                <point x="0.882813" y="1" />
+                                <point x="0.121094" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ProgressBar" sid="490957279867816">
+                <plugin id="progressbar" />
+                <instance-variables>
+                    <instance-variable name="progresss" sid="349724348246002" type="number" />
+                </instance-variables>
+            </object-type>
+        </object-folder>
+        <object-folder name="Layout Selector">
+            <object-type name="TextBox" sid="706736375865664">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="Button" sid="836385356122879">
+                <plugin id="Button" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Discord">
+            <object-type name="DiscordRPC" sid="339458183033419">
+                <plugin id="eren_DiscordRPC" />
+            </object-type>
+        </object-folder>
+        <object-type name="TiledBackground3" sid="754256039325145">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="525035987548422">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="912236151589073">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Leozinho\Documents\aaaa\sheets\chão.png" />
+        </object-type>
+        <object-type name="LocalStorage" sid="601450590312161">
+            <plugin id="LocalStorage" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="ControlesMobile" plugin-id="Sprite" sid="569442831465769">
+            <members>
+                <member>ArrowDown</member>
+                <member>ArrowUp</member>
+                <member>X</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Loading.xml</layout>
+        <layout>MENUINICIAL.xml</layout>
+        <layout>FASE1.xml</layout>
+        <layout>segredo.xml</layout>
+        <layout>FASE2.xml</layout>
+        <layout>Layout Select.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>FASE1ES.xml</event-sheet>
+        <event-sheet>MENUINICIALES.xml</event-sheet>
+        <event-sheet>FASE2ES.xml</event-sheet>
+        <event-sheet>segredo.xml</event-sheet>
+        <event-sheet>LoadingES.xml</event-sheet>
+        <event-sheet>Layout SelectES.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="5" />
+        <global-instance type="Touch" uid="12">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="14" />
+        <global-instance type="Audio" uid="20">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="40" />
+        <global-instance type="NWjs" uid="42" />
+        <global-instance type="LocalStorage" uid="56" />
+        <global-instance type="Gamepad" uid="44">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="DiscordRPC" uid="41">
+            <properties>
+                <client-id>847552923872788571</client-id>
+                <preview_mode>True</preview_mode>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <sound-folder name="Contador">
+            <file name="mk64_countdown1.ogg" />
+            <file name="mk64_countdown2.ogg" />
+            <file name="mario-letsgo.ogg" />
+        </sound-folder>
+        <file name="smb_jump-small.ogg" />
+        <file name="smb_coin.ogg" />
+        <file name="smb_checkpoint.ogg" />
+        <file name="smb_mariodie.ogg" />
+        <file name="smb_stage_clear.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="eastereggmusic.ogg" />
+        <file name="snd_SMB_music_underground.ogg" />
+        <file name="snd_SMB_music_ground.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>segredo</name>
+    <events>
+        <event-block sid="113931321024972">
+            <conditions>
+                <condition id="2" name="Key is down" sid="667481153441607" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="254346663762307" type="Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="258592583805216" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="753266082000727">
+            <conditions>
+                <condition id="2" name="Key is down" sid="311165368212597" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="294413463325942" type="Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="467108238809862" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="283849720632401" title="Animações4">
+            <sub-events>
+                <event-block sid="932736409364727">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="273884765760496" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="475758045128593" type="Player">
+                            <param id="0" name="Animation">&quot;Pulando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="152084718246718">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="152116529246056" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="929894958758166" type="Player">
+                            <param id="0" name="Animation">&quot;Pulando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="751325827353180">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="760279951368622" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="258977302694801">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="236712421506995" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="127094810012821" type="Player">
+                                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="551268446491797">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="922256705296458" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="380436506275039" type="Player">
+                                    <param id="0" name="Animation">&quot;Parado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="140729454697088">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="155526990933413" type="Player">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">4136</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Alert" sid="825190780279446" type="Browser">
+                    <param id="0" name="Message">&quot;ENTRA NO SMBBR PFV, DA PRA ENTRAR PELO MENU E SO CLICAR NO SPRITE NO CANTO SUPERIOR DIREITO&quot;</param>
+                </action>
+                <action id="1" name="Close" sid="313829710177539" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="814749146088179">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="165174851151857" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="402005739693783" type="Audio">
+                    <param id="0" name="Audio file">eastereggmusic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-2</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="456455098139016">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="132090626523493" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set RichPresence" sid="494395040796773" type="DiscordRPC">
+                    <param id="0" name="state">&quot;shhhhhhh&quot;</param>
+                    <param id="1" name="details">&quot;você não está vendo isso&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;smbricon&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;mario&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Mario&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

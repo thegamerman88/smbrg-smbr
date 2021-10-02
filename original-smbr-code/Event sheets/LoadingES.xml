@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LoadingES</name>
+    <events>
+        <event-block sid="436589682274201">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="935765522061799" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set progress" sid="529277947959708" type="ProgressBar">
+                    <param id="0" name="Value">ProgressBar.progresss</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="596297841366393">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="277855614066416" type="System" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="535756294399671" type="ProgressBar">
+                    <param id="0" name="Instance variable">progresss</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="231370996200702">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="791934317006877" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="519162633471853" type="System">
+                    <param id="0" name="Seconds">5.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="960892096671469" type="System">
+                    <param id="0" name="Layout">MENUINICIAL</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="743359094331195">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="760555515618278" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set RichPresence" sid="469046650420671" type="DiscordRPC">
+                    <param id="0" name="state">&quot;Tela de Carregamento&quot;</param>
+                    <param id="1" name="details">&quot;Esperando...&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;smbricon&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;mario&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Mario&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

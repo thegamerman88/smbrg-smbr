@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MENUINICIALES</name>
+    <events>
+        <event-group description="" sid="813452106721849" title="Fundo">
+            <sub-events>
+                <event-block sid="611566538597709">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="178762425496962" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="158347435491272" type="TiledBackground2">
+                            <param id="0" name="Distance">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="523267262680361">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="571740849245136" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="722356000610201" type="TiledBackground">
+                            <param id="0" name="Distance">-2</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="796245103802826" type="TiledBackground4">
+                            <param id="0" name="Distance">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="770042142334821">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="156484927123291" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="539338840394422" type="TiledBackground3">
+                            <param id="0" name="Distance">-7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="731689848469484">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="436029458407235" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="813212956202864" type="MarioMenu">
+                            <param id="0" name="Animation">&quot;Andando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="460234493116676" type="System">
+                            <param id="0" name="Layer">6</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="424756671302778" title="Jogar">
+            <sub-events>
+                <event-block sid="389391441609231">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="815282047039621" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="779055955461088" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="848555429432105" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="631025720287324">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="116838188918625" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="530136551998709" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="345997440024306" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="499782734524223">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="548338266463984" type="System" />
+                        <condition id="-33" name="Pick by comparison" sid="752873636070759" type="System">
+                            <param id="0" name="Object">Opcoes</param>
+                            <param id="1" name="Expression">Opcoes.opcao</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Select.OpcaoSelecionada</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="915611263730974" type="Select">
+                            <param id="0" name="Y">Opcoes.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="681335338179495">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="264701370335263" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="248415444887621" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="457166358081222" type="System">
+                            <param id="0" name="Layout">FASE1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="997305101720878">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="651194221595329" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="823618399218586" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="559524437977766" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="753955949408397" title="Jogar controle">
+            <sub-events>
+                <event-block sid="574438330311360">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="710171396672851" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">13</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="800015179059911" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="937174213378181" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869266709261049">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="509892015527344" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">12</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="311308687300144" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="313698157355478" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267837604940614">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="640378221912893" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="775616424095459" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="620660749449337" type="System">
+                            <param id="0" name="Layout">FASE1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="603612288691849">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="800531590442407" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="352922407162086" type="Select">
+                            <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="517505671261279" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="222912809039138" title="Device">
+            <sub-events>
+                <event-group description="" sid="169730880688168" title="PC">
+                    <sub-events>
+                        <event-block sid="675675983272609">
+                            <conditions>
+                                <condition id="4" name="Has gamepads" sid="884122496011053" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="550896140698686" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="207907720152648" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="655510088802237">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Has gamepads" sid="668420399034514" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="715475144356966" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="968719617949893" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="687116655326964">
+                            <conditions>
+                                <condition id="1" name="On gamepad connected" sid="693362467553837" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="387670078390808" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="514378633019667" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="819643377506277">
+                            <conditions>
+                                <condition id="2" name="On gamepad disconnected" sid="536590040717668" type="Gamepad" />
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="808470315631341" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="637894930470572" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;PC SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="703188857368281" title="Mobile">
+                    <sub-events>
+                        <event-block sid="693691671761155">
+                            <conditions>
+                                <condition id="1" name="On gamepad connected" sid="991853898216263" type="Gamepad" />
+                                <condition id="-20" name="Is on mobile device" sid="864127487611773" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="773212614450320" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="990877088426257">
+                            <conditions>
+                                <condition id="2" name="On gamepad disconnected" sid="633266049857999" type="Gamepad" />
+                                <condition id="-20" name="Is on mobile device" sid="694336425811410" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="510007955565315" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="649187174265605">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="615337306683969" type="System" />
+                                <condition id="4" name="Has gamepads" sid="671159996201681" type="Gamepad" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="688322745565223" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE COM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="636200722814877">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="852318342294221" type="System" />
+                                <condition id="4" inverted="1" name="Has gamepads" sid="215460935620498" type="Gamepad" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="863258163515996" type="Dispositivo">
+                                    <param id="0" name="Instance variable">Dispositivo</param>
+                                    <param id="1" name="Value">&quot;MOBILE SEM GAMEPAD&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="660027123013276">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="701350972230968" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="747780378102345" type="Dispositivo">
+                            <param id="0" name="Text">Dispositivo.Dispositivo</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="345957718111957" title="Jogar mobile">
+            <sub-events>
+                <event-block sid="317391171385573">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="644318175904440" type="System" />
+                        <condition id="-20" name="Is on mobile device" sid="542738974881691" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="485936038420476" type="System">
+                            <param id="0" name="Layer">6</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="637792180067929">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="986027493795156" type="System" />
+                        <condition id="-20" inverted="1" name="Is on mobile device" sid="416884997907751" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="256662645065751" type="System">
+                            <param id="0" name="Layer">6</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="314334488768200" type="ControlesMobile" />
+                    </actions>
+                </event-block>
+                <event-block sid="109449116255769">
+                    <conditions>
+                        <condition id="-20" name="Is on mobile device" sid="683134465739279" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="391111306544397">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="102497204560897" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="510054829340978" type="ArrowUp">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="312763143006395" type="ArrowDown">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="416532809944446">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="983773356140699" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="247132004959534" type="ArrowUp">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="417982250071878" type="ArrowDown">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="914651960845365">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="902253264967928" type="Touch">
+                                    <param id="0" name="Object">ArrowDown</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="556167465577288" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="452332361147998" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="576727072897567">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="813180672396563" type="Touch">
+                                    <param id="0" name="Object">ArrowUp</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="678122420950088" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="809420700405402" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="624823349983522">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="167695355275100" type="Touch">
+                                    <param id="0" name="Object">X</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="122044314014001" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="825434860519666" type="System">
+                                    <param id="0" name="Layout">FASE1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="433694866645900">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="133035417444101" type="Touch">
+                                    <param id="0" name="Object">X</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="516551278734253" type="Select">
+                                    <param id="0" name="Instance variable">OpcaoSelecionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Close" sid="230386912403778" type="Browser" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="318064839631059">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="780624772868941" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set RichPresence" sid="158678822539398" type="DiscordRPC">
+                    <param id="0" name="state">&quot;Menu Inicial&quot;</param>
+                    <param id="1" name="details">&quot;Escolhendo Uma Das Opções&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;smbricon&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;mario&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Mario&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
