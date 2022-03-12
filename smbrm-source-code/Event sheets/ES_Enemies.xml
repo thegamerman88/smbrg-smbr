@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Enemies</name>
+    <events>
+        <include>ES_Rumble</include>
+        <event-group description="" sid="156097050274269" title="direção">
+            <sub-events>
+                <event-block sid="603666146108625">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="899568730007758" type="System">
+                            <param id="0" name="Variable">Tema</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UnderWorld&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="526571453705833">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="809333085496568" type="OBJ_Goomba">
+                                    <param id="0" name="Instance variable">walkto</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;esquerda&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="187200491950876" type="OBJ_Goomba">
+                                    <param id="0" name="Animation">&quot;walk_UG&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="691145552612802" type="OBJ_Goomba">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="436563401013591">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="186888932853062" type="OBJ_Goomba">
+                                    <param id="0" name="Instance variable">walkto</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;direita&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="350563388663394" type="OBJ_Goomba">
+                                    <param id="0" name="Animation">&quot;walk_UG&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="615715449586370" type="OBJ_Goomba">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="460644621499455">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="109347571704354" type="System">
+                            <param id="0" name="Variable">Tema</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;OverWorld&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="658407738902511">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="653931813452765" type="OBJ_Goomba">
+                                    <param id="0" name="Instance variable">walkto</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;esquerda&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="501281526042092" type="OBJ_Goomba">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="900243286582669" type="OBJ_Goomba">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="433933323776001">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="772284323928668" type="OBJ_Goomba">
+                                    <param id="0" name="Instance variable">walkto</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;direita&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="535817735543415" type="OBJ_Goomba">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="214171246927781" type="OBJ_Goomba">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="255406039693022" title="mudar direção">
+            <sub-events>
+                <event-block sid="519990286612564">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="749194496840527" type="OBJ_Goomba">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="105186082631099" type="OBJ_Goomba">
+                            <param id="0" name="Instance variable">walkto</param>
+                            <param id="1" name="Value">&quot;direita&quot;&#x0D;&#x0A;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="105302659070200">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="719211449127950" type="OBJ_Goomba">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="171167384824574" type="OBJ_Goomba">
+                            <param id="0" name="Instance variable">walkto</param>
+                            <param id="1" name="Value">&quot;esquerda&quot;&#x0D;&#x0A;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="719186305227256" title="morte">
+            <sub-events>
+                <event-block sid="293455480892898">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="434797743570188" type="System">
+                            <param id="0" name="Variable">Tema</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;OverWorld&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="607342476733314">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="492732199437258" type="System">
+                                    <param id="0" name="Variable">grande</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="828406548030429">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="170391157923049" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="4" name="Is falling" sid="544230278118530" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="2" inverted="1" name="Is on floor" sid="728474666382988" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="467647615743302" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="388489789119854" type="Audio">
+                                            <param id="0" name="Audio file">smb_stomp</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action behavior="PlatformPlus" id="9" name="Set vector Y" sid="594177284547459" type="OBJ_Player">
+                                            <param id="0" name="Vector Y">-550</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="989462950600676" type="Function">
+                                            <param id="0" name="Name">&quot;StartRumble&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}150{###}0{###}1.0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="267843083080199" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="974669020343958" type="Function">
+                                            <param id="0" name="Name">&quot;GoomScore&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="302757033789607" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;dead&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="926203233710111" type="System">
+                                            <param id="0" name="Seconds">0.6</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="990022945450848" type="OBJ_Goomba">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="484201439368185">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="610865462669559" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="2" name="Is on floor" sid="889712594383840" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="4" inverted="1" name="Is falling" sid="172497703649696" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="541184754590293" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                                        </condition>
+                                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="445528144676385" type="OBJ_Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="587414021523479" type="OBJ_Player">
+                                            <param id="0" name="Instance variable">play</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="876331010162414" type="OBJ_Play">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="773909908979454" type="Audio">
+                                            <param id="0" name="Audio file">smb_mariodie</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="765212789844276">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="709128429497362" type="System">
+                                    <param id="0" name="Variable">grande</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="321963418450340">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="677320820984031" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="4" inverted="1" name="Is falling" sid="861900208767635" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="2" name="Is on floor" sid="553192974013240" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="505459059295046" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="442620480315034" type="Audio">
+                                            <param id="0" name="Audio file">smb_pipe</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;pd&quot;</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="803899812473209" type="Audio">
+                                            <param id="0" name="Tag">&quot;msc&quot;</param>
+                                            <param id="1" name="dB">-10</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="306361071348751" type="Audio">
+                                            <param id="0" name="Tag">&quot;Play&quot;</param>
+                                            <param id="1" name="dB">-10</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="683413373419082" type="System">
+                                            <param id="0" name="Variable">grande</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="923036614768883" type="OBJ_Player">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="818547205889877">
+                                            <conditions>
+                                                <condition id="0" name="On ended" sid="879767287016962" type="Audio">
+                                                    <param id="0" name="Tag">&quot;pd&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set volume" sid="965959484811637" type="Audio">
+                                                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                                                    <param id="1" name="dB">0</param>
+                                                </action>
+                                                <action id="3" name="Set volume" sid="484131409804821" type="Audio">
+                                                    <param id="0" name="Tag">&quot;Play&quot;</param>
+                                                    <param id="1" name="dB">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="795399764054134">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="124257292674165" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="4" name="Is falling" sid="455099408368632" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="2" inverted="1" name="Is on floor" sid="263844628308064" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="973262340214700" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="979755591354192" type="Audio">
+                                            <param id="0" name="Audio file">smb_stomp</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action behavior="PlatformPlus" id="9" name="Set vector Y" sid="226899277120826" type="OBJ_Player">
+                                            <param id="0" name="Vector Y">-550</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="354058738604697" type="Function">
+                                            <param id="0" name="Name">&quot;StartRumble&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}150{###}0{###}1.0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="596327724044711" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="955072497684755" type="Function">
+                                            <param id="0" name="Name">&quot;GoomScore&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="570623220974029" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;dead&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="949653971825212" type="System">
+                                            <param id="0" name="Seconds">0.6</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="554292094972011" type="OBJ_Goomba">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="409014178171840">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="894649790635017" type="System">
+                            <param id="0" name="Variable">Tema</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UnderWorld&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="358470867723923">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="615181962817275" type="System">
+                                    <param id="0" name="Variable">grande</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="332176927972408">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="293263617015612" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="4" name="Is falling" sid="437996419747596" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="2" inverted="1" name="Is on floor" sid="916651559368111" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="245482573861428" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk_UG&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="719448671317950" type="Audio">
+                                            <param id="0" name="Audio file">smb_stomp</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action behavior="PlatformPlus" id="9" name="Set vector Y" sid="580927781475646" type="OBJ_Player">
+                                            <param id="0" name="Vector Y">-550</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="292356729668068" type="Function">
+                                            <param id="0" name="Name">&quot;StartRumble&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}150{###}0{###}1.0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="758983401651122" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="250084392643007" type="Function">
+                                            <param id="0" name="Name">&quot;GoomScore&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="596536819479609" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;dead_UG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="619928375525491" type="System">
+                                            <param id="0" name="Seconds">0.6</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="702845623678650" type="OBJ_Goomba">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="769540393779153">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="772970035458875" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="4" inverted="1" name="Is falling" sid="186895280410730" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="2" name="Is on floor" sid="807568537996185" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="824392024915775" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk_UG&quot;</param>
+                                        </condition>
+                                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="631231549754763" type="OBJ_Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="612148430048982" type="OBJ_Player">
+                                            <param id="0" name="Instance variable">play</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="879896861643966" type="OBJ_Play">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="259725172295234" type="Audio">
+                                            <param id="0" name="Audio file">smb_mariodie</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="691078388249738">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="235707065462461" type="System">
+                                    <param id="0" name="Variable">grande</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="529855120467639">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="850620415308834" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="4" name="Is falling" sid="534458603298719" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="2" inverted="1" name="Is on floor" sid="779180099088599" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="377688715485899" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk_UG&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="634806334200910" type="Audio">
+                                            <param id="0" name="Audio file">smb_stomp</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action behavior="PlatformPlus" id="9" name="Set vector Y" sid="717919993003040" type="OBJ_Player">
+                                            <param id="0" name="Vector Y">-550</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="125509023744763" type="Function">
+                                            <param id="0" name="Name">&quot;StartRumble&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}150{###}0{###}1.0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="552635526641378" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="410535081743577" type="Function">
+                                            <param id="0" name="Name">&quot;GoomScore&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="108481887752557" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;dead_UG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="877421074673213" type="System">
+                                            <param id="0" name="Seconds">0.6</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="183090437091426" type="OBJ_Goomba">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="922816528560387">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="433599708479588" type="OBJ_Player">
+                                            <param id="0" name="Object">OBJ_Goomba</param>
+                                        </condition>
+                                        <condition behavior="PlatformPlus" id="4" inverted="1" name="Is falling" sid="150669156319249" type="OBJ_Player" />
+                                        <condition behavior="PlatformPlus" id="2" name="Is on floor" sid="418938648847583" type="OBJ_Player" />
+                                        <condition id="2" name="Is playing" sid="882119897864755" type="OBJ_Goomba">
+                                            <param id="0" name="Animation">&quot;walk_UG&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="843745450418323" type="Audio">
+                                            <param id="0" name="Audio file">smb_pipe</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;pd&quot;</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="701341812079294" type="Audio">
+                                            <param id="0" name="Tag">&quot;msc&quot;</param>
+                                            <param id="1" name="dB">-10</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="904740782627390" type="Audio">
+                                            <param id="0" name="Tag">&quot;UGPlay&quot;</param>
+                                            <param id="1" name="dB">-10</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="240981181015110" type="System">
+                                            <param id="0" name="Variable">grande</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="465256200910697" type="OBJ_Player">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="756046255953380">
+                                            <conditions>
+                                                <condition id="0" name="On ended" sid="281914521247155" type="Audio">
+                                                    <param id="0" name="Tag">&quot;pd&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set volume" sid="332465025806404" type="Audio">
+                                                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                                                    <param id="1" name="dB">0</param>
+                                                </action>
+                                                <action id="3" name="Set volume" sid="562771527828711" type="Audio">
+                                                    <param id="0" name="Tag">&quot;UGPlay&quot;</param>
+                                                    <param id="1" name="dB">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="189766378523161">
+            <conditions>
+                <condition id="0" name="On function" sid="807684195590430" type="Function">
+                    <param id="0" name="Name">&quot;GoomScore&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="343332213029072" type="OBJ_Player">
+                    <param id="0" name="Instance variable">play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="309558964149942" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-10" name="Add to" sid="652113286348227" type="System">
+                    <param id="0" name="Variable">ScorePF</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-3" name="Create object" sid="552304722531119" type="System">
+                    <param id="0" name="Object to create">TXT_ScorePopUp</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">OBJ_goomba.X-30</param>
+                    <param id="3" name="Y">OBJ_goomba.Y-32</param>
+                </action>
+                <action id="0" name="Set text" sid="188735973933911" type="TXT_ScorePopUp">
+                    <param id="0" name="Text">&quot;100&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="884390529527568" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="871505076794660" type="TXT_ScorePopUp" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

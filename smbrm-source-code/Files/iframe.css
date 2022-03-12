@@ -1,0 +1,32 @@
+html {
+  overflow:   auto;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+@font-face {
+  font-family: 'super_mario_maker_extendedRg';
+  src: url('super-mario-maker-extended-webfont.woff2') format('woff2'),
+       url('super-mario-maker-extended-webfont.woff') format('woff');
+
+}
+
+body{
+  font-family: super_mario_maker_extendedRg;
+}
+
+h1{
+  color: black;
+}
+
+p{
+  color: black;
+}
+
+hr{
+  border-top: 2px dashed black;
+  border-bottom: none;
+}
+

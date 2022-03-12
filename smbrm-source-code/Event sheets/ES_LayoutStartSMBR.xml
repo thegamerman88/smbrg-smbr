@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_LayoutStartSMBR</name>
+    <events>
+        <event-group description="" sid="447658548453439" title="Nuvens">
+            <sub-events>
+                <event-block sid="306458998557880">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="391376792175340" type="System">
+                            <param id="0" name="Variable">anim</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="178504781077544">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="736036955745117" type="System" />
+                                <condition id="-14" name="Compare variable" sid="964404508824697" type="System">
+                                    <param id="0" name="Variable">die</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Move forward" sid="993560309111409" type="OBJ_Clouds">
+                                    <param id="0" name="Distance">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="134479239349512" title="Layout Start">
+            <sub-events>
+                <event-block sid="230582612555497">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="685070864389352" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="398554543114989" type="System">
+                            <param id="0" name="Variable">onoff</param>
+                            <param id="1" name="Value">&quot;on&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="799692529648768" type="System">
+                            <param id="0" name="Object to create">OBJ_DarkTST</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="X">439.141</param>
+                            <param id="3" name="Y">240</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="169077895274252" type="OBJ_DarkTST">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="730209096180530" type="OBJ_DarkTST">
+                            <param id="0" name="Width">928</param>
+                            <param id="1" name="Height">488</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="500615907830798" type="OBJ_DarkTST">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="463655157536279" type="OBJ_DarkTST">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="248645520022943" type="OBJ_DarkTST" />
+                        <action id="-13" name="Set time scale" sid="465712330061346" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="6" name="Stop" sid="952432575385039" type="Audio">
+                            <param id="0" name="Tag">&quot;msc&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="496312076489400" type="Audio">
+                            <param id="0" name="Tag">&quot;Play&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="617527372732134" type="Audio">
+                            <param id="0" name="Tag">&quot;Editor&quot;</param>
+                        </action>
+                        <action id="0" name="Set RichPresence" sid="168105845230953" type="DiscordRPC">
+                            <param id="0" name="state">&quot;Correndo bastante no SMBR!&quot;</param>
+                            <param id="1" name="details">&quot;Jogando Super Mario Bros. Run&quot;</param>
+                            <param id="2" name="largeimagekey">&quot;icone_smbrg_disc&quot;</param>
+                            <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run Gold&quot;</param>
+                            <param id="4" name="smallimagekey">&quot;smbr_0&quot;</param>
+                            <param id="5" name="smallimagetext">&quot;Super Mario Bros. Run&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="887353702296798" type="System">
+                            <param id="0" name="Variable">mort</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="879943936821192" type="System">
+                            <param id="0" name="Variable">grande</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="909403870332508" type="OBJ_Player">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="572881941366464" type="System">
+                            <param id="0" name="Variable">Checkp_X</param>
+                            <param id="1" name="Value">OBJ_LevelStartEnd.X-32</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="182334211835283" type="System">
+                            <param id="0" name="Variable">Checkp_Y</param>
+                            <param id="1" name="Value">OBJ_LevelStartEnd.Y</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="291138647647594" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="PlatformPlus" id="1" name="Set max speed" sid="217477053504809" type="OBJ_Player">
+                            <param id="0" name="Max Speed">170</param>
+                        </action>
+                        <action behavior="PlatformPlus" id="2" name="Set acceleration" sid="466379188982542" type="OBJ_Player">
+                            <param id="0" name="Acceleration">800</param>
+                        </action>
+                        <action behavior="PlatformPlus" id="3" name="Set deceleration" sid="150635677300880" type="OBJ_Player">
+                            <param id="0" name="Deceleration">400</param>
+                        </action>
+                        <action behavior="PlatformPlus" id="0" name="Set ignoring input" sid="868280488156546" type="OBJ_Player">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="733300072358249" type="OBJ_Goomba">
+                            <param id="0" name="Speed">5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="340555158317945" type="OBJ_Goomba">
+                            <param id="0" name="Instance variable">walkto</param>
+                            <param id="1" name="Value">&quot;esquerda&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="104022358122850" type="OBJ_Player">
+                            <param id="0" name="X">Checkp_X</param>
+                            <param id="1" name="Y">Checkp_Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="489759322531163" type="OBJ_Cam">
+                            <param id="0" name="X">OBJ_Player.X</param>
+                            <param id="1" name="Y">OBJ_Player.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="420779637146447" type="System">
+                            <param id="0" name="Variable">camera</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="317597515372660">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="529293313595724" type="System">
+                                    <param id="0" name="Variable">MMSC</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="392950452896854">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="475504061363264" type="System">
+                                            <param id="0" name="Variable">Tema</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;OverWorld&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="607765496887934" type="Audio">
+                                            <param id="0" name="Audio file">MSC_smb_Overworld</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;msc&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="361924195714608">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="435910325601525" type="System">
+                                            <param id="0" name="Variable">Tema</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;UnderWorld&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="165709834909888" type="Audio">
+                                            <param id="0" name="Audio file">MSC_SMB_Underworld_Play</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;msc&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="385749256277410">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="793907013179452" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="957238893633158" type="System">
+                            <param id="0" name="Variable">anim</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="584654126863541" type="System">
+                            <param id="0" name="Variable">Win</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

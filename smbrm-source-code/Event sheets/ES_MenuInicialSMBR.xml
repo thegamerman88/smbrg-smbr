@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_MenuInicialSMBR</name>
+    <events>
+        <variable constant="0" name="EX" sid="153217273650487" static="0" type="number">0</variable>
+        <variable constant="0" name="NG" sid="288625522497099" static="0" type="number">0</variable>
+        <event-group description="" sid="642523563478009" title="hoverCFG2">
+            <sub-events>
+                <event-group description="" sid="809837908834184" title="PC2">
+                    <sub-events>
+                        <event-block sid="213909177575069">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="979068628724546" type="Mouse">
+                                    <param id="0" name="Object">OBJ_Full</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="794484858753605" type="OBJ_Full">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="791585157897630">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="858494037312507" type="Mouse">
+                                    <param id="0" name="Object">OBJ_Full</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="658233078549746" type="OBJ_Full">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="640668465685009" title="OCSSMBR">
+            <sub-events>
+                <event-block sid="398166916535727">
+                    <conditions>
+                        <condition behavior="Fade" id="1" name="On fade-in finished" sid="548664077286751" type="OBJ_DarkTST" />
+                        <condition id="-14" name="Compare variable" sid="953433600826958" type="System">
+                            <param id="0" name="Variable">NG</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="365895730919235" type="System">
+                            <param id="0" name="Variable">EX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="573598213524945" type="System">
+                            <param id="0" name="Layout">TransicaoFase</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="323257777923922">
+                    <conditions>
+                        <condition behavior="Fade" id="1" name="On fade-in finished" sid="379003510184292" type="OBJ_DarkTST" />
+                        <condition id="-14" name="Compare variable" sid="995309677737215" type="System">
+                            <param id="0" name="Variable">NG</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="722092325181264" type="System">
+                            <param id="0" name="Variable">EX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-37" name="Load" sid="721021177527598" type="System">
+                            <param id="0" name="Slot">&quot;SMBR_AUTOSAVE&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="375249867890558">
+                    <conditions>
+                        <condition behavior="Fade" id="1" name="On fade-in finished" sid="494429008627956" type="OBJ_DarkTST" />
+                        <condition id="-14" name="Compare variable" sid="197641900765727" type="System">
+                            <param id="0" name="Variable">EX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="821366237044784" type="System">
+                            <param id="0" name="Layout">LS_Exit</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="303231146532525">
+                    <conditions>
+                        <condition id="-30" name="On load failed" sid="245249155081762" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="483444049727942" type="System">
+                            <param id="0" name="Layout">TransicaoFase</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="971146087126344">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="509570204034286" type="System">
+                            <param id="0" name="Layer">5</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="536952734296454" type="OBJ_DarkTST">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881603356761118">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="154809481896782" type="Touch">
+                                    <param id="0" name="Object">OBJ_Dark</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="300067740149455" type="Touch">
+                                    <param id="0" name="Object">OBJ_Full</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="557394207109481" type="System">
+                                    <param id="0" name="Layer">5</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="955117545537955" title="OpcoesSMBR">
+                            <sub-events>
+                                <event-block sid="694776136803504">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="624764809058522" type="Touch">
+                                            <param id="0" name="Object">OBJ_Full</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="637930640590529" type="OBJ_Full">
+                                            <param id="0" name="Instance variable">OptSMBR</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="231963186950472" type="System">
+                                            <param id="0" name="Variable">NG</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="956634951377053" type="System">
+                                            <param id="0" name="Variable">Checkp_Y</param>
+                                            <param id="1" name="Value">448</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="969081023248027" type="System">
+                                            <param id="0" name="Variable">Checkp_X</param>
+                                            <param id="1" name="Value">80</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="460415448061107" type="System">
+                                            <param id="0" name="Time scale">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="811594695562330" type="System">
+                                            <param id="0" name="Variable">anim</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="716166095819278" type="System">
+                                            <param id="0" name="Variable">camera</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="686922671924734" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="198582962453609" type="OBJ_UI_Pause">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="757170763410483" type="OBJ_DarkTST" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="251903025813548">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="197716661223960" type="Touch">
+                                            <param id="0" name="Object">OBJ_Full</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="344434401420937" type="OBJ_Full">
+                                            <param id="0" name="Instance variable">OptSMBR</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="960188307385432" type="System">
+                                            <param id="0" name="Variable">NG</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="698160793765061" type="System">
+                                            <param id="0" name="Variable">Checkp_Y</param>
+                                            <param id="1" name="Value">448</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="931636773804953" type="System">
+                                            <param id="0" name="Variable">Checkp_X</param>
+                                            <param id="1" name="Value">80</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="428463886502021" type="System">
+                                            <param id="0" name="Time scale">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="746917070923695" type="System">
+                                            <param id="0" name="Variable">anim</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="269566180533143" type="System">
+                                            <param id="0" name="Variable">camera</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="323170494727413" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="676911012521257" type="OBJ_UI_Pause">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="714289413553451" type="OBJ_DarkTST" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+                <event-block sid="405591742162379">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="129878199336068" type="System">
+                            <param id="0" name="Layer">5</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="412530781239095" type="OBJ_DarkTST">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-group description="" sid="878665502057849" title="OpcoesSMBR2">
+                            <sub-events>
+                                <event-block sid="477339541486956">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="494319379592531" type="Touch">
+                                            <param id="0" name="Object">OBJ_Full</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="259340755759220" type="OBJ_Full">
+                                            <param id="0" name="Instance variable">OptSMBR</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="596756327268361" type="System">
+                                            <param id="0" name="Layer">5</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="666753297623226">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="477395869299491" type="Touch">
+                                            <param id="0" name="Object">OBJ_Full</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="501714286024153" type="OBJ_Full">
+                                            <param id="0" name="Instance variable">OptSMBR</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="195334902243006" type="System">
+                                            <param id="0" name="Variable">EX</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="557235153204932" type="OBJ_DarkTST" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="896434251244687">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="152030206056676" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="675040948064006" type="System">
+                    <param id="0" name="Variable">Moeda</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="480195638182427" type="System">
+                    <param id="0" name="Variable">MoedaPF</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="327637567180077" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="406091442577609" type="System">
+                    <param id="0" name="Variable">ScorePF</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="445529705543742" type="System">
+                    <param id="0" name="Layer">5</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="6" name="Stop" sid="224824517176995" type="Audio">
+                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                </action>
+                <action id="0" name="Set RichPresence" sid="479298272059445" type="DiscordRPC">
+                    <param id="0" name="state">&quot;No menu inicial do SMBR&quot;</param>
+                    <param id="1" name="details">&quot;Pensando se vai jogar SMBR ou não&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;icone_smbrg_disc&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run Gold&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;smbr_0&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Super Mario Bros. Run&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="251286827841615">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="871522742147980" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="235874709855617" type="System">
+                    <param id="0" name="Variable">NG</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="692581335740378" type="System">
+                    <param id="0" name="Variable">EX</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

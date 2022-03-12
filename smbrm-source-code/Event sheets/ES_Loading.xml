@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Loading</name>
+    <events>
+        <event-block sid="461196427507336">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="891468194654535" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="575227535902403" type="OBJ_Loader">
+                    <param id="0" name="Width">OBJ_Loader.Width+20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="669538153964397">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="180275540088043" type="OBJ_Loader">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Width">OBJ_Load_Anim.X+36</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="592875806108244" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="147028326356361" type="OBJ_Loader" />
+            </actions>
+        </event-block>
+        <event-block sid="843506694108384">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="487032910142854" type="OBJ_Loader" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="422901043642533" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="445748674383429" type="OBJ_Load_Anim">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="338282377566260" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="532606880907028" type="OBJ_Dark" />
+            </actions>
+        </event-block>
+        <event-block sid="770544118312866">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="823222961255658" type="OBJ_Dark" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="242242148588635" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="995263417804092" type="System">
+                    <param id="0" name="Layout">LS_Loading_SMBRM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="718369348531219">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="706829342758063" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="803323668931507" type="Mouse">
+                    <param id="0" name="Sprite">CUR_Default</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="511014286573564" title="voll">
+            <sub-events>
+                <event-block sid="646132424495977">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="669773588501134" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="732096835115206" type="LocalStorage">
+                            <param id="0" name="Key">&quot;vol&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="764038643836254">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="222002173682042" type="LocalStorage">
+                            <param id="0" name="Key">&quot;vol&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="734391183536685" type="LocalStorage">
+                            <param id="0" name="Key">&quot;vol&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="776266909450045">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="883183787397944" type="LocalStorage">
+                            <param id="0" name="Key">&quot;vol&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Set master volume" sid="607699196816642" type="Audio">
+                            <param id="0" name="dB">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="869827424334418" type="System">
+                            <param id="0" name="Variable">vol</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="750048592703128" title="full">
+            <sub-events>
+                <event-block sid="814919947212118">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="898993094028983" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="524463230745303" type="LocalStorage">
+                            <param id="0" name="Key">&quot;fs&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="795657248056143">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="698635810611830" type="LocalStorage">
+                            <param id="0" name="Key">&quot;fs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="980915778089823" type="LocalStorage">
+                            <param id="0" name="Key">&quot;fs&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="996018376280170">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="214657017270336" type="LocalStorage">
+                            <param id="0" name="Key">&quot;fs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="287359138130093" type="System">
+                            <param id="0" name="Variable">fullscreen</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="216170995854029">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="915238730704191" type="System">
+                    <param id="0" name="Variable">fullscreen</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Cancel fullscreen" sid="438672261681902" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="317843372420608">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="113595222533342" type="System">
+                    <param id="0" name="Variable">fullscreen</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="235228086034433" type="Browser">
+                    <param id="0" name="Mode">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="398552741176307">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="700084041333109" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;LS_Loading_SMBR&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="659416995146310" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-43" name="Go to next/previous layout" sid="769719954332804" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="843097985568584">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="506081848246405" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;LS_Loading_SMBRM&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="280279817807926" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="810574900422578" type="System">
+                    <param id="0" name="Layout">LS_TelaInicial_SMBRM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="927767908100672" title="MMSC">
+            <sub-events>
+                <event-block sid="879744270778383">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="600410295115892" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="260901176758710" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="475608573266599">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="317127188997100" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="935951016334906" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="839645052611948">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="905137506860113" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="487678085590212" type="System">
+                            <param id="0" name="Variable">MMSC</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="202079589651758" title="asb">
+            <sub-events>
+                <event-block sid="409869255280747">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="760655776180888" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="695507669981562" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="337801658548003">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="338126449736723" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="462967947248763" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="906891047205529">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="528700621466256" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="413021451946957" type="System">
+                            <param id="0" name="Variable">AUTOSAVEBCKUP</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="902660907875967" title="FXX">
+            <sub-events>
+                <event-block sid="260023669139445">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="717569146316657" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="864063475094950" type="LocalStorage">
+                            <param id="0" name="Key">&quot;FX&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390632364964602">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="276012351501633" type="LocalStorage">
+                            <param id="0" name="Key">&quot;FX&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="397470596217333" type="LocalStorage">
+                            <param id="0" name="Key">&quot;FX&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="438238178588826">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="582229240033152" type="LocalStorage">
+                            <param id="0" name="Key">&quot;FX&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="335270745948274" type="System">
+                            <param id="0" name="Variable">FX</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="136089103408225" title="versão">
+            <sub-events>
+                <event-block sid="233718228314464">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="259201446862575" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="649429307216662" type="OBJ_Version">
+                            <param id="0" name="Text">projectversion</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="876099409177467">
+            <conditions>
+                <condition id="-27" inverted="1" name="Effects are supported" sid="686568824775588" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="823306185145967" type="System">
+                    <param id="0" name="Variable">FX</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="700617967738451" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="0" name="Set item" sid="947909269587129" type="LocalStorage">
+                    <param id="0" name="Key">&quot;FX&quot;</param>
+                    <param id="1" name="Value">FX</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_CFGS</name>
+    <events>
+        <variable constant="0" name="FX" sid="240143254381776" static="0" type="number">1</variable>
+        <variable constant="0" name="MMSC" sid="819205772822607" static="0" type="number">0</variable>
+        <variable constant="0" name="CCFG" sid="839805034236445" static="0" type="number">0</variable>
+        <variable constant="0" name="AUTOSAVEBCKUP" sid="872906853247334" static="0" type="number">0</variable>
+        <variable constant="0" name="vol" sid="253356529761208" static="0" type="number">0</variable>
+        <variable constant="0" name="fullscreen" sid="880741397897416" static="0" type="number">0</variable>
+        <event-group description="" sid="564099107434841" title="volume mute">
+            <sub-events>
+                <event-block sid="316572971526589">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="796448043233978" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Set master volume" sid="931693906606633" type="Audio">
+                            <param id="0" name="dB">OBJ_Volume.Value</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635060355163142">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="524234411510309" type="OBJ_Volume">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="542748199517111" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="682717881045638">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="271848368241935" type="OBJ_Volume">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Value">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="429216953125148" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="973870016229631" title="screen">
+            <sub-events>
+                <event-block sid="337184309501787">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="623301868097633" type="Touch">
+                            <param id="0" name="Object">OBJ_Full</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="723500455920022" type="OBJ_Full">
+                            <param id="0" name="Instance variable">OptSMBR</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="945518284480476">
+                            <conditions>
+                                <condition id="10" name="Is fullscreen" sid="766723673596040" type="Browser" />
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Cancel fullscreen" sid="902794272932066" type="Browser" />
+                                <action id="-9" name="Set value" sid="974051730860412" type="System">
+                                    <param id="0" name="Variable">fullscreen</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="550510574781867">
+                            <conditions>
+                                <condition id="10" inverted="1" name="Is fullscreen" sid="419456531544289" type="Browser" />
+                            </conditions>
+                            <actions>
+                                <action id="10" name="Request fullscreen" sid="926528853104549" type="Browser">
+                                    <param id="0" name="Mode">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="217292928182357" type="System">
+                                    <param id="0" name="Variable">fullscreen</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="163284351807311" title="vol">
+            <sub-events>
+                <event-block sid="288123785606502">
+                    <conditions>
+                        <condition id="2" name="On changed" sid="273015762420838" type="OBJ_Volume" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="566299743971005" type="LocalStorage">
+                            <param id="0" name="Key">&quot;vol&quot;</param>
+                            <param id="1" name="Value">OBJ_Volume.Value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="913196065943569" type="System">
+                            <param id="0" name="Variable">vol</param>
+                            <param id="1" name="Value">OBJ_Volume.Value</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="997314380436964">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="948284555593921" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set value" sid="719774615626876" type="OBJ_Volume">
+                            <param id="0" name="Value">vol</param>
+                        </action>
+                        <action id="10" name="Set master volume" sid="333902851439253" type="Audio">
+                            <param id="0" name="dB">vol</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="524390274466368">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="806174840933947" type="System">
+                    <param id="0" name="Variable">fullscreen</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="108498165113022" type="LocalStorage">
+                    <param id="0" name="Key">&quot;fs&quot;</param>
+                    <param id="1" name="Value">&quot;0&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="806741141005362">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="392481663355689" type="System">
+                    <param id="0" name="Variable">fullscreen</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="942596629255286" type="LocalStorage">
+                    <param id="0" name="Key">&quot;fs&quot;</param>
+                    <param id="1" name="Value">&quot;1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="376097657412224">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="946979918457215" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set RichPresence" sid="803363228250457" type="DiscordRPC">
+                    <param id="0" name="state">&quot;Configurações do SMBRM&quot;</param>
+                    <param id="1" name="details">&quot;Configurando o SMBRM&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;icone_smbrg_disc&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run Maker!&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;menu_0&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Super Mario Bros. Run Maker!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="150360581847969" title="Auto Save Backup">
+            <sub-events>
+                <event-block sid="626068177439293">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="514633076644684" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="224602942196030">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="799803068190926" type="System">
+                                    <param id="0" name="Variable">AUTOSAVEBCKUP</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set checked" sid="417470553594615" type="BTTN_ASB">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="155406755627060">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="109575283751954" type="System">
+                                    <param id="0" name="Variable">AUTOSAVEBCKUP</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set checked" sid="591469869451873" type="BTTN_ASB">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="987336369538293">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="760589025482978" type="BTTN_ASB" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="652288974027065" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="226339205354264">
+                            <conditions>
+                                <condition id="1" name="Is checked" sid="120567482191134" type="BTTN_ASB" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="783359322500674" type="System">
+                                    <param id="0" name="Variable">AUTOSAVEBCKUP</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="539948970616064" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="593381598054484" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;ASB&quot;</param>
+                                    <param id="1" name="Value">AUTOSAVEBCKUP</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="350872217976018">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is checked" sid="587208329952992" type="BTTN_ASB" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="172173983334123" type="System">
+                                    <param id="0" name="Variable">AUTOSAVEBCKUP</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="376814148137740" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="917536893063668" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;ASB&quot;</param>
+                                    <param id="1" name="Value">AUTOSAVEBCKUP</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="102355612190204" title="Modo Musica">
+            <sub-events>
+                <event-block sid="850168919755659">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="367471050947391" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="782923387954867">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="403170511663358" type="System">
+                                    <param id="0" name="Variable">MMSC</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set checked" sid="789539475662590" type="BTTN_MMSC">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="155054501751357">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="107253154004473" type="System">
+                                    <param id="0" name="Variable">MMSC</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set checked" sid="531853068759179" type="BTTN_MMSC">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="967153915616553">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="547001598420704" type="BTTN_MMSC" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="658418556979091" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="237312983369482">
+                            <conditions>
+                                <condition id="1" name="Is checked" sid="151737061404477" type="BTTN_MMSC" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="217993404584542" type="System">
+                                    <param id="0" name="Variable">MMSC</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="380369214658515" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="202956887093454" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;MMSC&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="982910923549434">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is checked" sid="271979791943119" type="BTTN_MMSC" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="522774304802886" type="System">
+                                    <param id="0" name="Variable">MMSC</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="383750809960682" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="748280418512033" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;MMSC&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="383261278515303" title="Creditos">
+            <sub-events>
+                <event-block sid="473688819111190">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="397392434533879" type="Touch">
+                            <param id="0" name="Object">OBJ_Full</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="140651161241086" type="OBJ_Full">
+                            <param id="0" name="Instance variable">OptSMBR</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="480651779658236" type="System">
+                            <param id="0" name="Layout">LT_Creditos</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="148647634582785" title="hoverCFG">
+            <sub-events>
+                <event-group description="" sid="902505301924150" title="PC">
+                    <sub-events>
+                        <event-block sid="357977093435586">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="704626031918824" type="Mouse">
+                                    <param id="0" name="Object">OBJ_Full</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="956838054108588" type="OBJ_Full">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="827437619101794">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="146659518003697" type="Mouse">
+                                    <param id="0" name="Object">OBJ_Full</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="242191356323028" type="OBJ_Full">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="986541883940279">
+            <conditions>
+                <condition id="17" name="On tap object" sid="598509119661151" type="Touch">
+                    <param id="0" name="Object">OBJ_Back</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="529230073366837" type="System">
+                    <param id="0" name="Layout">LS_TelaInicial_SMBRM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="288584372781227" title="FX">
+            <sub-events>
+                <event-block sid="355842469330799">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="611217158781898" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="980174942120476">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="692899725293078" type="System">
+                                    <param id="0" name="Variable">FX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set checked" sid="967755429919983" type="BTTN_EFF">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="215863766101562">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="647712065154541" type="System">
+                                    <param id="0" name="Variable">FX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set checked" sid="402057193582256" type="BTTN_EFF">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="807707618143718">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="884592892810039" type="BTTN_EFF" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="201257821468572" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="657978670401112">
+                            <conditions>
+                                <condition id="1" name="Is checked" sid="343750858933739" type="BTTN_EFF" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="258519101709437" type="System">
+                                    <param id="0" name="Variable">FX</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="786093789427430" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="855859907356584" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;FX&quot;</param>
+                                    <param id="1" name="Value">FX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="554254469108412">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is checked" sid="724868440114673" type="BTTN_EFF" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="597561816449905" type="System">
+                                    <param id="0" name="Variable">FX</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="328750005075712" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="427306868450782" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;FX&quot;</param>
+                                    <param id="1" name="Value">FX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="647006774570713">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="248196672254359" type="System" />
+                        <condition id="-27" inverted="1" name="Effects are supported" sid="226013770435427" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="861772112086634" type="TXT_TXT">
+                            <param id="0" name="Instance variable">fct</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Ativar efeitos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="465108713164855" type="TXT_TXT">
+                            <param id="0" name="Text">&quot;(Opção desativada, efeitos não são suportados.)&quot;</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="664478457588798" type="BTTN_EFF">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="6" name="Set checked" sid="501339251840336" type="BTTN_EFF">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="135761164400017" type="System">
+                            <param id="0" name="Variable">FX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="242729140884850" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Set item" sid="432276298121724" type="LocalStorage">
+                            <param id="0" name="Key">&quot;FX&quot;</param>
+                            <param id="1" name="Value">FX</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

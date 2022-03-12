@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_PIPE</name>
+    <events>
+        <event-group description="" sid="675367293469243" title="Pipe">
+            <sub-events>
+                <event-block sid="673517322120722">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="641425590281858" type="OBJ_Pipe">
+                            <param id="0" name="Object">OBJ_Pipe</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">2</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="117827591901779" type="System">
+                            <param id="0" name="Object">OBJ_Pipe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="139318543835585" type="OBJ_Pipe">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="110401101693867">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="181580068510918" type="OBJ_Pipe">
+                            <param id="0" name="Object">OBJ_Pipe</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="823881051233549" type="System">
+                            <param id="0" name="Object">OBJ_Pipe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="476435575320718" type="OBJ_Pipe">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="757629539771871">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="290208900964270" type="OBJ_Pipe">
+                            <param id="0" name="Object">OBJ_Pipe</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-2</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="979688116329764" type="System">
+                            <param id="0" name="Object">OBJ_Pipe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="507928277242674" type="OBJ_Pipe">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

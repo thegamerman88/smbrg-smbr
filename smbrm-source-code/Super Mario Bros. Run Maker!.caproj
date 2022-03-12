@@ -1,0 +1,2471 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Super Mario Bros. Run Maker!</name>
+    <description>SMB fangame</description>
+    <version>Alpha 0.12.1</version>
+    <author>thegamerman88</author>
+    <author-email>leoluniere@outlook.com</author-email>
+    <author-website>http://</author-website>
+    <app-id>dev.thegamerman88.smbrm</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="PlayLive" id="HTML_iFrame" version="1.419999957">HTML | iFrame</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
+        <plugin author="Andrews Vinícius &amp; nickersoft" id="PushJs" version="1">PushJs</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_SimulateInput" version="0.100000001">Simulate key event</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="UserMedia" version="1">User Media</plugin>
+        <plugin author="Eren Ertuğrul" id="eren_DiscordRPC" version="1">DiscordRPC</plugin>
+        <plugin author="Scirra" id="filechooser" version="1">File chooser</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="McKack" id="mck_import" version="1.100000024">Import</plugin>
+        <plugin author="Rex.Rainbow" id="rex_TouchWrap" version="0.100000001">Touch wrap</plugin>
+        <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Jorge Popoca" id="PlatformPlus" version="1.5">PlatformPlus</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_Button2" version="0.100000001">Button</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_Platform_MoveTo" version="0.100000001">Platform MoveTo</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_text_scrolling" version="1">Scrolling</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+        <behavior author="Rex.Rainbow" id="rex_Anchor_mod" version="1">Anchor mod</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
+        <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
+        <effect author="Scirra" id="divide">Divide</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>LT_Intro</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">Custom</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Global_Plugins">
+            <object-type name="Browser" sid="439382679265967">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="586429533157074">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Gamepad" sid="526459770487783">
+                <plugin id="gamepad" />
+            </object-type>
+            <object-type name="Keyboard" sid="803720890663901">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Audio" sid="754894528830323">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Touch" sid="136798730973839">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Mouse" sid="134439956900440">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="TouchWrap" sid="363814891920111">
+                <plugin id="rex_TouchWrap" />
+            </object-type>
+            <object-type name="AJAX" sid="528962563925167">
+                <plugin id="AJAX" />
+            </object-type>
+            <object-type name="DiscordRPC" sid="779889848996925">
+                <plugin id="eren_DiscordRPC" />
+            </object-type>
+            <object-type name="NWjs" sid="764275636281851">
+                <plugin id="NodeWebkit" />
+            </object-type>
+            <object-type name="LocalStorage" sid="625108698426466">
+                <plugin id="LocalStorage" />
+            </object-type>
+            <object-type name="PushJs" sid="865967080785792">
+                <plugin id="PushJs" />
+            </object-type>
+            <object-type global="1" name="Date" sid="774368995193994">
+                <plugin id="Rex_Date" />
+            </object-type>
+            <object-type name="UserMedia" sid="194848422320479">
+                <plugin id="UserMedia" />
+            </object-type>
+            <object-type name="SimulateKeyEvent" sid="824490748153758">
+                <plugin id="Rex_SimulateInput" />
+            </object-type>
+            <object-type global="1" name="Import" sid="882148618566554">
+                <plugin id="mck_import" />
+            </object-type>
+        </object-folder>
+        <object-folder name="IN-Gameplay">
+            <object-folder name="Inimigos">
+                <object-type name="OBJ_Goomba" sid="992865629879113">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="walkto" sid="505167043275908" type="string" />
+                        <instance-variable name="OrX" sid="978754387230512" type="number" />
+                        <instance-variable name="OrY" sid="372536887831698" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Platform" sid="363154643081021">
+                            <behavior id="Platform" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="209737143326494">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="330770787312953" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.0625" y="0" />
+                                    <point x="0.9375" y="0" />
+                                    <point x="0.9375" y="0.99375" />
+                                    <point x="0.0625" y="0.99375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.0625" y="0" />
+                                    <point x="0.9375" y="0" />
+                                    <point x="0.9375" y="0.99375" />
+                                    <point x="0.0625" y="0.99375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="506064070814630" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Inimigos (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.0625" y="0" />
+                                    <point x="0.9375" y="0" />
+                                    <point x="0.9375" y="0.99375" />
+                                    <point x="0.0625" y="0.99375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="walk_UG" pingpong="0" repeatcount="1" repeatto="0" sid="930607442546517" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.0625" y="0" />
+                                    <point x="0.9375" y="0" />
+                                    <point x="0.9375" y="0.99375" />
+                                    <point x="0.0625" y="0.99375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.0625" y="0" />
+                                    <point x="0.9375" y="0" />
+                                    <point x="0.9375" y="0.99375" />
+                                    <point x="0.0625" y="0.99375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="dead_UG" pingpong="0" repeatcount="1" repeatto="0" sid="353067072806556" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.0625" y="0" />
+                                    <point x="0.9375" y="0" />
+                                    <point x="0.9375" y="0.99375" />
+                                    <point x="0.0625" y="0.99375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Player">
+                <object-type name="OBJ_Player" sid="810214023234356">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Dir" sid="633621658759825" type="string" />
+                        <instance-variable name="Walk_run" sid="822014775135178" type="boolean" />
+                        <instance-variable name="play" sid="868429649668731" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="PlatformPlus" sid="882345171255473">
+                            <behavior id="PlatformPlus" />
+                        </behavior-type>
+                        <behavior-type name="Flash" sid="761512354036545">
+                            <behavior id="Flash" />
+                        </behavior-type>
+                        <behavior-type name="8Direction" sid="273311933014157">
+                            <behavior id="EightDir" />
+                        </behavior-type>
+                        <behavior-type name="DragDrop" sid="350787207738863">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="907496462487405">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Anim_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="248445185612714" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="1" name="Anim_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="677203438385129" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Anim_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="720576426999433" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="MG_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="470599235304911" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="1" name="MG_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="729390187243679" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="MG_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="102400825088972" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.09375" />
+                                    <point x="0.84375" y="0.09375" />
+                                    <point x="0.84375" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Cam" sid="437196402586891">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="ScrollTo" sid="694961190241451">
+                            <behavior id="scrollto" />
+                        </behavior-type>
+                        <behavior-type name="8Direction" sid="797893844378896">
+                            <behavior id="EightDir" />
+                        </behavior-type>
+                        <behavior-type name="PlatformMoveTo" sid="325769841111430">
+                            <behavior id="Rex_Platform_MoveTo" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="959246338603897">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="127755476589907" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Elementos">
+                <object-folder name="BG">
+                    <object-type name="OBJ_Clouds" sid="457904127115495">
+                        <plugin id="TiledBg" />
+                        <behaviors>
+                            <behavior-type name="Wrap" sid="613755807762646">
+                                <behavior id="wrap" />
+                            </behavior-type>
+                            <behavior-type name="NoSave" sid="929442758015276">
+                                <behavior id="NoSave" />
+                            </behavior-type>
+                            <behavior-type name="Persist" sid="270517639148390">
+                                <behavior id="Persist" />
+                            </behavior-type>
+                        </behaviors>
+                        <texture original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\nuvens.png" />
+                    </object-type>
+                    <object-type name="OBJ_Mountains" sid="191407945321631">
+                        <plugin id="TiledBg" />
+                        <behaviors>
+                            <behavior-type name="NoSave" sid="480922223550416">
+                                <behavior id="NoSave" />
+                            </behavior-type>
+                            <behavior-type name="Wrap" sid="589941789450310">
+                                <behavior id="wrap" />
+                            </behavior-type>
+                        </behaviors>
+                        <texture original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Background.png" />
+                    </object-type>
+                    <object-type name="OBJ_Mountains2" sid="843926871533944">
+                        <plugin id="TiledBg" />
+                        <behaviors>
+                            <behavior-type name="NoSave" sid="375896114297322">
+                                <behavior id="NoSave" />
+                            </behavior-type>
+                            <behavior-type name="Wrap" sid="993839012213451">
+                                <behavior id="wrap" />
+                            </behavior-type>
+                        </behaviors>
+                        <texture original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Background.png" />
+                    </object-type>
+                    <object-type name="OBJ_Mountains3" sid="291309027932352">
+                        <plugin id="TiledBg" />
+                        <behaviors>
+                            <behavior-type name="NoSave" sid="892493681935420">
+                                <behavior id="NoSave" />
+                            </behavior-type>
+                            <behavior-type name="Wrap" sid="489024060433114">
+                                <behavior id="wrap" />
+                            </behavior-type>
+                            <behavior-type name="AnchorMod" sid="282947066328917">
+                                <behavior id="rex_Anchor_mod" />
+                            </behavior-type>
+                        </behaviors>
+                        <texture original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Background.png" />
+                    </object-type>
+                </object-folder>
+                <object-folder name="Tutorial">
+                    <object-type name="TXT_Tutorial" sid="973376031664493">
+                        <plugin id="Spritefont2" />
+                        <texture />
+                    </object-type>
+                </object-folder>
+                <object-folder name="OnOffBlocks">
+                    <object-type name="OBJ_On" sid="405602375496523">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Solid" sid="259627852193717">
+                                <behavior id="solid" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465256181538895" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Paleta.png" />
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Downloads\s.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="OBJ_Off" sid="162691016151816">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Solid" sid="799495438455500">
+                                <behavior id="solid" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="251235455167397" speed="0">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Downloads\s.png" />
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Downloads\s.png" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-folder name="BrickBreak">
+                    <object-type name="BreakableBlock_Particle" sid="626093012426558">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Physics" sid="964824186765564">
+                                <behavior id="Physics" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="2" loop="0" name="OG" pingpong="0" repeatcount="1" repeatto="0" sid="761670492281446" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Paleta2x.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="UG" pingpong="0" repeatcount="1" repeatto="0" sid="369746749967996" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-type name="OBJ_OverWorld" sid="845629314287571">
+                    <plugin id="Tilemap" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="707835636932446">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\chão - Cópia.png" />
+                    <tiles>
+                        <tile id="4">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="5">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="8">
+                            <collision-poly>
+                                <point x="0.5" y="0.5" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="9">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.511719" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                    </tiles>
+                </object-type>
+                <object-type name="OBJ_Coin" sid="101270756063556">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="195991390749095" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="917054888544961" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.25" y="0.1875" />
+                                    <point x="0.75" y="0.1875" />
+                                    <point x="0.75" y="0.9375" />
+                                    <point x="0.25" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Change_Direction_right" sid="588148413985187">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236985863824868" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Downloads\vcslocallymodified_93490.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Change_Direction_left" sid="885779876561381">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298386266558531" speed="5">
+                            <frame duration="1" hotspotX="0.030303" hotspotY="0" original-source="C:\Users\thegamerman88\Downloads\vcslocallymodified_93490.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_LevelStartEnd" sid="974884463152310">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="end" sid="252241059951394" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="401129942758062">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194818646957687" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\inicio&amp;fim.png">
+                                <collision-poly>
+                                    <point x="0.166667" y="0.104167" />
+                                    <point x="0.9375" y="0.104167" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.166667" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TiledBackground" sid="795405904548285">
+                    <plugin id="TiledBg" />
+                    <behaviors>
+                        <behavior-type name="Jumpthru" sid="294093435233574">
+                            <behavior id="jumpthru" />
+                        </behavior-type>
+                        <behavior-type name="MoveTo" sid="751034705684821">
+                            <behavior id="Rex_MoveTo" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="988387704842482">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture />
+                </object-type>
+                <object-type name="OBJ_Mushrom" sid="213638076389838">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Direção" sid="156535228500605" type="string" />
+                        <instance-variable name="OrX" sid="331279830350031" type="number" />
+                        <instance-variable name="OrY" sid="103806118329787" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Platform" sid="459835338667299">
+                            <behavior id="Platform" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="132793194792530" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\52569.png">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Cloud" sid="233023605403992">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Jumpthru" sid="807196596674124">
+                            <behavior id="jumpthru" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650661930032248" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="583537113214032" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_OnOFF" sid="503362389896092">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="398368875691868">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                        <behavior-type name="Solid" sid="664161458323422">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="910639244405773" speed="5">
+                            <frame duration="2" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png" />
+                            <frame duration="2" hotspotX="0" hotspotY="0" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="885875525454314" speed="5">
+                            <frame duration="2" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png" />
+                            <frame duration="2" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Spike" sid="631729962542808">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="856074654947318">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="920979464468673" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.00625" y="0.00625" />
+                                    <point x="0.999375" y="0.000625" />
+                                    <point x="0.999375" y="0.999375" />
+                                    <point x="0.00625" y="0.999375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="660014056383037" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.00625" y="0.00625" />
+                                    <point x="0.999375" y="0.000625" />
+                                    <point x="0.999375" y="0.999375" />
+                                    <point x="0.00625" y="0.999375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Pipe" sid="439055300958424">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="455908728819596">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523031715675274" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\c1.png">
+                                <collision-poly>
+                                    <point x="0.015625" y="0" />
+                                    <point x="0.984375" y="0" />
+                                    <point x="0.984375" y="1" />
+                                    <point x="0.015625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\c2.png">
+                                <collision-poly>
+                                    <point x="0.015625" y="0" />
+                                    <point x="0.984375" y="0" />
+                                    <point x="0.984375" y="1" />
+                                    <point x="0.015625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Ground" sid="670808703399663">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="901233410845614">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="779465285586451" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="347248100118863" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Paleta.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_BBLock" sid="254392077244539">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="611308642840271">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840404676307085" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="646778853727121" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Paleta.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_RampaEqr" sid="528233230003021">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="364374952508626">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148784446612546" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="510661914970787" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_RampaDrt" sid="604834408374151">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="601368009380046">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990923991847957" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="149726409253788" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BreakableBlock" sid="462672977393440">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="257984197837421">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                        <behavior-type name="Solid" sid="211954007047673">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Brick" pingpong="0" repeatcount="1" repeatto="0" sid="209032978294991" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="344374586120514" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Paleta.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="BrokenOG" pingpong="0" repeatcount="1" repeatto="0" sid="931531605630680" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="TL" x="0.3125" y="0.3125" />
+                                <image-point name="TR" x="0.6875" y="0.3125" />
+                                <image-point name="BL" x="0.25" y="0.75" />
+                                <image-point name="BR" x="0.75" y="0.75" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="BrokenUG" pingpong="0" repeatcount="1" repeatto="0" sid="574689815158522" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="TL" x="0.3125" y="0.3125" />
+                                <image-point name="TR" x="0.6875" y="0.3125" />
+                                <image-point name="BL" x="0.25" y="0.75" />
+                                <image-point name="BR" x="0.75" y="0.75" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Ice" sid="787182877361734">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="471685400636489">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="954682661497640" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="535408056117099" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Paleta.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_MovePlatform" sid="600217997949896">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="dir" sid="851882256470170" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Jumpthru" sid="309631087793179">
+                            <behavior id="jumpthru" />
+                        </behavior-type>
+                        <behavior-type name="Sine" sid="320417179148601">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565795753480590" speed="1">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.625" />
+                                    <point x="0" y="0.625" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="Editor" pingpong="0" repeatcount="1" repeatto="0" sid="182694924092263" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="OBJ_Jumper" sid="846117990590797">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="OrX" sid="986376501966354" type="number" />
+                    <instance-variable name="OrY" sid="365224989283561" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="866853782464485">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="847706296291128">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397995525326480" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png">
+                            <collision-poly>
+                                <point x="0.0625" y="0.03125" />
+                                <point x="0.9375" y="0.03125" />
+                                <point x="0.9375" y="0.96875" />
+                                <point x="0.0625" y="0.96875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OBJ_Checkpoint" sid="184923439814581">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="145675119339612" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Downloads\1.png">
+                            <collision-poly>
+                                <point x="0.15625" y="0" />
+                                <point x="0.75" y="0" />
+                                <point x="0.75" y="1" />
+                                <point x="0.15625" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Downloads\2.png">
+                            <collision-poly>
+                                <point x="0.15625" y="0" />
+                                <point x="0.75" y="0" />
+                                <point x="0.75" y="1" />
+                                <point x="0.15625" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Not-In-Gameplay">
+            <object-folder name="menu">
+                <object-type name="SEP" sid="981223274136323">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396535611717522" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Mario_Preview" sid="467953730131826">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Dir" sid="902636175954269" type="string" />
+                        <instance-variable name="Walk_run" sid="500615478339823" type="boolean" />
+                        <instance-variable name="play" sid="613380599055734" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="951338855802873">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Anim_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="479933575468388" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.071875" />
+                                    <point x="0.9375" y="0.071875" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="1" name="Anim_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="931411729368235" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Anim_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="487013153694174" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\Documentos\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="MG_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="233929018294789" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.03125" />
+                                    <point x="0.9375" y="0.03125" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="1" name="MG_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="727917979605688" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.03125" />
+                                    <point x="0.9375" y="0.03125" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.03125" />
+                                    <point x="0.9375" y="0.03125" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.03125" />
+                                    <point x="0.9375" y="0.03125" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="MG_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="101582618239089" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Pessoal (Mario 1).png">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.03125" />
+                                    <point x="0.9375" y="0.03125" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="txt1" sid="393052659881612">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="262717216218285">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901970190140250" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\txt1.png">
+                                <collision-poly>
+                                    <point x="0.00821918" y="0.08" />
+                                    <point x="0.5" y="0.0133333" />
+                                    <point x="0.99589" y="0.04" />
+                                    <point x="0.99589" y="0.493333" />
+                                    <point x="0.963014" y="0.64" />
+                                    <point x="0.5" y="0.666667" />
+                                    <point x="0.0342466" y="0.666667" />
+                                    <point x="0.0369863" y="0.493333" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="txt2" sid="447844913123782">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="680250567681488">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                        <behavior-type name="AnchorMod" sid="181594053875074">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="585539252933486" speed="5">
+                            <frame duration="1" hotspotX="0.502347" hotspotY="0.506667" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\txt2.png">
+                                <collision-poly>
+                                    <point x="0.0140845" y="0.04" />
+                                    <point x="0.962441" y="0.493333" />
+                                    <point x="0.164319" y="0.533333" />
+                                    <point x="0.0140845" y="0.493333" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="discord_button" sid="292976689129407">
+                    <plugin id="Button" />
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="324731488207519">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+            </object-folder>
+            <object-folder name="fasesee">
+                <object-type name="Text" sid="320660030844761">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="loading">
+                <object-type name="OBJ_Load_Anim" sid="950007921542880">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Rotate" sid="161439437838006">
+                            <behavior id="Rotate" />
+                        </behavior-type>
+                        <behavior-type name="AnchorMod" sid="610047012034660">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726232666946975" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Loader" sid="662919795156560">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="587796437644447">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                        <behavior-type name="AnchorMod" sid="229928951600905">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="349407183867065" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_LoadingMario" sid="954005887616862">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="815031750603556" speed="7">
+                            <frame duration="1" hotspotX="0.501818" hotspotY="0.501695" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Projects\SMBRG\sprites\0.png">
+                                <collision-poly>
+                                    <point x="0.269091" y="0.250847" />
+                                    <point x="0.498182" y="0.061017" />
+                                    <point x="0.865455" y="0.125424" />
+                                    <point x="0.810909" y="0.498305" />
+                                    <point x="0.749091" y="0.766102" />
+                                    <point x="0.498182" y="1" />
+                                    <point x="0.123636" y="0.884746" />
+                                    <point x="0.312727" y="0.498305" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501818" hotspotY="0.501695" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Projects\SMBRG\sprites\1.png">
+                                <collision-poly>
+                                    <point x="0.2" y="0.186441" />
+                                    <point x="0.498182" y="0" />
+                                    <point x="0.8" y="0.186441" />
+                                    <point x="0.687273" y="0.498305" />
+                                    <point x="0.730909" y="0.749153" />
+                                    <point x="0.498182" y="1" />
+                                    <point x="0.250909" y="0.766102" />
+                                    <point x="0.185455" y="0.498305" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501818" hotspotY="0.501695" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Projects\SMBRG\sprites\3.png">
+                                <collision-poly>
+                                    <point x="0.2" y="0.186441" />
+                                    <point x="0.498182" y="0" />
+                                    <point x="0.8" y="0.186441" />
+                                    <point x="0.938182" y="0.498305" />
+                                    <point x="0.865455" y="0.874576" />
+                                    <point x="0.498182" y="0.813559" />
+                                    <point x="0.0654545" y="0.938983" />
+                                    <point x="0" y="0.498305" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="intro">
+                <object-type name="TXT_Credits" sid="535151173140846">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="301265153380662">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture />
+                </object-type>
+                <object-type name="TXT_MadeBy" sid="143102857023657">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="351500447845725">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture />
+                </object-type>
+            </object-folder>
+            <object-folder name="CFGS">
+                <object-type name="OBJ_Full" sid="997922340709577">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="OptSMBR" sid="675314033097485" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="151561233293588">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632154546456235" speed="0">
+                            <frame duration="1" hotspotX="0.498039" hotspotY="0.493671" />
+                            <frame duration="1" hotspotX="0.498039" hotspotY="0.493671" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Volume" sid="580925929079026">
+                    <plugin id="sliderbar" />
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="805191110572666">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="BTTN_ASB" sid="391101086188463">
+                    <plugin id="Button" />
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="296467963254770">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="BTTN_MMSC" sid="999364045346474">
+                    <plugin id="Button" />
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="577273943575537">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="BTTN_EFF" sid="595242836370970">
+                    <plugin id="Button" />
+                    <behaviors>
+                        <behavior-type name="AnchorMod" sid="996963695238169">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+            </object-folder>
+            <object-folder name="Creditos">
+                <object-type name="txtc" sid="874673765021758">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="527576043377583">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992769728335997" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\txtc1.png">
+                                <collision-poly>
+                                    <point x="0.00821918" y="0.08" />
+                                    <point x="0.5" y="0.0133333" />
+                                    <point x="0.99589" y="0.04" />
+                                    <point x="0.99589" y="0.493333" />
+                                    <point x="0.963014" y="0.64" />
+                                    <point x="0.5" y="0.666667" />
+                                    <point x="0.0342466" y="0.666667" />
+                                    <point x="0.0369863" y="0.493333" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.502825" hotspotY="0.506667" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\txtc2.png">
+                                <collision-poly>
+                                    <point x="0.0338983" y="0.08" />
+                                    <point x="0.960452" y="0.493333" />
+                                    <point x="0.141243" y="0.666667" />
+                                    <point x="0.0169492" y="0.493333" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="UI">
+            <object-type name="OBJ_UI_Pause" sid="380583953684846">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967935128577113" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\pause.png">
+                            <collision-poly>
+                                <point x="0.044" y="0.044" />
+                                <point x="0.5" y="0.02" />
+                                <point x="0.956" y="0.044" />
+                                <point x="0.98" y="0.5" />
+                                <point x="0.956" y="0.956" />
+                                <point x="0.5" y="0.98" />
+                                <point x="0.044" y="0.956" />
+                                <point x="0.02" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\play.png">
+                            <collision-poly>
+                                <point x="0.044" y="0.044" />
+                                <point x="0.5" y="0.02" />
+                                <point x="0.956" y="0.044" />
+                                <point x="0.98" y="0.5" />
+                                <point x="0.956" y="0.956" />
+                                <point x="0.5" y="0.98" />
+                                <point x="0.044" y="0.956" />
+                                <point x="0.02" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OBJ_Dark" sid="658695573583993">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="800590943957620">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Anchor" sid="851682757036877">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540234590799742" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OBJ_CFGS" sid="650481223595869">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="AnchorMod" sid="983373487574941">
+                        <behavior id="rex_Anchor_mod" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504470951298099" speed="5">
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\smm2pce sprites\images\[6] Menu\[80] [Active] settings-icon\Animation-0 Direction-0 Frame-0.png">
+                            <collision-poly>
+                                <point x="0.0444444" y="0.0444444" />
+                                <point x="0.488889" y="0" />
+                                <point x="0.955556" y="0.0444444" />
+                                <point x="1" y="0.488889" />
+                                <point x="0.955556" y="0.955556" />
+                                <point x="0.488889" y="1" />
+                                <point x="0.0444444" y="0.955556" />
+                                <point x="0" y="0.488889" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TXT_TXT" sid="496941614858871">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="fct" sid="645622280722127" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="AnchorMod" sid="256857081519592">
+                        <behavior id="rex_Anchor_mod" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\thegamerman88\Downloads\aA0uOGV.png" />
+            </object-type>
+            <object-type name="OBJ_Back" sid="931521561094951">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="AnchorMod" sid="803325510402487">
+                        <behavior id="rex_Anchor_mod" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932536202941597" speed="5">
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\smm2pce sprites\images\[7] Info\[99] [Active] Back\Animation-0 Direction-0 Frame-0.png">
+                            <collision-poly>
+                                <point x="0.0444444" y="0.0444444" />
+                                <point x="0.488889" y="0" />
+                                <point x="0.955556" y="0.0444444" />
+                                <point x="1" y="0.488889" />
+                                <point x="0.955556" y="0.955556" />
+                                <point x="0.488889" y="1" />
+                                <point x="0.0444444" y="0.955556" />
+                                <point x="0" y="0.488889" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TXT_TXTWhite" sid="167966351281425">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="Moeda_Score" sid="165379476416448" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="436731683025398">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\thegamerman88\Downloads\aA0uOGV.png" />
+            </object-type>
+            <object-type name="OBJ_HoverMenu" sid="436221331802736">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="370180964559025" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OBJ_SMBRLOGO" sid="835306058514197">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720567549385705" speed="0">
+                        <frame duration="1" hotspotX="0.500605" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Sprite-0002.png">
+                            <collision-poly>
+                                <point x="0.00604595" y="0.0113636" />
+                                <point x="0.995163" y="0.00909091" />
+                                <point x="0.995163" y="0.990909" />
+                                <point x="0.00604595" y="0.988636" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.500605" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Sprite-0001.png">
+                            <collision-poly>
+                                <point x="0.00604595" y="0.0113636" />
+                                <point x="0.995163" y="0.00909091" />
+                                <point x="0.995163" y="0.990909" />
+                                <point x="0.00604595" y="0.988636" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PSM_OPT" sid="468665510917382">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="opt" sid="553344024163081" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="AnchorMod" sid="185908489555049">
+                        <behavior id="rex_Anchor_mod" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852509623561487" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Run" sid="103138956610754">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270215874521524" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TXT_ScorePopUp" sid="584470816841552">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="Moeda_Score" sid="835826086962523" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="231719107530478">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\thegamerman88\Downloads\aA0uOGV.png" />
+            </object-type>
+            <object-type name="OBJ_DarkTST" sid="484879077047889">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="719549486334489">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="AnchorMod" sid="976516945865212">
+                        <behavior id="rex_Anchor_mod" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511130305465618" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="SMBRM">
+            <object-folder name="UI">
+                <object-folder name="Block_Select">
+                    <object-type name="OBJ_BG_Item" sid="105662511622779">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Pin" sid="152682593652336">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                            <behavior-type name="NoSave" sid="970893196445851">
+                                <behavior id="NoSave" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450524967598245" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="OBJ_Item_Preview" sid="302711382338623">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="Frame" sid="845727284293157" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="183983561238466">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                            <behavior-type name="NoSave" sid="562215753812402">
+                                <behavior id="NoSave" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="28" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445223702324869" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.53125" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\52569.png">
+                                    <collision-poly>
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="0.796875" />
+                                        <point x="1" y="1" />
+                                        <point x="1" y="1" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.529412" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1).png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Paleta2x.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\Qual Mario-\Mario\Smb1\Coisas (Mario 1)2x.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Downloads\vcslocallymodified_93490.png">
+                                    <collision-poly>
+                                        <point x="0.9375" y="0.5" />
+                                        <point x="0.8125" y="0.8125" />
+                                        <point x="0.5" y="0.9375" />
+                                        <point x="0.1875" y="0.8125" />
+                                        <point x="0.0625" y="0.5" />
+                                        <point x="0.1875" y="0.1875" />
+                                        <point x="0.5" y="0.0625" />
+                                        <point x="0.8125" y="0.1875" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Downloads\vcslocallymodified_93490.png">
+                                    <collision-poly>
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="17" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="122075916529277" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.53125" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="0.796875" />
+                                        <point x="1" y="1" />
+                                        <point x="1" y="1" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                        <point x="0" y="1" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.529412" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-type name="OBJ_Dock" sid="158724364481182">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="MoveTo" sid="430159876165388">
+                            <behavior id="Rex_MoveTo" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="691560985300462">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                        <behavior-type name="AnchorMod" sid="164893359853046">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="950162098307871" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Grid" sid="597946077146715">
+                    <plugin id="TiledBg" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="404918096587863">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\thegamerman88\OneDrive\Imagens\grid.png" />
+                </object-type>
+                <object-type name="OBJ_Selector" sid="192868997577042">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160134805713562" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Play" sid="472616198891589">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Button" sid="475522063666215">
+                            <behavior id="Rex_Button2" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="326985960149920">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                        <behavior-type name="AnchorMod" sid="398136025758288">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="887817458800656" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\PlaySMBRM.png">
+                                <collision-poly>
+                                    <point x="0.02" y="0.5" />
+                                    <point x="0.044" y="0.044" />
+                                    <point x="0.5" y="0.02" />
+                                    <point x="0.956" y="0.044" />
+                                    <point x="0.98" y="0.5" />
+                                    <point x="0.956" y="0.956" />
+                                    <point x="0.5" y="0.98" />
+                                    <point x="0.044" y="0.956" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\SMBRG\EditSMBRM.png">
+                                <collision-poly>
+                                    <point x="0.02" y="0.5" />
+                                    <point x="0.044" y="0.044" />
+                                    <point x="0.5" y="0.02" />
+                                    <point x="0.956" y="0.044" />
+                                    <point x="0.98" y="0.5" />
+                                    <point x="0.956" y="0.956" />
+                                    <point x="0.5" y="0.98" />
+                                    <point x="0.044" y="0.956" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_DeleteEverything" sid="764607061141053">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="512231289830998">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932594781256640" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Downloads\Sem Título-1.png">
+                                <collision-poly>
+                                    <point x="0.102564" y="0.0909091" />
+                                    <point x="0.5" y="0.0454545" />
+                                    <point x="0.897436" y="0.0909091" />
+                                    <point x="0.884615" y="0.897727" />
+                                    <point x="0.5" y="0.954545" />
+                                    <point x="0.115385" y="0.897727" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_LevelSelector" sid="104896490057889">
+                    <plugin id="filechooser" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="911281273482811">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="OBJ_Save" sid="332565659927070">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="532568446012787">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="471414811071678">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="200706683261945" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.491228" original-source="C:\Users\thegamerman88\Downloads\mediafloppy_92583.png">
+                                <collision-poly>
+                                    <point x="0.0535714" y="0.0526316" />
+                                    <point x="0.5" y="0.0350877" />
+                                    <point x="0.946429" y="0.0526316" />
+                                    <point x="0.964286" y="0.491228" />
+                                    <point x="0.946429" y="0.929825" />
+                                    <point x="0.5" y="0.947368" />
+                                    <point x="0.0535714" y="0.929825" />
+                                    <point x="0.0357143" y="0.491228" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Load" sid="993343988547328">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="591347684531540">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="650656698835550">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733844258731898" speed="5">
+                            <frame duration="1" hotspotX="0.518519" hotspotY="0.48" original-source="C:\Users\thegamerman88\Downloads\folderblueopen_93431.png">
+                                <collision-poly>
+                                    <point x="0.111111" y="0.04" />
+                                    <point x="0.518519" y="0.12" />
+                                    <point x="0.851852" y="0.12" />
+                                    <point x="0.962963" y="0.48" />
+                                    <point x="0.925926" y="0.92" />
+                                    <point x="0.111111" y="0.92" />
+                                    <point x="0.037037" y="0.48" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Erase" sid="677854169379627">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="190630945995121">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                        <behavior-type name="Pin" sid="288706302120164">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="169324713459554" speed="0">
+                            <frame duration="1" hotspotX="0.508197" hotspotY="0.507246" original-source="C:\Program Files\Construct 2\selectpattern.png" />
+                            <frame duration="1" hotspotX="0.508197" hotspotY="0.507246" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_DockBlur" sid="510342335400009">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="812339888777968">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                        <behavior-type name="Pin" sid="656386125735134">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <effects>
+                        <effect-type name="Divide">
+                            <effect id="divide" />
+                        </effect-type>
+                        <effect-type name="BlurHorizontal">
+                            <effect id="blurhorizontal" />
+                        </effect-type>
+                        <effect-type name="BlurVertical">
+                            <effect id="blurvertical" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312233891154275" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_CameraPrint" sid="146071078082183">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="490269207965101">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="110111822917221" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.510638" original-source="C:\Users\thegamerman88\Downloads\cameraphoto_92604.png">
+                                <collision-poly>
+                                    <point x="0.125" y="0.0638298" />
+                                    <point x="0.857143" y="0.0851064" />
+                                    <point x="0.964286" y="0.510638" />
+                                    <point x="0.857143" y="0.93617" />
+                                    <point x="0.142857" y="0.93617" />
+                                    <point x="0.0357143" y="0.510638" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_ThemeSel" sid="492459051680454">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="403646850159321">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="616330281534615" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\thegamerman88\Meu Drive\Construct_2_Files\Sprites\sheets\164185.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OBJ_Selector2" sid="755707690066242">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="369937383336929" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Menu">
+                <object-type name="OBJ_GroundMenu" sid="848180336419242">
+                    <plugin id="TiledBg" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="189324572698402">
+                            <behavior id="solid" />
+                        </behavior-type>
+                        <behavior-type name="Wrap" sid="246500965239153">
+                            <behavior id="wrap" />
+                        </behavior-type>
+                        <behavior-type name="AnchorMod" sid="407190915563499">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\tilemap_smm2.png" />
+                </object-type>
+                <object-type name="OBJ_GroundMenu2" sid="187370157537180">
+                    <plugin id="TiledBg" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="838053256515899">
+                            <behavior id="solid" />
+                        </behavior-type>
+                        <behavior-type name="Wrap" sid="582089065906489">
+                            <behavior id="wrap" />
+                        </behavior-type>
+                        <behavior-type name="AnchorMod" sid="435397475746390">
+                            <behavior id="rex_Anchor_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\tilemap_smm2.png" />
+                </object-type>
+            </object-folder>
+            <object-type name="OBJ_Default_Ground" sid="337402284519478">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="277530177427090">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="982981069256278">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\tilemap_smm2.png" />
+            </object-type>
+            <object-type name="OBJ_Restrict" sid="518346460785093">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="920804641587228" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OBJ_Default_Ground2" sid="886868918230835">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="145957687772949">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\tilemap_smm2.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Cursors">
+            <object-folder name="SMBRM">
+                <object-type name="CUR_Idle_Maker" sid="536173654187822">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="133110724199893" speed="5">
+                            <frame duration="1" hotspotX="0.275362" hotspotY="0.231884" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CUR_Click_Maker" sid="562132617732809">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237755470920029" speed="5">
+                            <frame duration="1" hotspotX="0.275362" hotspotY="0.231884" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CUR_Erase_Maker" sid="682821612689774">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187984359424991" speed="2">
+                            <frame duration="1" hotspotX="0.377049" hotspotY="0.217391" />
+                            <frame duration="1" hotspotX="0.377049" hotspotY="0.217391" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="CUR_Default" sid="436505248124754">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="535939326934519">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="911904554261142" speed="5">
+                        <frame duration="1" hotspotX="0.0740741" hotspotY="0.0555556" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\smm2pce sprites\images\[19] level1\[81] [Active] cursor\Animation-0 Direction-0 Frame-0.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0" y="0" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Chabgelog" sid="275539080437500">
+            <plugin id="HTML_iFrame" />
+            <behaviors>
+                <behavior-type name="AnchorMod" sid="887724160706248">
+                    <behavior id="rex_Anchor_mod" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="OBJ_Version" sid="265391432782468">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="MoveTo" sid="772586524391295">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+                <behavior-type name="AnchorMod" sid="809917670649668">
+                    <behavior id="rex_Anchor_mod" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="OBJ_Menu" sid="116226765367445">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="746403437935615">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="AnchorMod" sid="315672120649036">
+                    <behavior id="rex_Anchor_mod" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212897620683103" speed="0">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\menu.png">
+                        <collision-poly>
+                            <point x="0.031506" y="0.031506" />
+                            <point x="0.515438" y="0" />
+                            <point x="0.99937" y="0.0466288" />
+                            <point x="1" y="0.515438" />
+                            <point x="0.99937" y="0.984247" />
+                            <point x="0.515438" y="1" />
+                            <point x="0.031506" y="0.999369" />
+                            <point x="0" y="0.515438" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="691072908183426">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Scrolling" sid="234388778636338">
+                    <behavior id="Rex_text_scrolling" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type global="1" name="level" sid="641916085450863">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="nivel" sid="258407074500018" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="NoSave" sid="165060898082719">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649881868106003" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="UI" plugin-id="Sprite" sid="119439447332156">
+            <members>
+                <member>OBJ_BG_Item</member>
+                <member>OBJ_CameraPrint</member>
+                <member>OBJ_DeleteEverything</member>
+                <member>OBJ_Dock</member>
+                <member>OBJ_DockBlur</member>
+                <member>OBJ_Erase</member>
+                <member>OBJ_Item_Preview</member>
+                <member>OBJ_Load</member>
+                <member>OBJ_Loader</member>
+                <member>OBJ_Menu</member>
+                <member>OBJ_Play</member>
+                <member>OBJ_Save</member>
+                <member>OBJ_ThemeSel</member>
+            </members>
+        </family>
+        <family name="Jump_Blocks" plugin-id="Sprite" sid="301131334007923">
+            <members>
+                <member>BreakableBlock</member>
+                <member>OBJ_OnOFF</member>
+            </members>
+        </family>
+        <family name="OnOffBlocks" plugin-id="Sprite" sid="789117816515468">
+            <members>
+                <member>OBJ_Off</member>
+                <member>OBJ_On</member>
+            </members>
+        </family>
+        <family name="MobileControls" plugin-id="Sprite" sid="517424776042501">
+            <members>
+                <member>OBJ_CameraPrint</member>
+            </members>
+            <behaviors>
+                <behavior-type name="NoSave" sid="448342552432156">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="PauseMenu" plugin-id="Sprite" sid="324290149826532">
+            <members>
+                <member>OBJ_SMBRLOGO</member>
+                <member>PSM_OPT</member>
+            </members>
+        </family>
+        <family name="inimigos" plugin-id="Sprite" sid="717563721734409">
+            <members>
+                <member>OBJ_Goomba</member>
+            </members>
+        </family>
+        <family name="basicBlocks" plugin-id="Sprite" sid="283068814836558">
+            <members>
+                <member>BreakableBlock</member>
+                <member>BreakableBlock_Particle</member>
+                <member>OBJ_BBLock</member>
+                <member>OBJ_Change_Direction_left</member>
+                <member>OBJ_Change_Direction_right</member>
+                <member>OBJ_Cloud</member>
+                <member>OBJ_Coin</member>
+                <member>OBJ_Goomba</member>
+                <member>OBJ_Ground</member>
+                <member>OBJ_Ice</member>
+                <member>OBJ_Jumper</member>
+                <member>OBJ_MovePlatform</member>
+                <member>OBJ_Mushrom</member>
+                <member>OBJ_Off</member>
+                <member>OBJ_On</member>
+                <member>OBJ_OnOFF</member>
+                <member>OBJ_Pipe</member>
+                <member>OBJ_RampaDrt</member>
+                <member>OBJ_RampaEqr</member>
+                <member>OBJ_Spike</member>
+            </members>
+        </family>
+        <family name="DragDrop" plugin-id="Sprite" sid="827261774257577">
+            <members>
+                <member>BreakableBlock</member>
+                <member>OBJ_BBLock</member>
+                <member>OBJ_Change_Direction_left</member>
+                <member>OBJ_Change_Direction_right</member>
+                <member>OBJ_Cloud</member>
+                <member>OBJ_Coin</member>
+                <member>OBJ_Goomba</member>
+                <member>OBJ_Ground</member>
+                <member>OBJ_Ice</member>
+                <member>OBJ_Jumper</member>
+                <member>OBJ_MovePlatform</member>
+                <member>OBJ_Mushrom</member>
+                <member>OBJ_Off</member>
+                <member>OBJ_On</member>
+                <member>OBJ_OnOFF</member>
+                <member>OBJ_Pipe</member>
+                <member>OBJ_RampaDrt</member>
+                <member>OBJ_RampaEqr</member>
+                <member>OBJ_Spike</member>
+            </members>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="769681962339209">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout-folder name="Arquivado">
+            <layout-folder name="SMBR">
+                <layout-folder name="Tela Inicial">
+                    <layout>LS_Loading_SMBR.xml</layout>
+                    <layout>LT_MenuInicialSMBR.xml</layout>
+                </layout-folder>
+                <layout-folder name="Fases">
+                    <layout>TransicaoFase.xml</layout>
+                    <layout>LT_Tutorial.xml</layout>
+                    <layout>TransicaoFase1.xml</layout>
+                    <layout>LT_1-1.xml</layout>
+                    <layout>TransicaoFase2.xml</layout>
+                </layout-folder>
+            </layout-folder>
+            <layout>LT_Menu.xml</layout>
+        </layout-folder>
+        <layout-folder name="Outras">
+            <layout>LT_Intro.xml</layout>
+            <layout>LT_Loading.xml</layout>
+            <layout>LT_CFGS.xml</layout>
+            <layout>LT_OBJS.xml</layout>
+            <layout>LS_Exit.xml</layout>
+            <layout>LS_Changelog.xml</layout>
+        </layout-folder>
+        <layout-folder name="SMBRM">
+            <layout-folder name="Tela Inicial">
+                <layout>LS_Loading_SMBRM.xml</layout>
+                <layout>LS_TelaInicial_SMBRM.xml</layout>
+            </layout-folder>
+            <layout-folder name="Editor">
+                <layout>LT_SMBRM_Maker.xml</layout>
+            </layout-folder>
+        </layout-folder>
+        <layout-folder name="Creditos">
+            <layout>LT_Creditos.xml</layout>
+        </layout-folder>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="Functions">
+            <event-sheet>ES_Mario.xml</event-sheet>
+            <event-sheet>ES_Rumble.xml</event-sheet>
+            <event-sheet>ES_Enemies.xml</event-sheet>
+            <event-sheet>ES_Checkpoint.xml</event-sheet>
+            <event-sheet>ES_MushRomm.xml</event-sheet>
+            <event-sheet>ES_BLOCK.xml</event-sheet>
+            <event-sheet>ES_PauseMenu.xml</event-sheet>
+            <event-sheet>ES_LayoutStartSMBR.xml</event-sheet>
+            <event-sheet>ES_PIPE.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Not-In-Gameplay">
+            <event-sheet>fasesee.xml</event-sheet>
+            <event-sheet>ES_Menu.xml</event-sheet>
+            <event-sheet>ES_Loading.xml</event-sheet>
+            <event-sheet>ES_Intro.xml</event-sheet>
+            <event-sheet>ES_CFGS.xml</event-sheet>
+            <event-sheet>ES_Creditos.xml</event-sheet>
+            <event-sheet>ES_Changelog.xml</event-sheet>
+        </event-folder>
+        <event-folder name="SMBRM">
+            <event-folder name="Editor">
+                <event-sheet>ES_SMBRM_Maker.xml</event-sheet>
+            </event-folder>
+            <event-folder name="Tela Inicial">
+                <event-sheet>ES_MenuInicialSMBRM.xml</event-sheet>
+            </event-folder>
+        </event-folder>
+        <event-folder name="Arquivado">
+            <event-folder name="SMBR">
+                <event-folder name="Fases">
+                    <event-sheet>ES_Level0.xml</event-sheet>
+                    <event-sheet>LT_transicao.xml</event-sheet>
+                </event-folder>
+                <event-folder name="Tela Inicial">
+                    <event-sheet>ES_MenuInicialSMBR.xml</event-sheet>
+                </event-folder>
+            </event-folder>
+        </event-folder>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Gamepad" uid="0">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="1" />
+        <global-instance type="Browser" uid="2" />
+        <global-instance type="Keyboard" uid="6" />
+        <global-instance type="Audio" uid="10">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>None</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Touch" uid="7">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="38" />
+        <global-instance type="NWjs" uid="39" />
+        <global-instance type="TouchWrap" uid="66">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+                <enable>Yes</enable>
+            </properties>
+        </global-instance>
+        <global-instance type="AJAX" uid="99" />
+        <global-instance type="DiscordRPC" uid="106">
+            <properties>
+                <client-id>892517979357585510</client-id>
+                <preview_mode>True</preview_mode>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="118" />
+        <global-instance type="PushJs" uid="115">
+            <properties>
+                <close-on-click>false</close-on-click>
+            </properties>
+        </global-instance>
+        <global-instance type="SimulateKeyEvent" uid="368" />
+    </global-instances>
+    <sounds-folder>
+        <sound-folder name="Musics" />
+        <file name="smb_coin.ogg" />
+        <file name="smb_jump-small.ogg" />
+        <file name="smb_mariodie.ogg" />
+        <file name="smb_stomp.ogg" />
+        <file name="smb_checkpoint.ogg" />
+        <file name="editor_add.ogg" />
+        <file name="editor_erase.ogg" />
+        <file name="smb_jump-super.ogg" />
+        <file name="smb_pipe.ogg" />
+        <file name="smb_powerup.ogg" />
+        <file name="SMB_BrickBreaking.ogg" />
+        <file name="smb_breakblock.ogg" />
+        <file name="smb_StageClear.ogg" />
+        <file name="style-changed.ogg" />
+        <file name="course-bot_load.ogg" />
+        <file name="course-bot_save.ogg" />
+        <file name="erase-button.ogg" />
+        <file name="erase-mode.ogg" />
+        <file name="erase1.ogg" />
+        <file name="erase2.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="MSC_smbr_Overworld_editor.ogg" />
+        <file name="MSC_SMB_Underworld_Play.ogg" />
+        <file name="MSC_SMB_Underworld_Play.m4a" />
+        <file name="MSC_SMB_Underworld_Edit.ogg" />
+        <file name="MSC_SMB_Underworld_Edit.m4a" />
+        <file name="MSC_smb_Overworld.ogg" />
+        <file name="Title Screen Retro.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="changelog.html" />
+        <file name="stylesheet.css" />
+        <file name="super-mario-maker-extended-webfont.woff" />
+        <file name="super-mario-maker-extended-webfont.woff2" />
+        <file name="iframe.css" />
+        <file name="discordlogo.png" />
+    </files-folder>
+</c2project>

@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Menu</name>
+    <events>
+        <variable constant="0" name="SMBR" sid="701043666026086" static="0" type="number">0</variable>
+        <variable constant="0" name="load" sid="616362598606678" static="0" type="number">0</variable>
+        <event-group description="" sid="779332813621623" title="HoverMouse">
+            <sub-events>
+                <event-block sid="880568690534229">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="197884276961136" type="System">
+                            <param id="0" name="Object">OBJ_HoverMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="539657523609911">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="185702641068119" type="Mouse">
+                                    <param id="0" name="Object">OBJ_HoverMenu</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="265226950828303" type="Mouse">
+                                    <param id="0" name="Object">SEP</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="612447992805776" type="Mouse">
+                                    <param id="0" name="Object">OBJ_CFGS</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="166480627427509" type="OBJ_HoverMenu">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="245688475417681">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="227709745101470" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="805910986075665" type="OBJ_HoverMenu">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="700634137294931" title="HoverControle">
+            <sub-events>
+                <event-block sid="489588871454654">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="365063474717137" type="System">
+                            <param id="0" name="Object">OBJ_HoverMenu</param>
+                        </condition>
+                        <condition id="4" name="Has gamepads" sid="279899100436623" type="Gamepad" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="144699320943879">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="149144584091884" type="CUR_Default">
+                                    <param id="0" name="Object">OBJ_HoverMenu</param>
+                                </condition>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="774682922801761" type="CUR_Default">
+                                    <param id="0" name="Object">SEP</param>
+                                </condition>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="930870247487711" type="CUR_Default">
+                                    <param id="0" name="Object">OBJ_CFGS</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="630434512380478">
+                                    <conditions>
+                                        <condition id="-9" inverted="1" name="Is visible" sid="280283835689635" type="OBJ_HoverMenu" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="465569685674727" type="OBJ_HoverMenu">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="799309672637625">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="244127803011508" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="194966942559804">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="539106043326490" type="OBJ_HoverMenu" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="330340395754411" type="OBJ_HoverMenu">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="312389782405315" title="CursorMenu">
+            <sub-events>
+                <event-block sid="353046194886534">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="106258237518699" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set cursor from sprite" sid="848778963217725" type="Mouse">
+                            <param id="0" name="Sprite">CUR_Default</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="441397221554430">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="859239185168543" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set RichPresence" sid="544001346100892" type="DiscordRPC">
+                    <param id="0" name="state">&quot;Menu de escolha do SMBRG&quot;</param>
+                    <param id="1" name="details">&quot;Escolhendo entre SMBR e SMBRM&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;icone_smbrg_disc&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run Gold&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;menu_0&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Super Mario Bros. Run Gold&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="725175216383987" title="load level smbrm">
+            <sub-events>
+                <event-block sid="924968790082946">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="201026024608840" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="764687515330137" type="LocalStorage">
+                            <param id="0" name="Key">&quot;autosave-backup&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="667315177457636">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="529372739849750" type="LocalStorage">
+                            <param id="0" name="Key">&quot;autosave-backup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="639163166282918" type="LocalStorage">
+                            <param id="0" name="Key">&quot;autosave-backup&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="754440455327139">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="186098504767139" type="LocalStorage">
+                            <param id="0" name="Key">&quot;autosave-backup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="575893375181571" type="System">
+                            <param id="0" name="Variable">load</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="914789070341656" type="System">
+                            <param id="0" name="Variable">ATSBK</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="529209813896870" title="start">
+            <sub-events>
+                <event-block sid="600683273196853">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="355829400613832" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="689517806036024" type="Audio">
+                            <param id="0" name="Tag">&quot;msc&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="292425850842414" type="Audio">
+                            <param id="0" name="Tag">&quot;Play&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="972198791224234" type="Audio">
+                            <param id="0" name="Tag">&quot;Editor&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="219357756756814" type="Audio">
+                            <param id="0" name="Tag">&quot;UGPlay&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="184010031236090" type="Audio">
+                            <param id="0" name="Tag">&quot;UGEdit&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="615630470767990" title="MMSC2">
+            <sub-events>
+                <event-block sid="968272099555400">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="698355975530891" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="250690030316414" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="451265682746640">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="198320150125774" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="696127693651329" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="289012370439540">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="878651579218509" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MMSC&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="844112975346516" type="System">
+                            <param id="0" name="Variable">MMSC</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="889338487100432" title="asb2">
+            <sub-events>
+                <event-block sid="719359260452070">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="331632482427701" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="591209743058974" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="142661715986474">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="937738233710542" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="322447299155545" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="995456130021885">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="385691584584132" type="LocalStorage">
+                            <param id="0" name="Key">&quot;ASB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="419542690708312" type="System">
+                            <param id="0" name="Variable">AUTOSAVEBCKUP</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="291457874185944">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="548408407727134" type="OBJ_DarkTST">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-group description="" sid="479914243856208" title="GoTo">
+                    <sub-events>
+                        <event-block sid="734392298455779">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="739207908228147" type="Touch">
+                                    <param id="0" name="Object">OBJ_HoverMenu</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="396860971895941" type="OBJ_HoverMenu">
+                                    <param id="0" name="Unique ID">168</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="903310476700598" type="Touch">
+                                    <param id="0" name="Object">SEP</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="459283298610093" type="Touch">
+                                    <param id="0" name="Object">OBJ_CFGS</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="613441075780477" type="System">
+                                    <param id="0" name="Variable">Checkp_Y</param>
+                                    <param id="1" name="Value">448</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="701740413127733" type="System">
+                                    <param id="0" name="Variable">Checkp_X</param>
+                                    <param id="1" name="Value">80</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="830043424010304" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="707631536432344" type="System">
+                                    <param id="0" name="Variable">anim</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="695406897351590" type="OBJ_Dark">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="597274276290501" type="System">
+                                    <param id="0" name="Variable">camera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="554648958846868" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="608453346003005" type="OBJ_UI_Pause">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="642105231177813" type="OBJ_DarkTST" />
+                                <action id="-9" name="Set value" sid="489110205726152" type="System">
+                                    <param id="0" name="Variable">SMBR</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="103005257688314">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="397088777295236" type="Touch">
+                                    <param id="0" name="Object">OBJ_HoverMenu</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="285627497461846" type="OBJ_HoverMenu">
+                                    <param id="0" name="Unique ID">169</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="429651414455523" type="Touch">
+                                    <param id="0" name="Object">SEP</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="120663213756794" type="Touch">
+                                    <param id="0" name="Object">OBJ_CFGS</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="1" name="Start fade" sid="503481662361599" type="OBJ_DarkTST" />
+                                <action id="-9" name="Set value" sid="872885685176560" type="System">
+                                    <param id="0" name="Variable">SMBR</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="744319497312221">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="969491633928675" type="Touch">
+                            <param id="0" name="Object">OBJ_CFGS</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="499721368234247" type="System">
+                            <param id="0" name="Layout">LT_CFGS</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="464720809220571">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="931173322670820" type="OBJ_DarkTST" />
+                <condition id="-14" name="Compare variable" sid="822927890512749" type="System">
+                    <param id="0" name="Variable">SMBR</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="669787041110735" type="System">
+                    <param id="0" name="Layout">LS_Loading_SMBRM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="912740304253254">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="471917910091421" type="OBJ_DarkTST" />
+                <condition id="-14" name="Compare variable" sid="509078055131821" type="System">
+                    <param id="0" name="Variable">SMBR</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="667542031035336" type="System">
+                    <param id="0" name="Layout">LS_Loading_SMBR</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="608849223234707">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="815424622319705" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="158331630850416" type="System">
+                    <param id="0" name="Variable">SMBR</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

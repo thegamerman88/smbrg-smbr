@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Rumble</name>
+    <events>
+        <event-block sid="839466647660882">
+            <conditions>
+                <condition id="0" name="On function" sid="375936340867369" type="Function">
+                    <param id="0" name="Name">&quot;StartRumble&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="17" name="Execute Javascript" sid="587909451782223" type="Browser">
+                    <param id="0" name="Javascript">&quot;var gamepads = navigator.getGamepads();&#x0D;&#x0A;if (gamepads.length &gt; 0) {&#x0D;&#x0A;  var gamepad = gamepads[&quot;&amp; Function.Param(0) &amp;&quot;];&#x0D;&#x0A;  if (gamepad.vibrationActuator) {&#x0D;&#x0A;    gamepad.vibrationActuator.playEffect(&apos;dual-rumble&apos;, {&#x0D;&#x0A;        duration: &quot; &amp;  Function.Param(1) &amp; &quot;,&#x0D;&#x0A;        strongMagnitude: &quot; &amp; Function.Param(2) &amp; &quot;,&#x0D;&#x0A;        weakMagnitude:&quot;  &amp; Function.Param(3) &amp; &quot;&#x0D;&#x0A;    });&#x0D;&#x0A;  }&#x0D;&#x0A;}&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="540398103998301">
+            <conditions>
+                <condition id="0" name="On function" sid="415725465387717" type="Function">
+                    <param id="0" name="Name">&quot;StopRumble&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="17" name="Execute Javascript" sid="532455044898928" type="Browser">
+                    <param id="0" name="Javascript">&quot;var gamepads = navigator.getGamepads();&#x0D;&#x0A;if (gamepads.length &gt; 0) {&#x0D;&#x0A;  var gamepad = gamepads[&quot;&amp; Function.Param(0) &amp;&quot;];&#x0D;&#x0A;  if (gamepad.vibrationActuator) {&#x0D;&#x0A;    gamepad.vibrationActuator.playEffect(&apos;dual-rumble&apos;, {&#x0D;&#x0A;        duration: 0,&#x0D;&#x0A;        strongMagnitude: 0,&#x0D;&#x0A;        weakMagnitude: 0&#x0D;&#x0A;    });&#x0D;&#x0A;  }&#x0D;&#x0A;}&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>exemplo de evento começar vibração</comment>
+        <event-block disabled="1" sid="639618500110886">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="124823075087098" type="System">
+                    <param id="0" name="First value">0</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="132067434725858" type="Function">
+                    <param id="0" name="Name">&quot;StartRumble&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;controller&quot;{###}&quot;time in ms&quot;{###}&quot;strongmotor 0-1.0&quot;{###}&quot;weakmotor 0-1.0&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Creditos</name>
+    <events>
+        <event-block sid="523928100574211">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="166180232839512" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="4" name="Move to XY" sid="150026305475098" type="OBJ_Version">
+                    <param id="0" name="X">427</param>
+                    <param id="1" name="Y">-4048</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="408404114429038" type="TXT_TXTWhite">
+                    <param id="0" name="Pin to">OBJ_Version</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="273474681746863" type="txtc">
+                    <param id="0" name="Pin to">OBJ_Version</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="758143383618217" type="txt2">
+                    <param id="0" name="Pin to">OBJ_Version</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Set RichPresence" sid="156011057672085" type="DiscordRPC">
+                    <param id="0" name="state">&quot;Creditos do SMBRM&quot;</param>
+                    <param id="1" name="details">&quot;Creditos do SMBRM&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;icone_smbrg_disc&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run Maker&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;menu_0&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Super Mario Bros. Run Maker&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="720814370673099">
+            <conditions>
+                <condition behavior="MoveTo" id="0" name="On hit target position" sid="803665033183947" type="OBJ_Version" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="820434876344093" type="TXT_TXTWhite" />
+                <action behavior="Pin" id="1" name="Unpin" sid="970794544316371" type="txtc" />
+                <action behavior="Pin" id="1" name="Unpin" sid="877201910245695" type="txt2" />
+                <action id="-2" name="Go to layout" sid="794039206177655" type="System">
+                    <param id="0" name="Layout">LT_CFGS</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="382794364765190">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="531949199134841" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="980058430634253" type="System">
+                    <param id="0" name="Variable">CCFG</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="742614347327686">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="515501725847623" type="Touch" />
+                <condition id="0" name="On key pressed" sid="867861126436957" type="Keyboard">
+                    <param id="0" name="Key">27</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="535168087662820" type="TXT_TXTWhite" />
+                <action behavior="Pin" id="1" name="Unpin" sid="125376362079510" type="txtc" />
+                <action behavior="Pin" id="1" name="Unpin" sid="343663070354320" type="txt2" />
+                <action id="-2" name="Go to layout" sid="748645068247058" type="System">
+                    <param id="0" name="Layout">LT_CFGS</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="424539020981199">
+            <conditions>
+                <condition id="2" name="Key is down" sid="557856915382431" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="435538298013014" type="OBJ_Version">
+                    <param id="0" name="Max speed">400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="789813171868596">
+            <conditions>
+                <condition id="2" inverted="1" name="Key is down" sid="379973846698977" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="846664093293001" type="OBJ_Version">
+                    <param id="0" name="Max speed">100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

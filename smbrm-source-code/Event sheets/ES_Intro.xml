@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Intro</name>
+    <events>
+        <variable constant="0" name="skip" sid="464299338570467" static="0" type="number">0</variable>
+        <event-block sid="411090517644830">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="426475712164767" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="464756066055428" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+                <action id="-16" name="Wait" sid="969796913062880" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="197622210671778" type="TXT_MadeBy" />
+                <action id="0" name="Set RichPresence" sid="391263795860051" type="DiscordRPC">
+                    <param id="0" name="state">&quot;Iniciando SMBRM...&quot;</param>
+                    <param id="1" name="details">&quot;Carregando o SMBRM&quot;</param>
+                    <param id="2" name="largeimagekey">&quot;icone_smbrg_disc&quot;</param>
+                    <param id="3" name="largeimagetext">&quot;Super Mario Bros. Run Maker!&quot;</param>
+                    <param id="4" name="smallimagekey">&quot;menu_0&quot;</param>
+                    <param id="5" name="smallimagetext">&quot;Super Mario Bros. Run Maker!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="982441749398924" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="427970192374765" type="System">
+                    <param id="0" name="Variable">skip</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="626585734588496">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="974727341791236" type="TXT_MadeBy" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="917890046604395" type="TXT_Credits" />
+            </actions>
+        </event-block>
+        <event-block sid="693365725751683">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="883803126113369" type="TXT_Credits" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="808495259061342" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="376251653631899" type="System">
+                    <param id="0" name="Layout">LT_Loading</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="545374833686100">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="812746054409065" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="593634722841275" type="System">
+                    <param id="0" name="Variable">skip</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="198851695419605">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="393817542897180" type="System" />
+                <condition id="-20" name="Is on mobile device" sid="359301487897258" type="System" />
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="645450995356214" type="Browser">
+                    <param id="0" name="Mode">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="215861147911670">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="669129375716433" type="System">
+                    <param id="0" name="Variable">skip</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="821959361764013">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="596258254902456" type="Keyboard" />
+                        <condition id="14" name="On tap" sid="429388440323574" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="535898132889512" type="System">
+                            <param id="0" name="Layout">LT_Loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="979103193064660">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="749209793044584" type="System" />
+                <condition id="-20" name="Is on mobile device" sid="821547480257250" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="915607428094613" type="LocalStorage">
+                    <param id="0" name="Key">&quot;fs&quot;</param>
+                    <param id="1" name="Value">&quot;1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="923592333521453" type="System">
+                    <param id="0" name="Variable">fullscreen</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

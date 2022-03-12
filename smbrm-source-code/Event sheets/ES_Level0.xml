@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_Level0</name>
+    <events>
+        <include>ES_MushRomm</include>
+        <include>ES_BLOCK</include>
+        <include>ES_LayoutStartSMBR</include>
+        <include>ES_PauseMenu</include>
+        <include>ES_Checkpoint</include>
+        <variable constant="0" name="MSCP" sid="258475929538330" static="0" type="number">0</variable>
+        <include>ES_Enemies</include>
+        <include>ES_Rumble</include>
+        <include>ES_Mario</include>
+        <event-block sid="472985206274237">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="796942339458738" type="TXT_Tutorial">
+                    <param id="0" name="Unique ID">189</param>
+                </condition>
+                <condition id="-20" inverted="1" name="Is on mobile device" sid="745936772106208" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="782021575880326" type="TXT_Tutorial">
+                    <param id="0" name="Text">&quot;Pressione Shift para corrrer&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="768309881825306">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="559312673354161" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;LT_Tutorial&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="375977480869970" type="System">
+                    <param id="0" name="Variable">Tema</param>
+                    <param id="1" name="Value">&quot;OverWorld&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="643302406067900">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="464922109925290" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;LT_1-1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="807242009559671" type="System">
+                    <param id="0" name="Variable">Tema</param>
+                    <param id="1" name="Value">&quot;OverWorld&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

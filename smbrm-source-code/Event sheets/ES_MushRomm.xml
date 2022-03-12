@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_MushRomm</name>
+    <events>
+        <event-block sid="944412455876313">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="537279709808787" type="OBJ_Player">
+                    <param id="0" name="Object">OBJ_Mushrom</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="453321756410709" type="OBJ_Mushrom" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="742723836361600" type="Audio">
+                    <param id="0" name="Audio file">smb_powerup</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;pu&quot;</param>
+                </action>
+                <action id="3" name="Set volume" sid="695988191904711" type="Audio">
+                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                    <param id="1" name="dB">-10</param>
+                </action>
+                <action id="3" name="Set volume" sid="737776101724560" type="Audio">
+                    <param id="0" name="Tag">&quot;Play&quot;</param>
+                    <param id="1" name="dB">-10</param>
+                </action>
+                <action id="-15" name="Set visible" sid="361077956407877" type="OBJ_Mushrom">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="781099995972839" type="System">
+                    <param id="0" name="Variable">grande</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="539293065633692" type="OBJ_Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-10" name="Add to" sid="538429629556152" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-10" name="Add to" sid="989427980758750" type="System">
+                    <param id="0" name="Variable">ScorePF</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-3" name="Create object" sid="873481185854987" type="System">
+                    <param id="0" name="Object to create">TXT_ScorePopUp</param>
+                    <param id="1" name="Layer">6</param>
+                    <param id="2" name="X">OBJ_player.X-30</param>
+                    <param id="3" name="Y">OBJ_player.Y-48</param>
+                </action>
+                <action id="0" name="Set text" sid="431954023678087" type="TXT_ScorePopUp">
+                    <param id="0" name="Text">&quot;1000&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="412547680928878" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="296281593779743" type="TXT_ScorePopUp" />
+            </actions>
+        </event-block>
+        <event-block sid="830180655394518">
+            <conditions>
+                <condition id="0" name="On ended" sid="383627592431292" type="Audio">
+                    <param id="0" name="Tag">&quot;pu&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="450966231369315" type="Audio">
+                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                    <param id="1" name="dB">0</param>
+                </action>
+                <action id="3" name="Set volume" sid="470420855045968" type="Audio">
+                    <param id="0" name="Tag">&quot;Play&quot;</param>
+                    <param id="1" name="dB">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="946044431251525">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="644952368118892" type="OBJ_Mushrom">
+                    <param id="0" name="Instance variable">Direção</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Left&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="561482284261063" type="OBJ_Mushrom">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="322165788632838">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="906181188042839" type="OBJ_Mushrom">
+                    <param id="0" name="Instance variable">Direção</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Right&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="307140677688501" type="OBJ_Mushrom">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="306765992046411">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="626463139185384" type="OBJ_Mushrom">
+                    <param id="0" name="Side">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="327575669380464" type="OBJ_Mushrom">
+                    <param id="0" name="Instance variable">Direção</param>
+                    <param id="1" name="Value">&quot;Right&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="796585765099169">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="433677757561339" type="OBJ_Mushrom">
+                    <param id="0" name="Side">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="852353247520734" type="OBJ_Mushrom">
+                    <param id="0" name="Instance variable">Direção</param>
+                    <param id="1" name="Value">&quot;Left&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="368461336471384">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="382794446982742" type="OBJ_Mushrom">
+                    <param id="0" name="Side">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="676861173712949" type="OBJ_Mushrom">
+                    <param id="0" name="Instance variable">Direção</param>
+                    <param id="1" name="Value">&quot;Left&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,8 @@
+#discord_button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-image: url(discordlogo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

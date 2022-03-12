@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_BLOCK</name>
+    <events>
+        <variable constant="0" name="onoff" sid="834160996157917" static="0" type="text">on</variable>
+        <event-group description="" sid="539370510264608" title="brick">
+            <sub-events>
+                <event-block sid="111597607358688">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="283549072479395" type="System">
+                            <param id="0" name="Object">BreakableBlock</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="456323051079684" type="BreakableBlock" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="165427551263155">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="402153986698406" type="OBJ_Player">
+                                    <param id="0" name="Object">BreakableBlock</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">-1</param>
+                                </condition>
+                                <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="993691632370254" type="BreakableBlock" />
+                                <condition id="-14" name="Compare variable" sid="983380747673762" type="System">
+                                    <param id="0" name="Variable">grande</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="268522473679613" type="BreakableBlock">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">Self.Y-16</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="927533223986121" type="BreakableBlock">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">Self.X</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="114568578315441" type="BreakableBlock">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="465845011242175">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="651585819753207" type="System">
+                                    <param id="0" name="Variable">Tema</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;OverWorld&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="583639324666109">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="880655293080538" type="OBJ_Player">
+                                            <param id="0" name="Object">BreakableBlock</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">-1</param>
+                                        </condition>
+                                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="236251805149675" type="BreakableBlock" />
+                                        <condition id="-14" name="Compare variable" sid="927178776324922" type="System">
+                                            <param id="0" name="Variable">grande</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="515249121220902" type="Audio">
+                                            <param id="0" name="Audio file">smb_breakblock</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;bb&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="895390388482793" type="BreakableBlock">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="773440814689400" type="BreakableBlock">
+                                            <param id="0" name="Animation">&quot;BrokenOG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="990897578692357" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TL&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TL&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="520069220021657" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;OG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="712598318912271" type="BreakableBlock_Particle">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="903392007118078" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">-60</param>
+                                            <param id="1" name="Y component">-250</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="491282411212239" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TR&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TR&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="509356386963689" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;OG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="690772412537470" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">60</param>
+                                            <param id="1" name="Y component">-250</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="288361098820923" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BL&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BL&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="428395952877765" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;OG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="358491388420491" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">-50</param>
+                                            <param id="1" name="Y component">-200</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="906138093383207" type="BreakableBlock_Particle">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="843334523031733" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BR&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BR&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="672006589205878" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;OG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="776471616650962" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">50</param>
+                                            <param id="1" name="Y component">-200</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="444984334613073">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="832860340635022" type="System">
+                                    <param id="0" name="Variable">Tema</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;UnderWorld&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="535916713268103">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="736460342434209" type="OBJ_Player">
+                                            <param id="0" name="Object">BreakableBlock</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">-1</param>
+                                        </condition>
+                                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="448961275215378" type="BreakableBlock" />
+                                        <condition id="-14" name="Compare variable" sid="243352402970694" type="System">
+                                            <param id="0" name="Variable">grande</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="726438896720246" type="Audio">
+                                            <param id="0" name="Audio file">smb_breakblock</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;bb&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="454042414646948" type="BreakableBlock">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="177981450320203" type="BreakableBlock">
+                                            <param id="0" name="Animation">&quot;BrokenUG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="497799345333566" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TL&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TL&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="874951999145979" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;UG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="898604351786250" type="BreakableBlock_Particle">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="114518667803769" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">-60</param>
+                                            <param id="1" name="Y component">-250</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="924407327847323" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TR&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TR&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="278691019377562" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;UG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="363795699705875" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">60</param>
+                                            <param id="1" name="Y component">-250</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="552952166614657" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BL&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BL&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="455567901738351" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;UG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="457416432292621" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">-50</param>
+                                            <param id="1" name="Y component">-200</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="281180825039910" type="BreakableBlock_Particle">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="312202799030246" type="System">
+                                            <param id="0" name="Object to create">BreakableBlock_Particle</param>
+                                            <param id="1" name="Layer">6</param>
+                                            <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BR&quot;)</param>
+                                            <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BR&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="567852887910358" type="BreakableBlock_Particle">
+                                            <param id="0" name="Animation">&quot;UG&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="967442469185187" type="BreakableBlock_Particle">
+                                            <param id="0" name="X component">50</param>
+                                            <param id="1" name="Y component">-200</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="612210943600510">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="308925787362460" type="BreakableBlock" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="765745015953115" type="BreakableBlock">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="160357939212299" title="onoff">
+            <sub-events>
+                <event-block sid="399211989100982">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="848911684572953" type="System">
+                            <param id="0" name="Object">OBJ_OnOFF</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="753527261671323">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="255139537532302" type="OBJ_Player">
+                                    <param id="0" name="Object">OBJ_OnOFF</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">-1</param>
+                                </condition>
+                                <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="161963637787313" type="OBJ_OnOFF" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="322549451927383" type="OBJ_OnOFF">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">Self.Y-16</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="969762811518927" type="OBJ_OnOFF">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">Self.X</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="486446083903274" type="OBJ_OnOFF">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="659841291150794">
+                            <conditions>
+                                <condition behavior="LiteTween" id="4" name="On tween end" sid="589757614228976" type="OBJ_OnOFF" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="975739531099892" type="OBJ_OnOFF">
+                                    <param id="0" name="Reverse mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="235768947425882">
+                            <conditions>
+                                <condition behavior="LiteTween" id="4" name="On tween end" sid="141803673073888" type="OBJ_OnOFF" />
+                                <condition id="2" name="Is playing" sid="468909737885366" type="OBJ_OnOFF">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="815583937101199" type="System">
+                                    <param id="0" name="Variable">onoff</param>
+                                    <param id="1" name="Value">&quot;off&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="230813724945986">
+                            <conditions>
+                                <condition behavior="LiteTween" id="4" name="On tween end" sid="402053087165798" type="OBJ_OnOFF" />
+                                <condition id="2" name="Is playing" sid="456512034248893" type="OBJ_OnOFF">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="255267852160659" type="System">
+                                    <param id="0" name="Variable">onoff</param>
+                                    <param id="1" name="Value">&quot;on&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="666970632106336">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="201451854497859" type="System">
+                                    <param id="0" name="Variable">onoff</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;on&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="569796766307488" type="OBJ_OnOFF">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="635426133786197" type="OBJ_Off">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="136233424664113" type="OBJ_On">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="825229354719486" type="OBJ_Off">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="548992678350625" type="OBJ_On">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="502819624943472">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="996257762712428" type="System">
+                                    <param id="0" name="Variable">onoff</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;off&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="367332640105449" type="OBJ_OnOFF">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="765397816496449" type="OBJ_Off">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="578763559350748" type="OBJ_On">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="168182981651427" type="OBJ_Off">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="897745654848557" type="OBJ_On">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="623658007136994">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="659766497885922" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="718934116369252" type="System">
+                                    <param id="0" name="Variable">onoff</param>
+                                    <param id="1" name="Value">&quot;on&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="447506772897043" type="OBJ_OnOFF">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="696833122871227" type="OBJ_OnOFF">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

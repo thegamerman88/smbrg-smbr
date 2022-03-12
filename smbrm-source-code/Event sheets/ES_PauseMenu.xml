@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_PauseMenu</name>
+    <events>
+        <event-group description="" sid="625290097534726" title="Pause">
+            <sub-events>
+                <event-block sid="913560620170939">
+                    <conditions>
+                        <condition id="-20" inverted="1" name="Is on mobile device" sid="293622459149353" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="906904156572849" type="OBJ_UI_Pause">
+                            <param id="0" name="X">848</param>
+                            <param id="1" name="Y">-48</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319724898365907">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="104846379579086" type="System">
+                            <param id="0" name="Variable">Win</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="901911855507909">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="551506161490143" type="Touch">
+                                    <param id="0" name="Object">OBJ_UI_Pause</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="814546310161095" type="Keyboard">
+                                    <param id="0" name="Key">27</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="659984148770087" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="591396769867431">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="188351362543211" type="OBJ_UI_Pause">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="351349736799767" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="625296364461163" type="OBJ_UI_Pause">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="315154581925020" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="442688929316034" type="System">
+                                            <param id="0" name="Variable">anim</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="836154440069669" type="OBJ_Dark">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="100725036536466" type="System">
+                                            <param id="0" name="Variable">camera</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="286739125911851" type="Audio">
+                                            <param id="0" name="Tag">&quot;msc&quot;</param>
+                                            <param id="1" name="dB">-10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="375631386824940">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="118472208890366" type="OBJ_UI_Pause">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="251126054247168" type="System">
+                                            <param id="0" name="Time scale">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="122331842089425" type="System">
+                                            <param id="0" name="Variable">anim</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="444318548126579" type="OBJ_Dark">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="657557061963419" type="System">
+                                            <param id="0" name="Variable">camera</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="820759585552278" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="672171673510101" type="OBJ_UI_Pause">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="335859087621525" type="Audio">
+                                            <param id="0" name="Tag">&quot;msc&quot;</param>
+                                            <param id="1" name="dB">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="516252677192190" title="PauseMenu">
+            <sub-events>
+                <event-block sid="281207227075268">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="774349847315214" type="OBJ_UI_Pause">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="859490771073660" type="PauseMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="100738453117092" type="TXT_TXTWhite">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="907897886062450" type="System">
+                            <param id="0" name="Layer">9</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="343046610866408">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="720647292766226" type="OBJ_UI_Pause">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="711344518023631" type="PauseMenu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="509578116740069" type="TXT_TXTWhite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="477284494896020" type="System">
+                            <param id="0" name="Layer">9</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="372710577775269">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="813580213531332" type="Touch">
+                                    <param id="0" name="Object">PSM_OPT</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="194756535070924" type="PSM_OPT">
+                                    <param id="0" name="Instance variable">opt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="603118308470101" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="943162289160841" type="System">
+                                    <param id="0" name="Variable">anim</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="994205231954105" type="OBJ_Dark">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="616936764690209" type="System">
+                                    <param id="0" name="Variable">camera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="786394472950801" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="962387986398160" type="OBJ_UI_Pause">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="426869738986527" type="Audio">
+                                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="447622063826480">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="771669333767485" type="Touch">
+                                    <param id="0" name="Object">PSM_OPT</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="342982712283380" type="PSM_OPT">
+                                    <param id="0" name="Instance variable">opt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="773482139416385" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="261880512129987" type="OBJ_Player">
+                                    <param id="0" name="X">Checkp_X</param>
+                                    <param id="1" name="Y">Checkp_Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="161316678643136" type="System">
+                                    <param id="0" name="Variable">anim</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="330079776615424" type="OBJ_Dark">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="561653676586071" type="System">
+                                    <param id="0" name="Variable">camera</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="599756356204423" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="160518018201728" type="OBJ_UI_Pause">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="507814027193601" type="Audio">
+                                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="705331251977812" type="System">
+                                    <param id="0" name="Variable">Win</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="685919254492476">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="318970356013641" type="Touch">
+                                    <param id="0" name="Object">PSM_OPT</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="327816060622795" type="PSM_OPT">
+                                    <param id="0" name="Instance variable">opt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-43" name="Go to next/previous layout" sid="803965450998706" type="System">
+                                    <param id="0" name="Which">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="580422033411522" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="142803606706852" type="System">
+                                    <param id="0" name="Variable">Win</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="632458061317498" type="System">
+                                    <param id="0" name="Variable">Moeda</param>
+                                    <param id="1" name="Value">Moeda-MoedaPF</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="291054235469882" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">Score-ScorePF</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="699290021744496">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="458167199951816" type="Touch">
+                                    <param id="0" name="Object">PSM_OPT</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="342788165815005" type="PSM_OPT">
+                                    <param id="0" name="Instance variable">opt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="461730373909733" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="186322567786381" type="System">
+                                    <param id="0" name="Variable">Win</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="6" name="Stop" sid="615073239133810" type="Audio">
+                                    <param id="0" name="Tag">&quot;msc&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="654489781278082" type="System">
+                                    <param id="0" name="Layout">LT_MenuInicialSMBR</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="407680877883537" title="hoverpausemenu">
+            <sub-events>
+                <event-block sid="278870943118788">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="144031785691214" type="System">
+                            <param id="0" name="Object">PSM_OPT</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="709553298700804">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="140404552317275" type="Mouse">
+                                    <param id="0" name="Object">PSM_OPT</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="891525046025881">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="293989428358966" type="PSM_OPT">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="839507070624992" type="PSM_OPT">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="338602204488611">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="804269061192861" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="845865183083460">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="447263611250595" type="PSM_OPT">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="517303300794700" type="PSM_OPT">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
