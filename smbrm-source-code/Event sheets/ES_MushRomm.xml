@@ -47,17 +47,13 @@
                 </action>
                 <action id="-3" name="Create object" sid="873481185854987" type="System">
                     <param id="0" name="Object to create">TXT_ScorePopUp</param>
-                    <param id="1" name="Layer">6</param>
+                    <param id="1" name="Layer">&quot;L_Objects&quot;</param>
                     <param id="2" name="X">OBJ_player.X-30</param>
                     <param id="3" name="Y">OBJ_player.Y-48</param>
                 </action>
                 <action id="0" name="Set text" sid="431954023678087" type="TXT_ScorePopUp">
                     <param id="0" name="Text">&quot;1000&quot;</param>
                 </action>
-                <action id="-16" name="Wait" sid="412547680928878" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="296281593779743" type="TXT_ScorePopUp" />
             </actions>
         </event-block>
         <event-block sid="830180655394518">

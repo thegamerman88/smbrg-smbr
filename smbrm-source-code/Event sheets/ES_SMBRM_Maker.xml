@@ -718,7 +718,7 @@
                         </action>
                         <action id="-3" name="Create object" sid="472588931864558" type="System">
                             <param id="0" name="Object to create">OBJ_Load_Anim</param>
-                            <param id="1" name="Layer">9</param>
+                            <param id="1" name="Layer">&quot;L_UI&quot;</param>
                             <param id="2" name="X">848</param>
                             <param id="3" name="Y">432</param>
                         </action>
@@ -1804,7 +1804,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="782720154939824" type="System">
                                                             <param id="0" name="Object to create">OBJ_Change_Direction_left</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -1830,7 +1830,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="974768494690285" type="System">
                                                             <param id="0" name="Object to create">OBJ_Change_Direction_right</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -1944,7 +1944,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="976958970478312" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -1967,7 +1967,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="498709992779385" type="System">
                                                             <param id="0" name="Object to create">BreakableBlock</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -1990,7 +1990,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="616051211403524" type="System">
                                                             <param id="0" name="Object to create">OBJ_BBLock</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2013,7 +2013,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="859925658983699" type="System">
                                                             <param id="0" name="Object to create">OBJ_Pipe</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/64)*64</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2036,7 +2036,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="576320075562396" type="System">
                                                             <param id="0" name="Object to create">OBJ_RampaEqr</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2059,7 +2059,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="340320373904567" type="System">
                                                             <param id="0" name="Object to create">OBJ_RampaDrt</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2082,7 +2082,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="886243143761124" type="System">
                                                             <param id="0" name="Object to create">OBJ_Coin</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2105,7 +2105,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="418360494134923" type="System">
                                                             <param id="0" name="Object to create">OBJ_Mushrom</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2136,7 +2136,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="583685805995279" type="System">
                                                             <param id="0" name="Object to create">OBJ_Goomba</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2167,7 +2167,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="759833280694898" type="System">
                                                             <param id="0" name="Object to create">OBJ_Jumper</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2198,7 +2198,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="846383780918684" type="System">
                                                             <param id="0" name="Object to create">OBJ_Cloud</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">OBJ_Selector.X</param>
                                                             <param id="3" name="Y">OBJ_Selector.Y</param>
                                                         </action>
@@ -2221,7 +2221,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="482907782917446" type="System">
                                                             <param id="0" name="Object to create">OBJ_OnOFF</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">OBJ_Selector.X</param>
                                                             <param id="3" name="Y">OBJ_Selector.Y</param>
                                                         </action>
@@ -2244,7 +2244,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="322140073191856" type="System">
                                                             <param id="0" name="Object to create">OBJ_On</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">OBJ_Selector.X</param>
                                                             <param id="3" name="Y">OBJ_Selector.Y</param>
                                                         </action>
@@ -2267,7 +2267,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="963247033060138" type="System">
                                                             <param id="0" name="Object to create">OBJ_Off</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">OBJ_Selector.X</param>
                                                             <param id="3" name="Y">OBJ_Selector.Y</param>
                                                         </action>
@@ -2290,7 +2290,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="387175642666217" type="System">
                                                             <param id="0" name="Object to create">OBJ_Spike</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">OBJ_Selector.X</param>
                                                             <param id="3" name="Y">OBJ_Selector.Y</param>
                                                         </action>
@@ -2313,7 +2313,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="111212489573088" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ice</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">OBJ_Selector.X</param>
                                                             <param id="3" name="Y">OBJ_Selector.Y</param>
                                                         </action>
@@ -2336,7 +2336,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="808831259579582" type="System">
                                                             <param id="0" name="Object to create">OBJ_MovePlatform</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">OBJ_Selector.X</param>
                                                             <param id="3" name="Y">OBJ_Selector.Y</param>
                                                         </action>
@@ -2359,7 +2359,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="539240386840896" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2382,7 +2382,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="138783565842931" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2405,7 +2405,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="886104789680815" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2428,7 +2428,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="756895505808652" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2451,7 +2451,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="120166309809872" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2474,7 +2474,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="948809058142376" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2497,7 +2497,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="613211511348653" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2520,7 +2520,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="414036775337973" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -2543,7 +2543,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="276440096197747" type="System">
                                                             <param id="0" name="Object to create">OBJ_Ground</param>
-                                                            <param id="1" name="Layer">5</param>
+                                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
@@ -3832,19 +3832,18 @@
                                     <param id="1" name="JPEG quality">100</param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="417164140688353" type="System">
-                                    <param id="0" name="Layer">9</param>
+                                    <param id="0" name="Layer">&quot;L_UI&quot;</param>
                                     <param id="1" name="Visibility">0</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="276365489579598" type="System">
-                                    <param id="0" name="Layer">8</param>
-                                    <param id="1" name="Visibility">0</param>
+                                <action id="-15" name="Set visible" sid="564721218582652" type="MobileControls">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="673008830175654" type="System">
-                                    <param id="0" name="Layer">4</param>
+                                    <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
                                     <param id="1" name="Visibility">0</param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="442353987379855" type="System">
-                                    <param id="0" name="Layer">3</param>
+                                    <param id="0" name="Layer">&quot;L_Selector&quot;</param>
                                     <param id="1" name="Visibility">0</param>
                                 </action>
                             </actions>
@@ -3922,20 +3921,20 @@
                                     <param id="0" name="URL">CanvasSnapshot</param>
                                     <param id="1" name="Filename">&quot;Print SMBRM-&quot; &amp; floor(random(100000, 999999))</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="360522352738578" type="System">
-                                    <param id="0" name="Layer">9</param>
-                                    <param id="1" name="Visibility">1</param>
-                                </action>
                                 <action id="-15" name="Set visible" sid="851641120950058" type="MobileControls">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="471611795160225" type="System">
-                                    <param id="0" name="Layer">4</param>
-                                    <param id="1" name="Visibility">1</param>
+                                <action id="-4" name="Set layer visible" sid="684603883764856" type="System">
+                                    <param id="0" name="Layer">&quot;L_UI&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="118883122307996" type="System">
-                                    <param id="0" name="Layer">3</param>
-                                    <param id="1" name="Visibility">1</param>
+                                <action id="-4" name="Set layer visible" sid="624240228738263" type="System">
+                                    <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="297754545524328" type="System">
+                                    <param id="0" name="Layer">&quot;L_Selector&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -4257,15 +4256,15 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="757452549660558" type="System">
-                            <param id="0" name="Layer">1</param>
+                            <param id="0" name="Layer">&quot;L_Mountain&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="374503492708553" type="System">
-                            <param id="0" name="Layer">2</param>
+                            <param id="0" name="Layer">&quot;L_Clouds&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-34" name="Set layer background color" sid="547657098129136" type="System">
-                            <param id="0" name="Layer">0</param>
+                            <param id="0" name="Layer">&quot;L_BGColor&quot;</param>
                             <param id="1" name="Color">rgb(118, 124, 255)</param>
                         </action>
                         <action id="-15" name="Set visible" sid="591816371958666" type="OBJ_Default_Ground">
@@ -4431,12 +4430,12 @@
                             <param id="0" name="Animation">&quot;UnderWorld&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="450151910339354" type="System">
-                            <param id="0" name="Layer">1</param>
+                        <action id="-4" name="Set layer visible" sid="405295953922725" type="System">
+                            <param id="0" name="Layer">&quot;L_Mountain&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="900464317143410" type="System">
-                            <param id="0" name="Layer">2</param>
+                        <action id="-4" name="Set layer visible" sid="856324952149459" type="System">
+                            <param id="0" name="Layer">&quot;L_Clouds&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-34" name="Set layer background color" sid="524077389642908" type="System">

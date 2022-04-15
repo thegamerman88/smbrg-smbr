@@ -1565,6 +1565,9 @@
                     <behavior-type name="Pin" sid="231719107530478">
                         <behavior id="Pin" />
                     </behavior-type>
+                    <behavior-type name="Fade" sid="450723594400750">
+                        <behavior id="Fade" />
+                    </behavior-type>
                 </behaviors>
                 <texture original-source="C:\Users\thegamerman88\Downloads\aA0uOGV.png" />
             </object-type>
