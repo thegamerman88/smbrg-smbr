@@ -58,10 +58,6 @@
                                         <action id="-13" name="Set time scale" sid="315154581925020" type="System">
                                             <param id="0" name="Time scale">0</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="442688929316034" type="System">
-                                            <param id="0" name="Variable">anim</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="836154440069669" type="OBJ_Dark">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
@@ -85,10 +81,6 @@
                                     <actions>
                                         <action id="-13" name="Set time scale" sid="251126054247168" type="System">
                                             <param id="0" name="Time scale">1.0</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="122331842089425" type="System">
-                                            <param id="0" name="Variable">anim</param>
-                                            <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="444318548126579" type="OBJ_Dark">
                                             <param id="0" name="Visibility">0</param>
@@ -172,10 +164,6 @@
                                 <action id="-13" name="Set time scale" sid="603118308470101" type="System">
                                     <param id="0" name="Time scale">1.0</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="943162289160841" type="System">
-                                    <param id="0" name="Variable">anim</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="-15" name="Set visible" sid="994205231954105" type="OBJ_Dark">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -213,10 +201,6 @@
                                 <action id="-3" name="Set position" sid="261880512129987" type="OBJ_Player">
                                     <param id="0" name="X">Checkp_X</param>
                                     <param id="1" name="Y">Checkp_Y</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="161316678643136" type="System">
-                                    <param id="0" name="Variable">anim</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="330079776615424" type="OBJ_Dark">
                                     <param id="0" name="Visibility">0</param>

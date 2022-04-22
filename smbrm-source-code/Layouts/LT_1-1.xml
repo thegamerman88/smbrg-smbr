@@ -2024,6 +2024,7 @@
                         <Dir>Right</Dir>
                         <Walk_run>true</Walk_run>
                         <play>true</play>
+                        <Mushroom>false</Mushroom>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PlatformPlus">
@@ -2310,7 +2311,7 @@
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ãúé¨ç</character-set>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;♥→↑←↓</character-set>
                         <text>Menu do SMBR</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -2383,7 +2384,7 @@
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ãúé¨ç</character-set>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;♥→↑←↓</character-set>
                         <text>Reiniciar a fase</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -2456,7 +2457,7 @@
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ãúé¨ç</character-set>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;♥→↑←↓</character-set>
                         <text>Voltar ao ultimo checkpoint</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -2529,7 +2530,7 @@
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ãúé¨ç</character-set>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;♥→↑←↓</character-set>
                         <text>Resumir jogo</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>

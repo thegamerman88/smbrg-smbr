@@ -11,7 +11,6 @@
         <variable constant="0" name="Cam_Y" sid="246172101041208" static="0" type="number">464</variable>
         <variable constant="0" name="Checkp_Y" sid="273380423579979" static="0" type="number">416</variable>
         <variable constant="0" name="Checkp_X" sid="595763400578410" static="0" type="number">64</variable>
-        <variable constant="0" name="anim" sid="194417845360169" static="0" type="number">1</variable>
         <variable constant="0" name="camera" sid="573269649035773" static="0" type="number">1</variable>
         <variable constant="0" name="die" sid="212190339072544" static="0" type="number">0</variable>
         <variable constant="0" name="mort" sid="439408515286810" static="0" type="number">0</variable>
@@ -19,15 +18,8 @@
             <sub-events>
                 <event-block sid="821890456215761">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="483704493106756" type="System">
-                            <param id="0" name="Variable">anim</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="803436560680986" type="System">
-                            <param id="0" name="Variable">grande</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="516429423816178" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Mushroom</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -89,15 +81,8 @@
                 </event-block>
                 <event-block sid="668472912967684">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="436919636039261" type="System">
-                            <param id="0" name="Variable">anim</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="189564052459184" type="System">
-                            <param id="0" name="Variable">grande</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="687504287685436" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Mushroom</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -163,15 +148,8 @@
             <sub-events>
                 <event-block sid="741442468362396">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="662458780775648" type="System">
-                            <param id="0" name="Variable">anim</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="491037480114481" type="System">
-                            <param id="0" name="Variable">grande</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="721427840691221" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Mushroom</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -198,15 +176,8 @@
                 </event-block>
                 <event-block sid="512253630760553">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="528698289031861" type="System">
-                            <param id="0" name="Variable">anim</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="690467111922202" type="System">
-                            <param id="0" name="Variable">grande</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="413708831205357" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Mushroom</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -383,11 +354,11 @@
             <sub-events>
                 <event-block sid="726724695345287">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="905432026266999" type="OBJ_Player">
-                            <param id="0" name="Instance variable">Walk_run</param>
-                        </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="301285296496080" type="OBJ_Player">
                             <param id="0" name="Instance variable">play</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="717776353145472" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Walk_run</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -757,51 +728,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="744487111990617" title="screenshot">
-            <sub-events>
-                <event-block sid="700489223519677">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="580488608457470" type="Keyboard">
-                            <param id="0" name="Key">113</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="216696813779791" type="System">
-                            <param id="0" name="First value">LayoutName</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">&quot;LT_SMBRGM_Maker&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-27" name="Snapshot canvas" sid="276355552569053" type="System">
-                            <param id="0" name="Format">0</param>
-                            <param id="1" name="JPEG quality">75</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="666456079049340">
-                    <conditions>
-                        <condition id="-26" name="On canvas snapshot" sid="635470273962704" type="System" />
-                        <condition id="-8" name="Compare two values" sid="985525732460528" type="System">
-                            <param id="0" name="First value">LayoutName</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">&quot;LT_SMBRGM_Maker&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add Notification" sid="757307139856317" type="PushJs">
-                            <param id="0" name="Title">&quot;Aviso!&quot;</param>
-                            <param id="1" name="Body">&quot;A sua captura de tela foi realizada com sucesso&quot;</param>
-                            <param id="2" name="Icon">&quot;https://media.discordapp.net/attachments/842596249223168001/906740552526090310/marioanao.png?width=473&amp;height=473&quot;</param>
-                            <param id="3" name="Tag (optional)">&quot;printsmbr&quot;</param>
-                            <param id="4" name="Timeout">5000</param>
-                        </action>
-                        <action id="13" name="Invoke download" sid="436331915074564" type="Browser">
-                            <param id="0" name="URL">CanvasSnapshot</param>
-                            <param id="1" name="Filename">&quot;Print SMBR-&quot; &amp; floor(random(100000, 999999))</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="986817747909940" title="spike">
             <sub-events>
                 <event-block sid="871612092855053">
@@ -809,29 +735,21 @@
                         <condition id="0" name="On collision with another object" sid="571494802700989" type="OBJ_Player">
                             <param id="0" name="Object">OBJ_Spike</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="111294498026766" type="System">
-                            <param id="0" name="Variable">grande</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                         <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="872566320549859" type="OBJ_Player" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="330095869822481" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Mushroom</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="106872399440296" type="OBJ_Player">
-                            <param id="0" name="Instance variable">play</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="0" name="Play" sid="914126482460250" type="Audio">
                             <param id="0" name="Audio file">smb_mariodie</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
                         </action>
-                        <action id="-16" name="Wait" sid="931134423681592" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="624566995701006" type="OBJ_Play">
-                            <param id="0" name="Frame number">0</param>
+                        <action id="0" name="Call function" sid="507826104507463" type="Function">
+                            <param id="0" name="Name">&quot;Edit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -840,16 +758,14 @@
                         <condition id="0" name="On collision with another object" sid="743024215221314" type="OBJ_Player">
                             <param id="0" name="Object">OBJ_Spike</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="700630290903746" type="System">
-                            <param id="0" name="Variable">grande</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                         <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="703627687381713" type="OBJ_Player" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="317144728831093" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Mushroom</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="738329591851343" type="System">
-                            <param id="0" name="Variable">grande</param>
+                        <action id="-13" name="Set boolean" sid="738329591851343" type="OBJ_Player">
+                            <param id="0" name="Instance variable">Mushroom</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Play" sid="571459350903991" type="Audio">

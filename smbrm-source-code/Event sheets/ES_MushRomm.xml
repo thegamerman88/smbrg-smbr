@@ -28,8 +28,8 @@
                 <action id="-15" name="Set visible" sid="361077956407877" type="OBJ_Mushrom">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="781099995972839" type="System">
-                    <param id="0" name="Variable">grande</param>
+                <action id="-13" name="Set boolean" sid="781099995972839" type="OBJ_Player">
+                    <param id="0" name="Instance variable">Mushroom</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action behavior="Flash" id="0" name="Flash" sid="539293065633692" type="OBJ_Player">

@@ -6,13 +6,7 @@
         <event-group description="" sid="447658548453439" title="Nuvens">
             <sub-events>
                 <event-block sid="306458998557880">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="391376792175340" type="System">
-                            <param id="0" name="Variable">anim</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions />
                     <sub-events>
                         <event-block sid="178504781077544">
@@ -193,10 +187,6 @@
                         <condition id="-2" name="On start of layout" sid="793907013179452" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="957238893633158" type="System">
-                            <param id="0" name="Variable">anim</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="-9" name="Set value" sid="584654126863541" type="System">
                             <param id="0" name="Variable">Win</param>
                             <param id="1" name="Value">0</param>

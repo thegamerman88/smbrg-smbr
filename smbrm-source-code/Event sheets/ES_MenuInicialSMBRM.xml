@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_MenuInicialSMBRM</name>
     <events>
+        <include>Mao</include>
         <variable constant="0" name="DPSAVE" sid="278376017196526" static="0" type="text"></variable>
         <include>ES_Enemies</include>
         <event-block sid="810941000603091">
@@ -16,6 +17,10 @@
                 <action id="1" name="Set CSS style" sid="609874126860397" type="OBJ_LevelSelector">
                     <param id="0" name="Property name">&quot;opacity&quot;</param>
                     <param id="1" name="Value">&quot;0&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="634570368587691" type="OBJ_Player">
+                    <param id="0" name="Instance variable">play</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -363,25 +368,27 @@
             <sub-events>
                 <event-group description="" sid="617761718696276" title="MarioD2">
                     <sub-events>
-                        <event-block sid="324053680415246">
+                        <event-block sid="654401951222844">
                             <conditions>
-                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="482517266221093" type="OBJ_Player" />
+                                <condition behavior="DragDrop" id="2" name="On drop" sid="647320072707089" type="OBJ_Mario_Preview" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="672247114566825" type="OBJ_Player">
-                                    <param id="0" name="X">Touch.X</param>
-                                    <param id="1" name="Y">touch.Y</param>
+                                <action id="-3" name="Set position" sid="227901324190188" type="OBJ_Mario_Preview">
+                                    <param id="0" name="X">OBJ_Selector.ImagePointX(1)</param>
+                                    <param id="1" name="Y">OBJ_Selector.ImagePointY(1)</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="950710607667939" type="OBJ_Mario_Preview">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="654401951222844">
+                        <event-block sid="655471174643672">
                             <conditions>
-                                <condition behavior="DragDrop" id="2" name="On drop" sid="647320072707089" type="OBJ_Player" />
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="567579492952703" type="OBJ_Mario_Preview" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="227901324190188" type="OBJ_Player">
-                                    <param id="0" name="X">OBJ_Selector.ImagePointX(1)</param>
-                                    <param id="1" name="Y">OBJ_Selector.ImagePointY(1)</param>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="555425547391625" type="OBJ_Mario_Preview">
+                                    <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -389,21 +396,6 @@
                 </event-group>
                 <event-group description="" sid="320776102869097" title="DragGrid2">
                     <sub-events>
-                        <event-group description="" sid="119762633218818" title="Group2">
-                            <sub-events>
-                                <event-block sid="469821599178221">
-                                    <conditions>
-                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="362824430386729" type="DragDrop" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="956802973927244" type="DragDrop">
-                                            <param id="0" name="X">Touch.X</param>
-                                            <param id="1" name="Y">Touch.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                         <event-block sid="412911782511395">
                             <conditions>
                                 <condition behavior="DragDrop" id="2" name="On drop" sid="938720498685103" type="DragDrop" />
@@ -425,6 +417,16 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="771191500680840">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="992694104247096" type="OBJ_Goomba" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="548295218456044" type="OBJ_Goomba">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="579807027947567">
                             <conditions>
                                 <condition behavior="DragDrop" id="2" name="On drop" sid="219188002832384" type="OBJ_Goomba" />
@@ -432,6 +434,9 @@
                             <actions>
                                 <action id="-16" name="Wait" sid="487006128243993" type="System">
                                     <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="394578659562487" type="OBJ_Goomba">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>

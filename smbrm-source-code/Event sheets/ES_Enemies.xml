@@ -144,10 +144,8 @@
                     <sub-events>
                         <event-block sid="607342476733314">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="492732199437258" type="System">
-                                    <param id="0" name="Variable">grande</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="517955442853469" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">Mushroom</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -209,18 +207,15 @@
                                         <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="445528144676385" type="OBJ_Player" />
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="587414021523479" type="OBJ_Player">
-                                            <param id="0" name="Instance variable">play</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="876331010162414" type="OBJ_Play">
-                                            <param id="0" name="Frame number">0</param>
-                                        </action>
                                         <action id="0" name="Play" sid="773909908979454" type="Audio">
                                             <param id="0" name="Audio file">smb_mariodie</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="167385735784607" type="Function">
+                                            <param id="0" name="Name">&quot;Edit&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -228,10 +223,8 @@
                         </event-block>
                         <event-block sid="765212789844276">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="709128429497362" type="System">
-                                    <param id="0" name="Variable">grande</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="318858526712753" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">Mushroom</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -262,8 +255,8 @@
                                             <param id="0" name="Tag">&quot;Play&quot;</param>
                                             <param id="1" name="dB">-10</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="683413373419082" type="System">
-                                            <param id="0" name="Variable">grande</param>
+                                        <action id="-13" name="Set boolean" sid="683413373419082" type="OBJ_Player">
+                                            <param id="0" name="Instance variable">Mushroom</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action behavior="Flash" id="0" name="Flash" sid="923036614768883" type="OBJ_Player">
@@ -352,10 +345,8 @@
                     <sub-events>
                         <event-block sid="358470867723923">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="615181962817275" type="System">
-                                    <param id="0" name="Variable">grande</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="308329890362219" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">Mushroom</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -417,18 +408,15 @@
                                         <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="631231549754763" type="OBJ_Player" />
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="612148430048982" type="OBJ_Player">
-                                            <param id="0" name="Instance variable">play</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="879896861643966" type="OBJ_Play">
-                                            <param id="0" name="Frame number">0</param>
-                                        </action>
                                         <action id="0" name="Play" sid="259725172295234" type="Audio">
                                             <param id="0" name="Audio file">smb_mariodie</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="215160374953261" type="Function">
+                                            <param id="0" name="Name">&quot;Edit&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -436,10 +424,8 @@
                         </event-block>
                         <event-block sid="691078388249738">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="235707065462461" type="System">
-                                    <param id="0" name="Variable">grande</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="190361133260873" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">Mushroom</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -514,14 +500,14 @@
                                             <param id="0" name="Tag">&quot;UGPlay&quot;</param>
                                             <param id="1" name="dB">-10</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="240981181015110" type="System">
-                                            <param id="0" name="Variable">grande</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
                                         <action behavior="Flash" id="0" name="Flash" sid="465256200910697" type="OBJ_Player">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                                             <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="338294917785035" type="OBJ_Player">
+                                            <param id="0" name="Instance variable">Mushroom</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>

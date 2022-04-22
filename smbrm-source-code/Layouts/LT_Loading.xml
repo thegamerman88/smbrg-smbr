@@ -187,7 +187,7 @@
             <effects />
         </layer>
         <layer name="Fade" sid="955706130639550">
-            <initially-visible>0</initially-visible>
+            <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -242,7 +242,7 @@
                         <behavior-instance type="Fade">
                             <properties>
                                 <active-at-start>No</active-at-start>
-                                <fade-in-time>1</fade-in-time>
+                                <fade-in-time>0.5</fade-in-time>
                                 <wait-time>0</wait-time>
                                 <fade-out-time>0</fade-out-time>
                                 <destroy>After fade out</destroy>

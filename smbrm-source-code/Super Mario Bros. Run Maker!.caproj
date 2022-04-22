@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Mario Bros. Run Maker!</name>
     <description>SMB fangame</description>
-    <version>Alpha 0.12.1</version>
+    <version>Alpha 0.13</version>
     <author>thegamerman88</author>
     <author-email>leoluniere@outlook.com</author-email>
     <author-website>http://</author-website>
@@ -231,6 +231,7 @@
                         <instance-variable name="Dir" sid="633621658759825" type="string" />
                         <instance-variable name="Walk_run" sid="822014775135178" type="boolean" />
                         <instance-variable name="play" sid="868429649668731" type="boolean" />
+                        <instance-variable name="Mushroom" sid="984357836692536" type="boolean" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="PlatformPlus" sid="882345171255473">
@@ -434,7 +435,7 @@
                 <object-folder name="Tutorial">
                     <object-type name="TXT_Tutorial" sid="973376031664493">
                         <plugin id="Spritefont2" />
-                        <texture />
+                        <texture original-source="C:\Users\thegamerman88\Documents\GitHub\imagensindus\Fonts\preto.png" />
                     </object-type>
                 </object-folder>
                 <object-folder name="OnOffBlocks">
@@ -948,13 +949,21 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565795753480590" speed="1">
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565795753480590" speed="6">
                             <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="0" y="0" />
                                     <point x="1" y="0" />
                                     <point x="1" y="0.625" />
                                     <point x="0" y="0.625" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.0078125" y="0.03125" />
+                                    <point x="0.992188" y="0.03125" />
+                                    <point x="0.992188" y="0.59375" />
+                                    <point x="0.0078125" y="0.59375" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1036,8 +1045,11 @@
                         <instance-variable name="play" sid="613380599055734" type="boolean" />
                     </instance-variables>
                     <behaviors>
-                        <behavior-type name="AnchorMod" sid="951338855802873">
-                            <behavior id="rex_Anchor_mod" />
+                        <behavior-type name="DragDrop" sid="208617510385725">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                        <behavior-type name="Platform" sid="719266242185990">
+                            <behavior id="Platform" />
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
@@ -1281,7 +1293,7 @@
                             <behavior id="Fade" />
                         </behavior-type>
                     </behaviors>
-                    <texture />
+                    <texture original-source="C:\Users\thegamerman88\Documents\GitHub\imagensindus\Fonts\branco.png" />
                 </object-type>
                 <object-type name="TXT_MadeBy" sid="143102857023657">
                     <plugin id="Spritefont2" />
@@ -1290,7 +1302,7 @@
                             <behavior id="Fade" />
                         </behavior-type>
                     </behaviors>
-                    <texture />
+                    <texture original-source="C:\Users\thegamerman88\Documents\GitHub\imagensindus\Fonts\branco.png" />
                 </object-type>
             </object-folder>
             <object-folder name="CFGS">
@@ -1461,7 +1473,7 @@
                         <behavior id="rex_Anchor_mod" />
                     </behavior-type>
                 </behaviors>
-                <texture original-source="C:\Users\thegamerman88\Downloads\aA0uOGV.png" />
+                <texture original-source="C:\Users\thegamerman88\Documents\GitHub\imagensindus\Fonts\preto.png" />
             </object-type>
             <object-type name="OBJ_Back" sid="931521561094951">
                 <plugin id="Sprite" />
@@ -1497,7 +1509,7 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
-                <texture original-source="C:\Users\thegamerman88\Downloads\aA0uOGV.png" />
+                <texture original-source="C:\Users\thegamerman88\Documents\GitHub\imagensindus\Fonts\branco.png" />
             </object-type>
             <object-type name="OBJ_HoverMenu" sid="436221331802736">
                 <plugin id="Sprite" />
@@ -1569,7 +1581,7 @@
                         <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
-                <texture original-source="C:\Users\thegamerman88\Downloads\aA0uOGV.png" />
+                <texture original-source="C:\Users\thegamerman88\Documents\GitHub\imagensindus\Fonts\branco.png" />
             </object-type>
             <object-type name="OBJ_DarkTST" sid="484879077047889">
                 <plugin id="Sprite" />
@@ -1584,6 +1596,34 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511130305465618" speed="0">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OBJ_Menu" sid="116226765367445">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="746403437935615">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="AnchorMod" sid="315672120649036">
+                        <behavior id="rex_Anchor_mod" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212897620683103" speed="0">
+                        <frame duration="1" hotspotX="0.507246" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\menu.png">
+                            <collision-poly>
+                                <point x="0.031506" y="0.031506" />
+                                <point x="0.515438" y="0" />
+                                <point x="0.99937" y="0.0466288" />
+                                <point x="1" y="0.515438" />
+                                <point x="0.99937" y="0.984247" />
+                                <point x="0.515438" y="1" />
+                                <point x="0.031506" y="0.999369" />
+                                <point x="0" y="0.515438" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.507246" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1681,7 +1721,7 @@
                                     </collision-poly>
                                 </frame>
                             </animation>
-                            <animation framecount="17" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="122075916529277" speed="0">
+                            <animation framecount="28" loop="0" name="UnderWorld" pingpong="0" repeatcount="1" repeatto="0" sid="122075916529277" speed="0">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1703,6 +1743,17 @@
                                 </frame>
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.529412" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1767,6 +1818,25 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="0" name="ZoomOut" pingpong="0" repeatcount="1" repeatto="0" sid="596243160180503" speed="0">
+                            <frame duration="1" hotspotX="0.3125" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.3125" hotspotY="0">
                                 <image-point name="Imagepoint 1" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="0.5" y="0.5" />
@@ -2006,6 +2076,19 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="OBJ_SMMHAND" sid="748038008236370">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="752680244467277">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="787379229758260" speed="5">
+                            <frame duration="1" hotspotX="0.00340909" hotspotY="0.130346" original-source="C:\Users\thegamerman88\Pictures\h.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Menu">
                 <object-type name="OBJ_GroundMenu" sid="848180336419242">
@@ -2136,34 +2219,6 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="OBJ_Menu" sid="116226765367445">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="746403437935615">
-                    <behavior id="Pin" />
-                </behavior-type>
-                <behavior-type name="AnchorMod" sid="315672120649036">
-                    <behavior id="rex_Anchor_mod" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212897620683103" speed="0">
-                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" original-source="C:\Users\thegamerman88\OneDrive\Construct_2_Files\Sprites\sheets\menu.png">
-                        <collision-poly>
-                            <point x="0.031506" y="0.031506" />
-                            <point x="0.515438" y="0" />
-                            <point x="0.99937" y="0.0466288" />
-                            <point x="1" y="0.515438" />
-                            <point x="0.99937" y="0.984247" />
-                            <point x="0.515438" y="1" />
-                            <point x="0.031506" y="0.999369" />
-                            <point x="0" y="0.515438" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Text2" sid="691072908183426">
             <plugin id="Text" />
             <behaviors>
@@ -2292,6 +2347,12 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Interative" plugin-id="Sprite" sid="155450131624827">
+            <members>
+                <member>OBJ_MovePlatform</member>
+                <member>OBJ_Player</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="Arquivado">
@@ -2342,6 +2403,7 @@
             <event-sheet>ES_PauseMenu.xml</event-sheet>
             <event-sheet>ES_LayoutStartSMBR.xml</event-sheet>
             <event-sheet>ES_PIPE.xml</event-sheet>
+            <event-sheet>Mao.xml</event-sheet>
         </event-folder>
         <event-folder name="Not-In-Gameplay">
             <event-sheet>fasesee.xml</event-sheet>

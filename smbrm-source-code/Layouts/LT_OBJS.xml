@@ -56,7 +56,7 @@
                         <hotspotX>0.030303031</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="OBJ_Change_Direction_right" uid="107">
@@ -81,12 +81,12 @@
                         <y>288</y>
                         <z>0</z>
                         <width>33</width>
-                        <height>32</height>
+                        <height>33</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="OBJ_Jumper" uid="108">
@@ -648,7 +648,7 @@
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;♥→↑←↓</character-set>
                         <text>2000</text>
                         <scale>0.7</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -686,7 +686,7 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="BreakableBlock_Particle" uid="373">
@@ -793,7 +793,7 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>50</magnitude>
+                                <magnitude>64</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -809,6 +809,39 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJ_SMMHAND" uid="150">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0.1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>163</x>
+                        <y>78</y>
+                        <z>0</z>
+                        <width>534</width>
+                        <height>590</height>
+                        <depth>0</depth>
+                        <hotspotX>0.003409091</hotspotX>
+                        <hotspotY>0.130346239</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

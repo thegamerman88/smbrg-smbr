@@ -106,7 +106,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>448</x>
+                        <x>427</x>
                         <y>64</y>
                         <z>0</z>
                         <width>400</width>
@@ -131,21 +131,31 @@
                         <play>false</play>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="AnchorMod">
+                        <behavior-instance type="DragDrop">
                             <properties>
-                                <left-edge>None</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                                <set-once>No</set-once>
+                                <axes>Both</axes>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>280</x>
+                        <x>259</x>
                         <y>78</y>
                         <z>0</z>
                         <width>28</width>
@@ -195,7 +205,7 @@
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ãúé¨</character-set>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;♥→↑←↓</character-set>
                         <text>Changelog do SMBRM!</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -224,7 +234,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>463</x>
+                        <x>442</x>
                         <y>64</y>
                         <z>0</z>
                         <width>320</width>

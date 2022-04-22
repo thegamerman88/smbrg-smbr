@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ES_SMBRM_Maker</name>
     <events>
+        <include>Mao</include>
         <variable constant="0" name="movendo" sid="744855707704232" static="0" type="number">0</variable>
         <variable constant="0" name="Tema" sid="152784605152670" static="0" type="text">OverWorld</variable>
         <variable constant="0" name="ZOOM" sid="824930381352379" static="0" type="number">0</variable>
@@ -19,62 +20,159 @@
         <include>ES_Mario</include>
         <event-group description="" sid="396980785292824" title="Seletor3">
             <sub-events>
-                <event-block sid="227018782249226">
+                <event-block sid="473426955279087">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="971056681881565" type="OBJ_Player">
-                            <param id="0" name="Instance variable">play</param>
+                        <condition id="-14" name="Compare variable" sid="541059810419850" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="636862133493881" type="OBJ_Selector">
-                            <param id="0" name="X">floor(Mouse.X/32)*32</param>
-                            <param id="1" name="Y">floor(Mouse.Y/32)*32</param>
+                        <action id="4" name="Set animation" sid="878342359826711" type="OBJ_Selector">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block any="1" sid="899936853185727">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="624711946023399" type="OBJ_Player">
-                            <param id="0" name="Instance variable">play</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="370628680115132" type="OBJ_Selector">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">-32</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="427012050522100">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="151563830790704" type="OBJ_Player">
-                            <param id="0" name="Instance variable">play</param>
-                        </condition>
-                        <condition id="-20" name="Is on mobile device" sid="278316267941732" type="System" />
-                    </conditions>
-                    <actions />
                     <sub-events>
-                        <event-block sid="446280127495634">
+                        <event-block sid="227018782249226">
                             <conditions>
-                                <condition id="2" name="Is in touch" sid="358071745577627" type="Touch" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="971056681881565" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="474524442150680" type="OBJ_Selector">
-                                    <param id="0" name="X">floor(Touch.X/32)*32</param>
-                                    <param id="1" name="Y">floor(Touch.Y/32)*32</param>
+                                <action id="-3" name="Set position" sid="636862133493881" type="OBJ_Selector">
+                                    <param id="0" name="X">floor(Mouse.X/32)*32</param>
+                                    <param id="1" name="Y">floor(Mouse.Y/32)*32</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="759302713830145" type="OBJ_Selector">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="211934887003930">
+                        <event-block any="1" sid="899936853185727">
                             <conditions>
-                                <condition id="2" inverted="1" name="Is in touch" sid="644639873785952" type="Touch" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="624711946023399" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="652580868540037" type="OBJ_Selector">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">-32</param>
+                                <action id="-15" name="Set visible" sid="512643573701631" type="OBJ_Selector">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="427012050522100">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="151563830790704" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
+                                <condition id="-20" name="Is on mobile device" sid="278316267941732" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="446280127495634">
+                                    <conditions>
+                                        <condition id="2" name="Is in touch" sid="358071745577627" type="Touch" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="474524442150680" type="OBJ_Selector">
+                                            <param id="0" name="X">floor(Touch.X/32)*32</param>
+                                            <param id="1" name="Y">floor(Touch.Y/32)*32</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="211934887003930">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Is in touch" sid="644639873785952" type="Touch" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="652580868540037" type="OBJ_Selector">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">-32</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="366507590267453">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="416831281567938" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="367160533374041" type="OBJ_Selector">
+                            <param id="0" name="Animation">&quot;ZoomOut&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="182915673421631">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="677275535438779" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="268458501549450" type="OBJ_Selector">
+                                    <param id="0" name="X">floor(Mouse.X/16)*16</param>
+                                    <param id="1" name="Y">floor(Mouse.Y/16)*16</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="982566981173675" type="OBJ_Selector">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="891951398530702">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="753537913449732" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="973007099622880" type="OBJ_Selector">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="352712701370197">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="924360054390479" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
+                                <condition id="-20" name="Is on mobile device" sid="734349256259327" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="793095617079074">
+                                    <conditions>
+                                        <condition id="2" name="Is in touch" sid="592674584091874" type="Touch" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="468965095312367" type="OBJ_Selector">
+                                            <param id="0" name="X">floor(Touch.X/16)*16</param>
+                                            <param id="1" name="Y">floor(Touch.Y/16)*16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="748891248632533">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Is in touch" sid="149913141707916" type="Touch" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="987262864116889" type="OBJ_Selector">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">-32</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -82,35 +180,19 @@
         </event-group>
         <event-group description="" sid="471879536729050" title="NuvensM">
             <sub-events>
-                <event-block sid="851371625840288">
+                <event-block sid="300203072022243">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="972696231107841" type="System">
-                            <param id="0" name="Variable">anim</param>
+                        <condition id="-14" name="Compare variable" sid="697696761918500" type="System">
+                            <param id="0" name="Variable">Tema</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="621067179866504" type="OBJ_Player">
-                            <param id="0" name="Instance variable">play</param>
+                            <param id="2" name="Value">&quot;OverWorld&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="300203072022243">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="175656273543639" type="System" />
-                                <condition id="-14" name="Compare variable" sid="429163581879063" type="System">
-                                    <param id="0" name="Variable">die</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-17" name="Move forward" sid="954225372631895" type="OBJ_Clouds">
-                                    <param id="0" name="Distance">-1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="954225372631895" type="OBJ_Clouds">
+                            <param id="0" name="Distance">-1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -322,6 +404,10 @@
                             <param id="0" name="Pin to">OBJ_Dock</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="739398623153983" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-9" name="Set value" sid="526621235608199" type="System">
                             <param id="0" name="Variable">camera</param>
                             <param id="1" name="Value">1</param>
@@ -432,10 +518,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="222072249485693" type="System">
-                            <param id="0" name="Variable">anim</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="16" name="Set title" sid="587179059319054" type="NWjs">
                             <param id="0" name="Title">&quot;Super Mario Bros: Run Maker!&quot;</param>
                         </action>
@@ -780,7 +862,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="843709217336879" title="8d-controls2">
+        <event-group description="" sid="843709217336879" title="8Dir-Controls">
             <sub-events>
                 <event-block sid="767455756681397">
                     <conditions>
@@ -846,6 +928,92 @@
         </event-group>
         <event-group description="" sid="387519915597453" title="scroll">
             <sub-events>
+                <variable constant="0" name="ZoomNormal" sid="587134495664272" static="0" type="number">1</variable>
+                <variable constant="0" name="ZoomOut" sid="117829149932119" static="0" type="number">0.5</variable>
+                <event-group description="" sid="972902979173169" title="Zoom">
+                    <sub-events>
+                        <event-block sid="176085700178801">
+                            <conditions>
+                                <condition id="0" name="On function" sid="469742407760471" type="Function">
+                                    <param id="0" name="Name">&quot;ZoomNormal&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Set layer scale" sid="616281418834859" type="System">
+                                    <param id="0" name="Layer">&quot;L_Player&quot;</param>
+                                    <param id="1" name="Scale">ZoomNormal</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="892719622336667" type="System">
+                                    <param id="0" name="Layer">&quot;L_Objects&quot;</param>
+                                    <param id="1" name="Scale">ZoomNormal</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="445198598513662" type="System">
+                                    <param id="0" name="Layer">&quot;L_Tilemap&quot;</param>
+                                    <param id="1" name="Scale">ZoomNormal</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="564586440514337" type="System">
+                                    <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
+                                    <param id="1" name="Scale">ZoomNormal</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="295552126952979" type="System">
+                                    <param id="0" name="Layer">&quot;L_Mountain&quot;</param>
+                                    <param id="1" name="Scale">ZoomNormal</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="758105153298128" type="System">
+                                    <param id="0" name="Layer">&quot;L_Clouds&quot;</param>
+                                    <param id="1" name="Scale">ZoomNormal</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="473838457578664" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="139623018656352" type="System">
+                                    <param id="0" name="Variable">ZOOM</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="886199719090738">
+                            <conditions>
+                                <condition id="0" name="On function" sid="784894638223591" type="Function">
+                                    <param id="0" name="Name">&quot;ZoomOut&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Set layer scale" sid="836186450631537" type="System">
+                                    <param id="0" name="Layer">&quot;L_Player&quot;</param>
+                                    <param id="1" name="Scale">ZoomOut</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="994576207192397" type="System">
+                                    <param id="0" name="Layer">&quot;L_Objects&quot;</param>
+                                    <param id="1" name="Scale">ZoomOut</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="908567484156906" type="System">
+                                    <param id="0" name="Layer">&quot;L_Tilemap&quot;</param>
+                                    <param id="1" name="Scale">ZoomOut</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="686709713705106" type="System">
+                                    <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
+                                    <param id="1" name="Scale">ZoomOut</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="778738801689917" type="System">
+                                    <param id="0" name="Layer">&quot;L_Mountain&quot;</param>
+                                    <param id="1" name="Scale">ZoomOut</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="307542897893075" type="System">
+                                    <param id="0" name="Layer">&quot;L_Clouds&quot;</param>
+                                    <param id="1" name="Scale">ZoomOut</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="774691554473982" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="765716867957756" type="System">
+                                    <param id="0" name="Variable">ZOOM</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="354303856194816">
                     <conditions>
                         <condition id="-20" name="Is on mobile device" sid="266200297626879" type="System" />
@@ -863,9 +1031,9 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="877271278262565" type="OBJ_Player">
                                     <param id="0" name="Instance variable">play</param>
                                 </condition>
-                                <condition id="-2" name="Compare Y" sid="990237785299391" type="OBJ_Dock">
+                                <condition id="3" name="Compare frame" sid="990237785299391" type="OBJ_Dock">
                                     <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Y co-ordinate">-176</param>
+                                    <param id="1" name="Number">0</param>
                                 </condition>
                                 <condition id="4" inverted="1" name="Is touching object" sid="102187294268593" type="Touch">
                                     <param id="0" name="Object">UI</param>
@@ -873,17 +1041,14 @@
                                 <condition id="4" inverted="1" name="Is touching object" sid="859249383119470" type="Touch">
                                     <param id="0" name="Object">MobileControls</param>
                                 </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="457459856722260" type="Touch">
+                                    <param id="0" name="Object">Interative</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-20" name="Set layout scale" sid="870030527467376" type="System">
-                                    <param id="0" name="Scale">1.0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="172949502416142" type="System">
-                                    <param id="0" name="Seconds">0.1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="213265437593452" type="System">
-                                    <param id="0" name="Variable">ZOOM</param>
-                                    <param id="1" name="Value">0</param>
+                                <action id="0" name="Call function" sid="951267375830603" type="Function">
+                                    <param id="0" name="Name">&quot;ZoomNormal&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -898,27 +1063,24 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="348123728663250" type="OBJ_Player">
                                     <param id="0" name="Instance variable">play</param>
                                 </condition>
-                                <condition id="-2" name="Compare Y" sid="411100376576644" type="OBJ_Dock">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Y co-ordinate">-176</param>
-                                </condition>
                                 <condition id="4" inverted="1" name="Is touching object" sid="590291065477412" type="Touch">
                                     <param id="0" name="Object">UI</param>
                                 </condition>
                                 <condition id="4" inverted="1" name="Is touching object" sid="691452916678036" type="Touch">
                                     <param id="0" name="Object">MobileControls</param>
                                 </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="400756410061589" type="Touch">
+                                    <param id="0" name="Object">Interative</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="714523020472106" type="OBJ_Dock">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-20" name="Set layout scale" sid="563892888148741" type="System">
-                                    <param id="0" name="Scale">0.5</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="308508662343196" type="System">
-                                    <param id="0" name="Seconds">0.1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="998868946218539" type="System">
-                                    <param id="0" name="Variable">ZOOM</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Call function" sid="737540626752599" type="Function">
+                                    <param id="0" name="Name">&quot;ZoomOut&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -935,14 +1097,15 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="881906688589942" type="OBJ_Player">
                             <param id="0" name="Instance variable">play</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="618647437318351" type="OBJ_Dock">
+                        <condition id="3" name="Compare frame" sid="952903667483559" type="OBJ_Dock">
                             <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">-176</param>
+                            <param id="1" name="Number">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-20" name="Set layout scale" sid="636457582550629" type="System">
-                            <param id="0" name="Scale">0.5</param>
+                        <action id="0" name="Call function" sid="427958465177309" type="Function">
+                            <param id="0" name="Name">&quot;ZoomOut&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -957,23 +1120,24 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="733960766897514" type="OBJ_Player">
                             <param id="0" name="Instance variable">play</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="379626376757707" type="OBJ_Dock">
+                        <condition id="3" name="Compare frame" sid="625376631563564" type="OBJ_Dock">
                             <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">-176</param>
+                            <param id="1" name="Number">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-20" name="Set layout scale" sid="779890057555535" type="System">
-                            <param id="0" name="Scale">1</param>
+                        <action id="0" name="Call function" sid="960241623488302" type="Function">
+                            <param id="0" name="Name">&quot;ZoomNormal&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="671012277826197">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="209424656015047" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="-14" name="Compare variable" sid="209424656015047" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -984,14 +1148,18 @@
                         <action id="-15" name="Set visible" sid="202129200098149" type="UI">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-7" name="Set size" sid="207096555311903" type="OBJ_Selector">
+                            <param id="0" name="Width">16</param>
+                            <param id="1" name="Height">16</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="291070927011921">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="180713984395932" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="-14" name="Compare variable" sid="583003257025849" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1002,15 +1170,19 @@
                         <action id="-15" name="Set visible" sid="362194865280867" type="UI">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-7" name="Set size" sid="691283698907346" type="OBJ_Selector">
+                            <param id="0" name="Width">32</param>
+                            <param id="1" name="Height">32</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-group description="" sid="993934701338078" title="Apagar">
+                        <event-group description="" sid="993934701338078" title="Erase">
                             <sub-events>
                                 <event-block sid="975938932767652">
                                     <conditions>
-                                        <condition id="-2" name="Compare Y" sid="135056157124422" type="OBJ_Dock">
+                                        <condition id="3" name="Compare frame" sid="687325768650934" type="OBJ_Dock">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Y co-ordinate">-176</param>
+                                            <param id="1" name="Number">0</param>
                                         </condition>
                                         <condition id="-14" name="Compare variable" sid="450898885929873" type="System">
                                             <param id="0" name="Variable">Mobile_Erase</param>
@@ -1354,9 +1526,9 @@
                                 <event-block sid="737854025931017">
                                     <conditions>
                                         <condition id="-20" inverted="1" name="Is on mobile device" sid="317833416656924" type="System" />
-                                        <condition id="-2" name="Compare Y" sid="719329225888000" type="OBJ_Dock">
+                                        <condition id="3" name="Compare frame" sid="426025029422758" type="OBJ_Dock">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Y co-ordinate">-176</param>
+                                            <param id="1" name="Number">0</param>
                                         </condition>
                                         <condition id="4" inverted="1" name="Is touching object" sid="415306672057139" type="Touch">
                                             <param id="0" name="Object">MobileControls</param>
@@ -1716,7 +1888,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="521951755619620" title="Make">
+                        <event-group description="" sid="521951755619620" title="Create">
                             <sub-events>
                                 <event-block sid="573921021593276">
                                     <conditions>
@@ -1757,10 +1929,6 @@
                                                 <condition id="4" inverted="1" name="Is touching object" sid="649088194204841" type="Touch">
                                                     <param id="0" name="Object">OBJ_Dock</param>
                                                 </condition>
-                                                <condition id="-2" name="Compare Y" sid="402967891006055" type="OBJ_Dock">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Y co-ordinate">-176</param>
-                                                </condition>
                                                 <condition id="4" inverted="1" name="Is touching object" sid="934979632435098" type="Touch">
                                                     <param id="0" name="Object">OBJ_Default_Ground</param>
                                                 </condition>
@@ -1787,6 +1955,10 @@
                                                     <param id="0" name="Object">OBJ_Grid</param>
                                                 </condition>
                                                 <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="590054196799823" type="DragDrop" />
+                                                <condition id="3" name="Compare frame" sid="318667360578844" type="OBJ_Dock">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
@@ -1881,10 +2053,6 @@
                                                 <condition id="4" inverted="1" name="Is touching object" sid="259238210321347" type="Touch">
                                                     <param id="0" name="Object">OBJ_Dock</param>
                                                 </condition>
-                                                <condition id="-2" name="Compare Y" sid="790738835344310" type="OBJ_Dock">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Y co-ordinate">-176</param>
-                                                </condition>
                                                 <condition id="4" inverted="1" name="Is touching object" sid="973699626352633" type="Touch">
                                                     <param id="0" name="Object">OBJ_Default_Ground</param>
                                                 </condition>
@@ -1930,6 +2098,10 @@
                                                     <param id="0" name="Object">OBJ_Grid</param>
                                                 </condition>
                                                 <condition behavior="DragDrop" disabled="1" id="0" inverted="1" name="Is dragging" sid="245692397865581" type="DragDrop" />
+                                                <condition id="3" name="Compare frame" sid="145406932670773" type="OBJ_Dock">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
@@ -2014,7 +2186,7 @@
                                                         <action id="-3" name="Create object" sid="859925658983699" type="System">
                                                             <param id="0" name="Object to create">OBJ_Pipe</param>
                                                             <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
-                                                            <param id="2" name="X">floor(TouchWrap.X/64)*64</param>
+                                                            <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
                                                         </action>
                                                         <action id="0" name="Play" sid="841276104257292" type="Audio">
@@ -2576,7 +2748,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="167053128327639" title="MDELT_PLAY">
+                        <event-group description="" sid="167053128327639" title="Play or not events">
                             <sub-events>
                                 <event-group description="" sid="801060246214734" title="Not_Play">
                                     <sub-events>
@@ -2585,14 +2757,50 @@
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="853814885944740" type="OBJ_Player">
                                                     <param id="0" name="Instance variable">play</param>
                                                 </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="571834433494013" type="System" />
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="441170767463090" type="System">
-                                                    <param id="0" name="Variable">grande</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="384246059371818">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="996542200200136" type="OBJ_Player">
+                                                            <param id="0" name="Instance variable">Mushroom</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="532040278746996" type="OBJ_Player">
+                                                            <param id="0" name="Animation">&quot;MG_Idle&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="396105910806182">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="421779771978338" type="OBJ_Player">
+                                                            <param id="0" name="Instance variable">Mushroom</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="565066880752714" type="OBJ_Player">
+                                                            <param id="0" name="Animation">&quot;Anim_Idle&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="167070104121373">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="571834433494013" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="462710646054640" type="OBJ_Player">
+                                                            <param id="0" name="Instance variable">Dir</param>
+                                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="171349526845681" type="OBJ_Player">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block any="1" sid="126743057535615">
                                             <conditions>
@@ -2605,23 +2813,6 @@
                                                 <action id="-10" name="Set value" sid="419252743210997" type="OBJ_Goomba">
                                                     <param id="0" name="Instance variable">walkto</param>
                                                     <param id="1" name="Value">&quot;esquerda&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="508746774804581">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="442814968957361" type="OBJ_Player">
-                                                    <param id="0" name="Instance variable">play</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="977216188771961" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="462710646054640" type="OBJ_Player">
-                                                    <param id="0" name="Instance variable">Dir</param>
-                                                    <param id="1" name="Value">&quot;Right&quot;</param>
-                                                </action>
-                                                <action id="7" name="Set mirrored" sid="171349526845681" type="OBJ_Player">
-                                                    <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2644,28 +2835,15 @@
                                                     <param id="0" name="X">Self.X</param>
                                                     <param id="1" name="Y">960</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="131900020886793" type="OBJ_Player">
-                                                    <param id="0" name="Instance variable">play</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action behavior="MoveTo" id="4" name="Move to XY" sid="767871361634720" type="OBJ_Dock">
-                                                    <param id="0" name="X">Self.X</param>
-                                                    <param id="1" name="Y">-176</param>
-                                                </action>
-                                                <action id="5" name="Set frame" sid="107683750500274" type="OBJ_Dock">
-                                                    <param id="0" name="Frame number">0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="344226706202182" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
                                                 <action id="0" name="Play" sid="671447937660192" type="Audio">
                                                     <param id="0" name="Audio file">smb_mariodie</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
                                                 </action>
-                                                <action id="5" name="Set frame" sid="248443151616943" type="OBJ_Play">
-                                                    <param id="0" name="Frame number">0</param>
+                                                <action id="0" name="Call function" sid="402323225493011" type="Function">
+                                                    <param id="0" name="Name">&quot;Edit&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2684,60 +2862,15 @@
                                                     <param id="0" name="X">LayoutWidth-32</param>
                                                     <param id="1" name="Y">Self.Y</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="944653023240701" type="OBJ_Player">
-                                                    <param id="0" name="Instance variable">play</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action behavior="MoveTo" id="4" name="Move to XY" sid="129089011440770" type="OBJ_Dock">
-                                                    <param id="0" name="X">Self.X</param>
-                                                    <param id="1" name="Y">-176</param>
-                                                </action>
-                                                <action id="5" name="Set frame" sid="434961675078337" type="OBJ_Dock">
-                                                    <param id="0" name="Frame number">0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="734649815260705" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
                                                 <action id="0" name="Play" sid="673614904149516" type="Audio">
                                                     <param id="0" name="Audio file">smb_mariodie</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;morte&quot;</param>
                                                 </action>
-                                                <action id="5" name="Set frame" sid="314262474060461" type="OBJ_Play">
-                                                    <param id="0" name="Frame number">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="475673444911029">
-                                            <conditions>
-                                                <condition id="-2" name="Compare Y" sid="581988094973424" type="OBJ_Player">
-                                                    <param id="0" name="Comparison">5</param>
-                                                    <param id="1" name="Y co-ordinate">960</param>
-                                                </condition>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="700028312999330" type="OBJ_Player">
-                                                    <param id="0" name="Instance variable">play</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-2" name="Go to layout" sid="262016887785122" type="System">
-                                                    <param id="0" name="Layout">LS_TelaInicial_SMBRM</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="649904652789502">
-                                            <conditions>
-                                                <condition id="-1" name="Compare X" sid="224149449293450" type="OBJ_Player">
-                                                    <param id="0" name="Comparison">5</param>
-                                                    <param id="1" name="X co-ordinate">LayoutWidth</param>
-                                                </condition>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="286720783131660" type="OBJ_Player">
-                                                    <param id="0" name="Instance variable">play</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-2" name="Go to layout" sid="107531476827831" type="System">
-                                                    <param id="0" name="Layout">LS_TelaInicial_SMBRM</param>
+                                                <action id="0" name="Call function" sid="447204446555822" type="Function">
+                                                    <param id="0" name="Name">&quot;Edit&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2884,9 +3017,6 @@
                                                             <param id="0" name="Animation">&quot;walk&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="-15" name="Set visible" sid="392025372960534" type="OBJ_Goomba">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="329141966832031">
@@ -2899,9 +3029,6 @@
                                                         <action id="-3" name="Set position" sid="316122320382806" type="OBJ_Mushrom">
                                                             <param id="0" name="X">Self.OrX</param>
                                                             <param id="1" name="Y">Self.OrY</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="120952893769889" type="OBJ_Mushrom">
-                                                            <param id="0" name="Visibility">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -2916,12 +3043,27 @@
                                                             <param id="0" name="X">Self.OrX</param>
                                                             <param id="1" name="Y">Self.OrY</param>
                                                         </action>
-                                                        <action id="-15" name="Set visible" sid="200478630421303" type="OBJ_Jumper">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
+                                        </event-block>
+                                        <event-block sid="914742662482735">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="407234102691738" type="OBJ_Player">
+                                                    <param id="0" name="Instance variable">play</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="392025372960534" type="OBJ_Goomba">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="200478630421303" type="OBJ_Jumper">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="120952893769889" type="OBJ_Mushrom">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
@@ -2932,11 +3074,11 @@
                                                 <condition id="2" name="Key is down" sid="233227169540690" type="Keyboard">
                                                     <param id="0" name="Key">16</param>
                                                 </condition>
-                                                <condition id="-2" name="Compare Y" sid="971552020714594" type="OBJ_Dock">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Y co-ordinate">-176</param>
-                                                </condition>
                                                 <condition id="3" name="Compare frame" sid="700105543912198" type="OBJ_Play">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="861870377183378" type="OBJ_Dock">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">0</param>
                                                 </condition>
@@ -2958,20 +3100,9 @@
                                                             <param id="0" name="X">80</param>
                                                             <param id="1" name="Y">864</param>
                                                         </action>
-                                                        <action id="-13" name="Set boolean" sid="733295951246172" type="OBJ_Player">
-                                                            <param id="0" name="Instance variable">play</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                        <action behavior="Flash" id="0" name="Flash" sid="219189846548244" type="OBJ_Player">
-                                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                                            <param id="2" name="Duration">1.0</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="783178228970445" type="System">
-                                                            <param id="0" name="Seconds">0.1</param>
-                                                        </action>
-                                                        <action id="5" name="Set frame" sid="180073965595206" type="OBJ_Play">
-                                                            <param id="0" name="Frame number">1</param>
+                                                        <action id="0" name="Call function" sid="624783428607026" type="Function">
+                                                            <param id="0" name="Name">&quot;Play&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -2982,15 +3113,15 @@
                                                 <condition id="16" name="On hold over object" sid="306346967609118" type="Touch">
                                                     <param id="0" name="Object">OBJ_Play</param>
                                                 </condition>
-                                                <condition id="-2" name="Compare Y" sid="304642303380907" type="OBJ_Dock">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Y co-ordinate">-176</param>
-                                                </condition>
                                                 <condition id="3" name="Compare frame" sid="186298576679987" type="OBJ_Play">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">0</param>
                                                 </condition>
                                                 <condition id="-20" name="Is on mobile device" sid="922251157165089" type="System" />
+                                                <condition id="3" name="Compare frame" sid="349783025885869" type="OBJ_Dock">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-3" name="Set position" sid="745704416476340" type="OBJ_Player">
@@ -3001,28 +3132,17 @@
                                                     <param id="0" name="X">80</param>
                                                     <param id="1" name="Y">864</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="524330342153267" type="OBJ_Player">
-                                                    <param id="0" name="Instance variable">play</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action behavior="Flash" id="0" name="Flash" sid="988240138059024" type="OBJ_Player">
-                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                                    <param id="2" name="Duration">1.0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="915989652886825" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="5" name="Set frame" sid="107460545169521" type="OBJ_Play">
-                                                    <param id="0" name="Frame number">1</param>
+                                                <action id="0" name="Call function" sid="786607157356160" type="Function">
+                                                    <param id="0" name="Name">&quot;Play&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="669481573937500">
                                             <conditions>
-                                                <condition id="-2" name="Compare Y" sid="551291028903502" type="OBJ_Dock">
+                                                <condition id="3" name="Compare frame" sid="161598972097711" type="OBJ_Dock">
                                                     <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Y co-ordinate">-176</param>
+                                                    <param id="1" name="Number">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -3044,22 +3164,9 @@
                                                                 <condition behavior="Button" id="1" name="On clicked" sid="420916500359916" type="OBJ_Play" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-13" name="Set boolean" sid="929193787754590" type="OBJ_Player">
-                                                                    <param id="0" name="Instance variable">play</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action behavior="PlatformPlus" id="8" name="Set vector X" sid="838155647266188" type="OBJ_Player">
-                                                                    <param id="0" name="Vector X">0</param>
-                                                                </action>
-                                                                <action behavior="PlatformPlus" id="9" name="Set vector Y" sid="710451232445321" type="OBJ_Player">
-                                                                    <param id="0" name="Vector Y">0</param>
-                                                                </action>
-                                                                <action behavior="Flash" id="1" name="Stop flashing" sid="390320843770803" type="OBJ_Player" />
-                                                                <action id="-16" name="Wait" sid="971337508252922" type="System">
-                                                                    <param id="0" name="Seconds">0.1</param>
-                                                                </action>
-                                                                <action id="5" name="Set frame" sid="126966111596804" type="OBJ_Play">
-                                                                    <param id="0" name="Frame number">0</param>
+                                                                <action id="0" name="Call function" sid="768158304007378" type="Function">
+                                                                    <param id="0" name="Name">&quot;Edit&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -3082,20 +3189,9 @@
                                                                 <condition behavior="Button" id="1" name="On clicked" sid="305514169872218" type="OBJ_Play" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-13" name="Set boolean" sid="506230566744661" type="OBJ_Player">
-                                                                    <param id="0" name="Instance variable">play</param>
-                                                                    <param id="1" name="Value">1</param>
-                                                                </action>
-                                                                <action id="-16" name="Wait" sid="939280176262186" type="System">
-                                                                    <param id="0" name="Seconds">0.1</param>
-                                                                </action>
-                                                                <action behavior="Flash" id="0" name="Flash" sid="770413426194319" type="OBJ_Player">
-                                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                                                    <param id="2" name="Duration">1.0</param>
-                                                                </action>
-                                                                <action id="5" name="Set frame" sid="824124353325507" type="OBJ_Play">
-                                                                    <param id="0" name="Frame number">1</param>
+                                                                <action id="0" name="Call function" sid="804919041479872" type="Function">
+                                                                    <param id="0" name="Name">&quot;Play&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -3114,11 +3210,65 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="103861410697004">
+                                            <conditions>
+                                                <condition id="0" name="On function" sid="839545077338354" type="Function">
+                                                    <param id="0" name="Name">&quot;Play&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="924268087455625" type="OBJ_Player">
+                                                    <param id="0" name="Instance variable">play</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action behavior="Flash" id="0" name="Flash" sid="150568275088628" type="OBJ_Player">
+                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                                    <param id="2" name="Duration">1.0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="480695554850001" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="144755597893546" type="OBJ_Play">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="755614341849377">
+                                            <conditions>
+                                                <condition id="0" name="On function" sid="840963452811446" type="Function">
+                                                    <param id="0" name="Name">&quot;Edit&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="143634595075139" type="OBJ_Player">
+                                                    <param id="0" name="Instance variable">play</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="139207109309325" type="OBJ_Player">
+                                                    <param id="0" name="Instance variable">Mushroom</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action behavior="PlatformPlus" id="8" name="Set vector X" sid="987238247865744" type="OBJ_Player">
+                                                    <param id="0" name="Vector X">0</param>
+                                                </action>
+                                                <action behavior="PlatformPlus" id="9" name="Set vector Y" sid="792496966721495" type="OBJ_Player">
+                                                    <param id="0" name="Vector Y">0</param>
+                                                </action>
+                                                <action behavior="Flash" id="1" name="Stop flashing" sid="174691700875011" type="OBJ_Player" />
+                                                <action id="-16" name="Wait" sid="747572724587081" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="312501115412070" type="OBJ_Play">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-group>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="930635281723897" title="SaveLoad2">
+                        <event-group description="" sid="930635281723897" title="Save and Load levels">
                             <sub-events>
                                 <event-block sid="355137750311309">
                                     <conditions>
@@ -3167,7 +3317,7 @@
                                     <actions>
                                         <action id="20" name="Invoke download of string" sid="920143259136287" type="Browser">
                                             <param id="0" name="String">SaveStateJSON</param>
-                                            <param id="1" name="MIME type">&quot;application/json&quot;</param>
+                                            <param id="1" name="MIME type">&quot;application/smbrmlevel&quot;</param>
                                             <param id="2" name="Filename">&quot;FASE.SMBRMLEVEL&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="722074662615485" type="System">
@@ -3210,7 +3360,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="565284702480747" title="restrictarea2">
+                        <event-group description="" sid="565284702480747" title="Restrict Area">
                             <sub-events>
                                 <event-block sid="624643584885417">
                                     <conditions>
@@ -3251,7 +3401,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="557879672694584" title="EraseButton2">
+                        <event-group description="" sid="557879672694584" title="EraseButton">
                             <sub-events>
                                 <event-block sid="985211298858005">
                                     <conditions>
@@ -3262,9 +3412,9 @@
                                             <param id="0" name="Comparison">0</param>
                                             <param id="1" name="Number">0</param>
                                         </condition>
-                                        <condition id="-2" inverted="1" name="Compare Y" sid="100671264589345" type="OBJ_Dock">
+                                        <condition id="3" name="Compare frame" sid="112132833854274" type="OBJ_Dock">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Y co-ordinate">-176</param>
+                                            <param id="1" name="Number">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3299,9 +3449,9 @@
                                             <param id="0" name="Comparison">0</param>
                                             <param id="1" name="Number">1</param>
                                         </condition>
-                                        <condition id="-2" inverted="1" name="Compare Y" sid="905183801242999" type="OBJ_Dock">
+                                        <condition id="3" name="Compare frame" sid="759101234495969" type="OBJ_Dock">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Y co-ordinate">-176</param>
+                                            <param id="1" name="Number">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3325,7 +3475,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="892649615702307" title="HUDPLAY2">
+                        <event-group description="" sid="892649615702307" title="HUD ON PLAY">
                             <sub-events>
                                 <event-block sid="301778958867262">
                                     <conditions>
@@ -3341,7 +3491,7 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-4" name="Set layer visible" sid="998510402461765" type="System">
-                                            <param id="0" name="Layer">8</param>
+                                            <param id="0" name="Layer">&quot;Moblie_Scroll&quot;</param>
                                             <param id="1" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="421046432009660" type="OBJ_CameraPrint">
@@ -3363,7 +3513,7 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-4" name="Set layer visible" sid="692609799073919" type="System">
-                                            <param id="0" name="Layer">8</param>
+                                            <param id="0" name="Layer">&quot;Moblie_Scroll&quot;</param>
                                             <param id="1" name="Visibility">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="958363010868019" type="OBJ_CameraPrint">
@@ -3434,9 +3584,9 @@
                                         <condition id="17" name="On tap object" sid="134593509211484" type="Touch">
                                             <param id="0" name="Object">OBJ_Item_Preview</param>
                                         </condition>
-                                        <condition id="-2" name="Compare Y" sid="493977864266664" type="OBJ_Dock">
+                                        <condition id="3" name="Compare frame" sid="467794721850321" type="OBJ_Dock">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Y co-ordinate">240</param>
+                                            <param id="1" name="Number">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3485,9 +3635,9 @@
                                 </event-block>
                                 <event-block sid="808487285895120">
                                     <conditions>
-                                        <condition id="-2" name="Compare Y" sid="307431169177914" type="OBJ_Dock">
+                                        <condition id="3" name="Compare frame" sid="804323996042441" type="OBJ_Dock">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Y co-ordinate">-176</param>
+                                            <param id="1" name="Number">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3498,9 +3648,9 @@
                                 </event-block>
                                 <event-block sid="609202375054588">
                                     <conditions>
-                                        <condition id="-2" inverted="1" name="Compare Y" sid="934538374327777" type="OBJ_Dock">
+                                        <condition id="3" name="Compare frame" sid="631900985926961" type="OBJ_Dock">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Y co-ordinate">-176</param>
+                                            <param id="1" name="Number">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3736,7 +3886,7 @@
             <sub-events>
                 <event-block sid="609244224355132">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="771034171399514" type="OBJ_Player">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="920218050565663" type="OBJ_Player">
                             <param id="0" name="Instance variable">play</param>
                         </condition>
                     </conditions>
@@ -3798,173 +3948,161 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set cursor from sprite" sid="725442846535449" type="Mouse">
-                            <param id="0" name="Sprite">CUR_Default</param>
+                        <action id="0" name="Set cursor style" sid="725442846535449" type="Mouse">
+                            <param id="0" name="Cursor style">7</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="168399366166633" title="screenshot2">
+        <event-group description="" sid="168399366166633" title="Screenshot">
             <sub-events>
-                <event-block sid="871219558665857">
+                <event-block sid="673763139338086">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="565087287970705" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="0" name="On key pressed" sid="840677810656661" type="Keyboard">
+                            <param id="0" name="Key">113</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="553739720538870" type="Keyboard">
+                            <param id="0" name="Key">16</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="673763139338086">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="840677810656661" type="Keyboard">
-                                    <param id="0" name="Key">113</param>
-                                </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="553739720538870" type="Keyboard">
-                                    <param id="0" name="Key">16</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Snapshot canvas" sid="264806072362339" type="System">
-                                    <param id="0" name="Format">1</param>
-                                    <param id="1" name="JPEG quality">100</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="417164140688353" type="System">
-                                    <param id="0" name="Layer">&quot;L_UI&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="564721218582652" type="MobileControls">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="673008830175654" type="System">
-                                    <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="442353987379855" type="System">
-                                    <param id="0" name="Layer">&quot;L_Selector&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="208844769887840">
-                            <conditions>
-                                <condition id="17" name="On tap object" sid="611661452332272" type="Touch">
-                                    <param id="0" name="Object">OBJ_CameraPrint</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Snapshot canvas" sid="131960905420993" type="System">
-                                    <param id="0" name="Format">1</param>
-                                    <param id="1" name="JPEG quality">100</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="595866611281486" type="System">
-                                    <param id="0" name="Layer">9</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="821819021263600" type="MobileControls">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="394370530940286" type="System">
-                                    <param id="0" name="Layer">4</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="736354203125627" type="System">
-                                    <param id="0" name="Layer">3</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="451850024929588">
-                            <conditions>
-                                <condition id="16" name="On hold over object" sid="551280286077135" type="Touch">
-                                    <param id="0" name="Object">OBJ_CameraPrint</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Snapshot canvas" sid="121292795003446" type="System">
-                                    <param id="0" name="Format">1</param>
-                                    <param id="1" name="JPEG quality">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="563349058986731">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="864369089031209" type="Keyboard">
-                                    <param id="0" name="Key">113</param>
-                                </condition>
-                                <condition id="2" name="Key is down" sid="638708450117867" type="Keyboard">
-                                    <param id="0" name="Key">16</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Snapshot canvas" sid="438060771313229" type="System">
-                                    <param id="0" name="Format">1</param>
-                                    <param id="1" name="JPEG quality">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="498873257307925">
-                            <conditions>
-                                <condition id="-26" name="On canvas snapshot" sid="890870577422965" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add Notification" sid="160027066491833" type="PushJs">
-                                    <param id="0" name="Title">&quot;Aviso!&quot;</param>
-                                    <param id="1" name="Body">&quot;A sua captura de tela foi realizada com sucesso&quot;</param>
-                                    <param id="2" name="Icon">&quot;https://media.discordapp.net/attachments/842596249223168001/906740552526090310/marioanao.png?width=473&amp;height=473&quot;</param>
-                                    <param id="3" name="Tag (optional)">&quot;printsmbr&quot;</param>
-                                    <param id="4" name="Timeout">5000</param>
-                                </action>
-                                <action id="13" name="Invoke download" sid="241762167004156" type="Browser">
-                                    <param id="0" name="URL">CanvasSnapshot</param>
-                                    <param id="1" name="Filename">&quot;Print SMBRM-&quot; &amp; floor(random(100000, 999999))</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="851641120950058" type="MobileControls">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="684603883764856" type="System">
-                                    <param id="0" name="Layer">&quot;L_UI&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="624240228738263" type="System">
-                                    <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="297754545524328" type="System">
-                                    <param id="0" name="Layer">&quot;L_Selector&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="500887701515159">
-                            <conditions>
-                                <condition id="-20" inverted="1" name="Is on mobile device" sid="511964866918504" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="998512387499201" type="OBJ_BG_Item">
-                                    <param id="0" name="Unique ID">207</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="336047598331579" type="OBJ_BG_Item" />
-                                <action id="-9" name="Destroy" sid="173274893540982" type="OBJ_CameraPrint" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="927774711176345">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="131152741017350" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="226201428849990" type="OBJ_BG_Item">
-                                    <param id="0" name="Unique ID">207</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="585839633018066" type="OBJ_CameraPrint">
-                                    <param id="0" name="Pin to">OBJ_BG_Item</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-27" name="Snapshot canvas" sid="264806072362339" type="System">
+                            <param id="0" name="Format">0</param>
+                            <param id="1" name="JPEG quality">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="417164140688353" type="System">
+                            <param id="0" name="Layer">&quot;L_UI&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="564721218582652" type="MobileControls">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="673008830175654" type="System">
+                            <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="442353987379855" type="System">
+                            <param id="0" name="Layer">&quot;L_Selector&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208844769887840">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="611661452332272" type="Touch">
+                            <param id="0" name="Object">OBJ_CameraPrint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Snapshot canvas" sid="131960905420993" type="System">
+                            <param id="0" name="Format">0</param>
+                            <param id="1" name="JPEG quality">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="516772847678585" type="System">
+                            <param id="0" name="Layer">&quot;L_UI&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="821819021263600" type="MobileControls">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="437862491417239" type="System">
+                            <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="449988267579595" type="System">
+                            <param id="0" name="Layer">&quot;L_Selector&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="451850024929588">
+                    <conditions>
+                        <condition id="16" name="On hold over object" sid="551280286077135" type="Touch">
+                            <param id="0" name="Object">OBJ_CameraPrint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Snapshot canvas" sid="121292795003446" type="System">
+                            <param id="0" name="Format">0</param>
+                            <param id="1" name="JPEG quality">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="563349058986731">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="864369089031209" type="Keyboard">
+                            <param id="0" name="Key">113</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="638708450117867" type="Keyboard">
+                            <param id="0" name="Key">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Snapshot canvas" sid="438060771313229" type="System">
+                            <param id="0" name="Format">0</param>
+                            <param id="1" name="JPEG quality">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="498873257307925">
+                    <conditions>
+                        <condition id="-26" name="On canvas snapshot" sid="890870577422965" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add Notification" sid="160027066491833" type="PushJs">
+                            <param id="0" name="Title">&quot;Aviso!&quot;</param>
+                            <param id="1" name="Body">&quot;A sua captura de tela foi realizada com sucesso&quot;</param>
+                            <param id="2" name="Icon">&quot;https://media.discordapp.net/attachments/842596249223168001/906740552526090310/marioanao.png?width=473&amp;height=473&quot;</param>
+                            <param id="3" name="Tag (optional)">&quot;printsmbr&quot;</param>
+                            <param id="4" name="Timeout">5000</param>
+                        </action>
+                        <action id="13" name="Invoke download" sid="241762167004156" type="Browser">
+                            <param id="0" name="URL">CanvasSnapshot</param>
+                            <param id="1" name="Filename">&quot;Print SMBRM-&quot; &amp; floor(random(100000, 999999))</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="851641120950058" type="MobileControls">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="684603883764856" type="System">
+                            <param id="0" name="Layer">&quot;L_UI&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="624240228738263" type="System">
+                            <param id="0" name="Layer">&quot;LT_Grid&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="297754545524328" type="System">
+                            <param id="0" name="Layer">&quot;L_Selector&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500887701515159">
+                    <conditions>
+                        <condition id="-20" inverted="1" name="Is on mobile device" sid="511964866918504" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="998512387499201" type="OBJ_BG_Item">
+                            <param id="0" name="Unique ID">207</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="336047598331579" type="OBJ_BG_Item" />
+                        <action id="-9" name="Destroy" sid="173274893540982" type="OBJ_CameraPrint" />
+                    </actions>
+                </event-block>
+                <event-block sid="927774711176345">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="131152741017350" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="226201428849990" type="OBJ_BG_Item">
+                            <param id="0" name="Unique ID">207</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="585839633018066" type="OBJ_CameraPrint">
+                            <param id="0" name="Pin to">OBJ_BG_Item</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -4022,10 +4160,10 @@
                         </event-block>
                         <event-block sid="675927077834810">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="811930220275061" type="System">
-                                    <param id="0" name="First value">LayoutScale</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">1</param>
+                                <condition id="-14" name="Compare variable" sid="913475316897836" type="System">
+                                    <param id="0" name="Variable">ZOOM</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -4294,14 +4432,6 @@
                                 <action id="11" name="Set collisions enabled" sid="890067474755281" type="OBJ_Player">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="991948886989845" type="System">
-                                    <param id="0" name="Variable">anim</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="370629837654887" type="OBJ_Player">
-                                    <param id="0" name="Animation">&quot;Anim_Idle&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-15" name="Set visible" sid="911771310741065" type="OBJ_Grid">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -4351,10 +4481,6 @@
                                 </action>
                                 <action id="11" name="Set collisions enabled" sid="139852573943880" type="OBJ_Player">
                                     <param id="0" name="Collisions">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="798077974423508" type="System">
-                                    <param id="0" name="Variable">anim</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="847520836200773" type="OBJ_Grid">
                                     <param id="0" name="Visibility">0</param>
@@ -4469,10 +4595,6 @@
                                 <action id="11" name="Set collisions enabled" sid="604395779549764" type="OBJ_Player">
                                     <param id="0" name="Collisions">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="704326705571116" type="System">
-                                    <param id="0" name="Variable">anim</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="-15" name="Set visible" sid="466708058372898" type="OBJ_Grid">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -4519,14 +4641,6 @@
                                 <action id="11" name="Set collisions enabled" sid="191152115415242" type="OBJ_Player">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="855650109622795" type="System">
-                                    <param id="0" name="Variable">anim</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="931448036575771" type="OBJ_Player">
-                                    <param id="0" name="Animation">&quot;Anim_Idle&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-15" name="Set visible" sid="996922214559455" type="OBJ_Grid">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -4560,99 +4674,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="819077519752135" title="Gamepad2">
-            <sub-events>
-                <event-group description="" sid="581609868755708" title="Mover_Cursor2">
-                    <sub-events>
-                        <event-block sid="108400249695215">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="955386198765865" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">2</param>
-                                    <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">-50</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="695327183223359" type="CUR_Idle_Maker">
-                                    <param id="0" name="X">Self.X-10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="258093412290473">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="498794372242378" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">2</param>
-                                    <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">50</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="494266074231149" type="CUR_Idle_Maker">
-                                    <param id="0" name="X">Self.X+10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="634939470868823">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="373618828139678" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">3</param>
-                                    <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">50</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="798269926760640" type="CUR_Idle_Maker">
-                                    <param id="0" name="Y">Self.Y+10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="140384149145705">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="200094949157256" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">3</param>
-                                    <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">-50</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="756315053131492" type="CUR_Idle_Maker">
-                                    <param id="0" name="Y">Self.Y-10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="119575764310487">
-                            <conditions>
-                                <condition id="4" inverted="1" name="Has gamepads" sid="245992122109744" type="Gamepad" />
-                                <condition id="-14" name="Pick by unique ID" sid="418104398058536" type="CUR_Idle_Maker">
-                                    <param id="0" name="Unique ID">371</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="956592719482149" type="CUR_Idle_Maker" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="478749702803905">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="209964358580858" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="806009411024902" type="CUR_Idle_Maker">
-                                    <param id="0" name="Unique ID">371</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="594493123574974" type="OBJ_Selector2">
-                                    <param id="0" name="X">floor(CUR_Idle_Maker.X/32)*32</param>
-                                    <param id="1" name="Y">floor(CUR_Idle_Maker.Y/32)*32</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="483107285507870" title="Erase_Sound">
@@ -4779,10 +4800,10 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="745249001834273" type="OBJ_Player">
                             <param id="0" name="Instance variable">play</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="724516524062812" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="-14" name="Compare variable" sid="143798641106953" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -4799,10 +4820,10 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="925708067609530" type="OBJ_Player">
                             <param id="0" name="Instance variable">play</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="125053056139445" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="-14" name="Compare variable" sid="224344054915519" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -4816,10 +4837,10 @@
                 </event-block>
                 <event-block sid="769169332474401">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="266822911634644" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="-14" name="Compare variable" sid="496382326071198" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -5033,27 +5054,39 @@
             <sub-events>
                 <event-group description="" sid="863568352968921" title="MarioD">
                     <sub-events>
-                        <event-block sid="439503888865732">
+                        <event-block sid="885457876145148">
                             <conditions>
-                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="183476603019013" type="OBJ_Player" />
+                                <condition id="-14" name="Compare variable" sid="177108056824296" type="System">
+                                    <param id="0" name="Variable">ZOOM</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="887331351332697" type="OBJ_Player">
-                                    <param id="0" name="X">Touch.X</param>
-                                    <param id="1" name="Y">touch.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="404740148226847">
-                            <conditions>
-                                <condition behavior="DragDrop" id="2" name="On drop" sid="620591367473011" type="OBJ_Player" />
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="365114101734286" type="OBJ_Player">
-                                    <param id="0" name="X">OBJ_Selector.ImagePointX(1)</param>
-                                    <param id="1" name="Y">OBJ_Selector.ImagePointY(1)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="439503888865732">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="183476603019013" type="OBJ_Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="887331351332697" type="OBJ_Player">
+                                            <param id="0" name="X">Touch.X</param>
+                                            <param id="1" name="Y">touch.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="404740148226847">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="620591367473011" type="OBJ_Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="365114101734286" type="OBJ_Player">
+                                            <param id="0" name="X">OBJ_Selector.ImagePointX(1)</param>
+                                            <param id="1" name="Y">OBJ_Selector.ImagePointY(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -5124,17 +5157,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="187445102381200">
-                            <conditions>
-                                <condition behavior="DragDrop" id="2" name="On drop" sid="142240721379314" type="OBJ_Pipe" />
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="307667607286873" type="OBJ_Pipe">
-                                    <param id="0" name="X">floor(TouchWrap.X/64)*64</param>
-                                    <param id="1" name="Y">floor(TouchWrap.Y/32)*32</param>
-                                </action>
-                            </actions>
-                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="418490534204704" title="DesativarAtivarDrag">
@@ -5143,6 +5165,11 @@
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="258846685009453" type="OBJ_Player">
                                     <param id="0" name="Instance variable">play</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="121949855632687" type="System">
+                                    <param id="0" name="Variable">ZOOM</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -5163,6 +5190,11 @@
                                 <condition id="4" name="Is touching object" sid="730224081008523" type="Touch">
                                     <param id="0" name="Object">MobileControls</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="399074663668833" type="System">
+                                    <param id="0" name="Variable">ZOOM</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="DragDrop" id="0" name="Set enabled" sid="897444309998449" type="DragDrop">
@@ -5174,7 +5206,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="192306119651370" title="Erase2">
+        <event-group description="" sid="192306119651370" title="Erase Everything">
             <sub-events>
                 <event-block sid="317107777180984">
                     <conditions>
@@ -5184,10 +5216,10 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="746926163186927" type="OBJ_Player">
                             <param id="0" name="Instance variable">play</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="950759387522305" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="-14" name="Compare variable" sid="231831020138011" type="System">
+                            <param id="0" name="Variable">ZOOM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -5199,9 +5231,9 @@
                         <condition id="17" name="On tap object" sid="851283352920896" type="Touch">
                             <param id="0" name="Object">OBJ_DeleteEverything</param>
                         </condition>
-                        <condition id="-2" inverted="1" name="Compare Y" sid="654639741186088" type="OBJ_Dock">
+                        <condition id="3" name="Compare frame" sid="896129068825484" type="OBJ_Dock">
                             <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">-176</param>
+                            <param id="1" name="Number">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -5226,6 +5258,68 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="454791601199708" title="ToggleMushroomEditor">
+            <sub-events>
+                <event-block sid="943836531365779">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="345974187134782" type="OBJ_Player">
+                            <param id="0" name="Instance variable">play</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="102372941807631">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="420366221229613" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="698880004669236">
+                                    <conditions>
+                                        <condition id="18" name="On double-tap object" sid="856531688453871" type="Touch">
+                                            <param id="0" name="Object">OBJ_Player</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-14" name="Toggle boolean" sid="538428530092031" type="OBJ_Player">
+                                            <param id="0" name="Instance variable">Mushroom</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="693596100680365">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="500173356481641" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="844194298351649">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="825962907050546" type="OBJ_Player" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="446222821083218">
+                                            <conditions>
+                                                <condition id="0" name="On key pressed" sid="786958105269572" type="Keyboard">
+                                                    <param id="0" name="Key">84</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-14" name="Toggle boolean" sid="993217690999268" type="OBJ_Player">
+                                                    <param id="0" name="Instance variable">Mushroom</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

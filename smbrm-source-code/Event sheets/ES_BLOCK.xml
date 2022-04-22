@@ -23,10 +23,8 @@
                                     <param id="2" name="Offset Y">-1</param>
                                 </condition>
                                 <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="993691632370254" type="BreakableBlock" />
-                                <condition id="-14" name="Compare variable" sid="983380747673762" type="System">
-                                    <param id="0" name="Variable">grande</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="983380747673762" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">Mushroom</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -64,10 +62,8 @@
                                             <param id="2" name="Offset Y">-1</param>
                                         </condition>
                                         <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="236251805149675" type="BreakableBlock" />
-                                        <condition id="-14" name="Compare variable" sid="927178776324922" type="System">
-                                            <param id="0" name="Variable">grande</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="276728306324649" type="OBJ_Player">
+                                            <param id="0" name="Instance variable">Mushroom</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -86,7 +82,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="990897578692357" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TL&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TL&quot;)</param>
                                         </action>
@@ -103,7 +99,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="491282411212239" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TR&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TR&quot;)</param>
                                         </action>
@@ -117,7 +113,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="288361098820923" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BL&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BL&quot;)</param>
                                         </action>
@@ -134,7 +130,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="843334523031733" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BR&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BR&quot;)</param>
                                         </action>
@@ -168,10 +164,8 @@
                                             <param id="2" name="Offset Y">-1</param>
                                         </condition>
                                         <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="448961275215378" type="BreakableBlock" />
-                                        <condition id="-14" name="Compare variable" sid="243352402970694" type="System">
-                                            <param id="0" name="Variable">grande</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="505000539509214" type="OBJ_Player">
+                                            <param id="0" name="Instance variable">Mushroom</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -190,7 +184,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="497799345333566" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TL&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TL&quot;)</param>
                                         </action>
@@ -207,7 +201,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="924407327847323" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;TR&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;TR&quot;)</param>
                                         </action>
@@ -221,7 +215,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="552952166614657" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BL&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BL&quot;)</param>
                                         </action>
@@ -238,7 +232,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="312202799030246" type="System">
                                             <param id="0" name="Object to create">BreakableBlock_Particle</param>
-                                            <param id="1" name="Layer">6</param>
+                                            <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                             <param id="2" name="X">BreakableBlock.ImagePointX(&quot;BR&quot;)</param>
                                             <param id="3" name="Y">BreakableBlock.ImagePointY(&quot;BR&quot;)</param>
                                         </action>
@@ -301,44 +295,6 @@
                                 <action behavior="LiteTween" id="10" name="Start" sid="486446083903274" type="OBJ_OnOFF">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="659841291150794">
-                            <conditions>
-                                <condition behavior="LiteTween" id="4" name="On tween end" sid="589757614228976" type="OBJ_OnOFF" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="975739531099892" type="OBJ_OnOFF">
-                                    <param id="0" name="Reverse mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="235768947425882">
-                            <conditions>
-                                <condition behavior="LiteTween" id="4" name="On tween end" sid="141803673073888" type="OBJ_OnOFF" />
-                                <condition id="2" name="Is playing" sid="468909737885366" type="OBJ_OnOFF">
-                                    <param id="0" name="Animation">&quot;on&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="815583937101199" type="System">
-                                    <param id="0" name="Variable">onoff</param>
-                                    <param id="1" name="Value">&quot;off&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="230813724945986">
-                            <conditions>
-                                <condition behavior="LiteTween" id="4" name="On tween end" sid="402053087165798" type="OBJ_OnOFF" />
-                                <condition id="2" name="Is playing" sid="456512034248893" type="OBJ_OnOFF">
-                                    <param id="0" name="Animation">&quot;off&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="255267852160659" type="System">
-                                    <param id="0" name="Variable">onoff</param>
-                                    <param id="1" name="Value">&quot;on&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -413,6 +369,44 @@
                                 </action>
                                 <action id="5" name="Set frame" sid="696833122871227" type="OBJ_OnOFF">
                                     <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="659841291150794">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="589757614228976" type="OBJ_OnOFF" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="975739531099892" type="OBJ_OnOFF">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="339463993930267">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="265598474826892" type="OBJ_OnOFF">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="393350365344990" type="System">
+                                    <param id="0" name="Variable">onoff</param>
+                                    <param id="1" name="Value">&quot;off&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="822479913412886">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="309109255465647" type="OBJ_OnOFF">
+                                    <param id="0" name="Animation">&quot;off&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="396688888652956" type="System">
+                                    <param id="0" name="Variable">onoff</param>
+                                    <param id="1" name="Value">&quot;on&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
