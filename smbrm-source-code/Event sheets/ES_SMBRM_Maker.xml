@@ -625,6 +625,9 @@
                         <action behavior="Platform" id="11" name="Set enabled" sid="586905901329494" type="OBJ_Mushrom">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="988282935588755" type="OBJ_Koopa">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="725919605181013">
@@ -641,6 +644,9 @@
                             <param id="0" name="State">1</param>
                         </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="978750811557024" type="OBJ_Mushrom">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="974849461202079" type="OBJ_Koopa">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -2026,23 +2032,11 @@
                                                 <condition id="4" inverted="1" name="Is touching object" sid="987297825716301" type="Touch">
                                                     <param id="0" name="Object">OBJ_Player</param>
                                                 </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="181941644737762" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Coin</param>
-                                                </condition>
                                                 <condition id="4" inverted="1" name="Is touching object" sid="418614489626756" type="Touch">
                                                     <param id="0" name="Object">OBJ_Restrict</param>
                                                 </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="752281488538729" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Goomba</param>
-                                                </condition>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="412164699355234" type="OBJ_Player">
                                                     <param id="0" name="Instance variable">play</param>
-                                                </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="437329889513844" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Jumper</param>
-                                                </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="906092400013132" type="Touch">
-                                                    <param id="0" name="Object">OBJ_UI_Pause</param>
                                                 </condition>
                                                 <condition id="2" inverted="1" name="Mouse button is down" sid="915171443568155" type="Mouse">
                                                     <param id="0" name="Mouse button">1</param>
@@ -2053,21 +2047,12 @@
                                                 <condition id="4" inverted="1" name="Is touching object" sid="259238210321347" type="Touch">
                                                     <param id="0" name="Object">OBJ_Dock</param>
                                                 </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="973699626352633" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Default_Ground</param>
-                                                </condition>
                                                 <condition id="-14" name="Compare variable" sid="690466077270145" type="System">
                                                     <param id="0" name="Variable">Mobile_Erase</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
                                                 <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="856288454907586" type="OBJ_Player" />
-                                                <condition id="4" inverted="1" name="Is touching object" sid="994653834749871" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Mushrom</param>
-                                                </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="962228609326663" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Cloud</param>
-                                                </condition>
                                                 <condition id="4" inverted="1" name="Is touching object" sid="356943434670890" type="Touch">
                                                     <param id="0" name="Object">OBJ_Play</param>
                                                 </condition>
@@ -2077,14 +2062,8 @@
                                                 <condition id="4" inverted="1" name="Is touching object" sid="408016415007761" type="Touch">
                                                     <param id="0" name="Object">OnOffBlocks</param>
                                                 </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="990250488510652" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Spike</param>
-                                                </condition>
                                                 <condition id="4" inverted="1" name="Is touching object" sid="613300008644209" type="Touch">
                                                     <param id="0" name="Object">basicBlocks</param>
-                                                </condition>
-                                                <condition id="4" inverted="1" name="Is touching object" sid="565663258045261" type="Touch">
-                                                    <param id="0" name="Object">OBJ_Pipe</param>
                                                 </condition>
                                                 <condition id="4" inverted="1" name="Is touching object" sid="136184173563709" type="Touch">
                                                     <param id="0" name="Object">MobileControls</param>
@@ -2097,7 +2076,7 @@
                                                 <condition id="4" name="Is touching object" sid="765346160529334" type="Touch">
                                                     <param id="0" name="Object">OBJ_Grid</param>
                                                 </condition>
-                                                <condition behavior="DragDrop" disabled="1" id="0" inverted="1" name="Is dragging" sid="245692397865581" type="DragDrop" />
+                                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="245692397865581" type="DragDrop" />
                                                 <condition id="3" name="Compare frame" sid="145406932670773" type="OBJ_Dock">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">0</param>
@@ -2530,7 +2509,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="539240386840896" type="System">
-                                                            <param id="0" name="Object to create">OBJ_Ground</param>
+                                                            <param id="0" name="Object to create">OBJ_FallPlatform</param>
                                                             <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
                                                             <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
                                                             <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
@@ -2540,6 +2519,14 @@
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;add&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="845371646986833" type="OBJ_FallPlatform">
+                                                            <param id="0" name="Instance variable">OrX</param>
+                                                            <param id="1" name="Value">Self.X</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="809790275986514" type="OBJ_FallPlatform">
+                                                            <param id="0" name="Instance variable">OrY</param>
+                                                            <param id="1" name="Value">Self.Y</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -2552,17 +2539,25 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-3" name="Create object" sid="138783565842931" type="System">
-                                                            <param id="0" name="Object to create">OBJ_Ground</param>
+                                                        <action id="-3" name="Create object" sid="258504080871379" type="System">
+                                                            <param id="0" name="Object to create">OBJ_Koopa</param>
                                                             <param id="1" name="Layer">&quot;L_Tilemap&quot;</param>
-                                                            <param id="2" name="X">floor(TouchWrap.X/32)*32</param>
-                                                            <param id="3" name="Y">floor(TouchWrap.Y/32)*32</param>
+                                                            <param id="2" name="X">OBJ_Selector.ImagePointX(1)</param>
+                                                            <param id="3" name="Y">OBJ_Selector.ImagePointY(1)</param>
                                                         </action>
-                                                        <action id="0" name="Play" sid="120489602192226" type="Audio">
+                                                        <action id="0" name="Play" sid="532398776093939" type="Audio">
                                                             <param id="0" name="Audio file">editor_add</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;add&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="969851018098259" type="OBJ_Koopa">
+                                                            <param id="0" name="Instance variable">OrX</param>
+                                                            <param id="1" name="Value">Self.X</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="424484673643915" type="OBJ_Koopa">
+                                                            <param id="0" name="Instance variable">OrY</param>
+                                                            <param id="1" name="Value">Self.Y</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -3044,6 +3039,89 @@
                                                             <param id="1" name="Y">Self.OrY</param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="764014935998361">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="989951306710961" type="System">
+                                                            <param id="0" name="Object">OBJ_FallPlatform</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="MoveTo" id="9" name="Stop" sid="648513137567464" type="OBJ_FallPlatform" />
+                                                        <action id="-3" name="Set position" sid="530814498966341" type="OBJ_FallPlatform">
+                                                            <param id="0" name="X">Self.OrX</param>
+                                                            <param id="1" name="Y">Self.OrY</param>
+                                                        </action>
+                                                        <action behavior="MoveTo" id="5" name="Set current speed" sid="712378982368664" type="OBJ_FallPlatform">
+                                                            <param id="0" name="Current speed">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="768023133998233">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="978672140909097" type="System">
+                                                            <param id="0" name="Object">OBJ_Koopa</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="291822730146855" type="OBJ_Koopa">
+                                                            <param id="0" name="X">Self.OrX</param>
+                                                            <param id="1" name="Y">Self.OrY</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="586183641068496" type="OBJ_Koopa">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="198775735599728" type="OBJ_Koopa">
+                                                            <param id="0" name="Instance variable">walkto</param>
+                                                            <param id="1" name="Value">&quot;esquerda&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="854660693791040">
+                                            <conditions>
+                                                <condition id="6" name="On frame changed" sid="657977767293760" type="OBJ_Play" />
+                                                <condition id="3" name="Compare frame" sid="132513451322957" type="OBJ_Play">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="365640599123785">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="681486996652164" type="System">
+                                                            <param id="0" name="Object">OBJ_Koopa</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="822868368960190">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="548594455055267" type="OBJ_Koopa">
+                                                                    <param id="0" name="Instance variable">shell</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="137385080976179" type="OBJ_Koopa">
+                                                                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="695193574844586">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="595154719811337" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="372486828639729" type="OBJ_Koopa">
+                                                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -4385,10 +4463,6 @@
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="216301400117329" type="OBJ_Coin">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="4" name="Set animation" sid="872039239124489" type="OBJ_Goomba">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
@@ -4461,6 +4535,13 @@
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="366846168832694" type="OBJ_Coin">
+                                    <param id="0" name="Animation">&quot;Editor&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="570023842961021" type="OBJ_Coin">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="745679456141410">
@@ -4507,6 +4588,10 @@
                                 <action id="5" name="Set frame" sid="349714054084573" type="OBJ_RampaEqr">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="990798522555438" type="OBJ_Coin">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -4552,10 +4637,6 @@
                             <param id="0" name="Animation">&quot;UnderWorld&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="144483918082112" type="OBJ_Coin">
-                            <param id="0" name="Animation">&quot;UnderWorld&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="-4" name="Set layer visible" sid="405295953922725" type="System">
                             <param id="0" name="Layer">&quot;L_Mountain&quot;</param>
                             <param id="1" name="Visibility">0</param>
@@ -4576,52 +4657,6 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="627635983263255">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="879475580972645" type="OBJ_Player">
-                                    <param id="0" name="Instance variable">play</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="PlatformPlus" id="11" name="Set enabled" sid="774026209835917" type="OBJ_Player">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="8Direction" id="8" name="Set enabled" sid="795855291289790" type="OBJ_Player">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="953273468127728" type="OBJ_Player">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="11" name="Set collisions enabled" sid="604395779549764" type="OBJ_Player">
-                                    <param id="0" name="Collisions">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="466708058372898" type="OBJ_Grid">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="3" name="Set volume" sid="310658086479530" type="Audio">
-                                    <param id="0" name="Tag">&quot;Play&quot;</param>
-                                    <param id="1" name="dB">-100</param>
-                                </action>
-                                <action id="3" name="Set volume" sid="343811937171203" type="Audio">
-                                    <param id="0" name="Tag">&quot;Editor&quot;</param>
-                                    <param id="1" name="dB">-100</param>
-                                </action>
-                                <action id="3" name="Set volume" sid="422002482859676" type="Audio">
-                                    <param id="0" name="Tag">&quot;UGPlay&quot;</param>
-                                    <param id="1" name="dB">0</param>
-                                </action>
-                                <action id="3" name="Set volume" sid="354061791863800" type="Audio">
-                                    <param id="0" name="Tag">&quot;UGEdit&quot;</param>
-                                    <param id="1" name="dB">-100</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="840299644940847" type="OBJ_RampaDrt">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="642104197001718" type="OBJ_RampaEqr">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="899193784274454">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="879077526501288" type="OBJ_Player">
@@ -4668,6 +4703,66 @@
                                 </action>
                                 <action id="4" name="Set animation" sid="908087594689814" type="OBJ_Goomba">
                                     <param id="0" name="Animation">&quot;walk_UG&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="325703638369424" type="OBJ_Coin">
+                                    <param id="0" name="Animation">&quot;Editor&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="666958797403729" type="OBJ_Coin">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="916190813665627" type="OBJ_Koopa">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="627635983263255">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="879475580972645" type="OBJ_Player">
+                                    <param id="0" name="Instance variable">play</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="PlatformPlus" id="11" name="Set enabled" sid="774026209835917" type="OBJ_Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="795855291289790" type="OBJ_Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="953273468127728" type="OBJ_Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="604395779549764" type="OBJ_Player">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="466708058372898" type="OBJ_Grid">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="310658086479530" type="Audio">
+                                    <param id="0" name="Tag">&quot;Play&quot;</param>
+                                    <param id="1" name="dB">-100</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="343811937171203" type="Audio">
+                                    <param id="0" name="Tag">&quot;Editor&quot;</param>
+                                    <param id="1" name="dB">-100</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="422002482859676" type="Audio">
+                                    <param id="0" name="Tag">&quot;UGPlay&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="354061791863800" type="Audio">
+                                    <param id="0" name="Tag">&quot;UGEdit&quot;</param>
+                                    <param id="1" name="dB">-100</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="840299644940847" type="OBJ_RampaDrt">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="642104197001718" type="OBJ_RampaEqr">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="333813136393926" type="OBJ_Coin">
+                                    <param id="0" name="Animation">&quot;UnderWorld&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -5157,6 +5252,46 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="236211357302297">
+                            <conditions>
+                                <condition behavior="DragDrop" id="2" name="On drop" sid="461410174191385" type="OBJ_FallPlatform" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="984444879381511" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="927552119142061" type="OBJ_FallPlatform">
+                                    <param id="0" name="Instance variable">OrX</param>
+                                    <param id="1" name="Value">Self.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="352777397606359" type="OBJ_FallPlatform">
+                                    <param id="0" name="Instance variable">OrY</param>
+                                    <param id="1" name="Value">Self.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="142382300463373">
+                            <conditions>
+                                <condition behavior="DragDrop" id="2" name="On drop" sid="593847017124732" type="OBJ_Koopa" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="531068213814948" type="OBJ_Koopa">
+                                    <param id="0" name="X">OBJ_Selector.ImagePointX(1)</param>
+                                    <param id="1" name="Y">OBJ_Selector.ImagePointY(1)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="715300088004197" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="559098553115076" type="OBJ_Koopa">
+                                    <param id="0" name="Instance variable">OrX</param>
+                                    <param id="1" name="Value">Self.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="235860681639163" type="OBJ_Koopa">
+                                    <param id="0" name="Instance variable">OrY</param>
+                                    <param id="1" name="Value">Self.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="418490534204704" title="DesativarAtivarDrag">
@@ -5261,7 +5396,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="454791601199708" title="ToggleMushroomEditor">
+        <event-group description="" sid="454791601199708" title="ToggleItensEditor">
             <sub-events>
                 <event-block sid="943836531365779">
                     <conditions>
@@ -5271,53 +5406,150 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="102372941807631">
-                            <conditions>
-                                <condition id="-20" name="Is on mobile device" sid="420366221229613" type="System" />
-                            </conditions>
-                            <actions />
+                        <event-group description="" sid="695651996307587" title="MushroomMario">
                             <sub-events>
-                                <event-block sid="698880004669236">
+                                <event-block sid="102372941807631">
                                     <conditions>
-                                        <condition id="18" name="On double-tap object" sid="856531688453871" type="Touch">
-                                            <param id="0" name="Object">OBJ_Player</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-14" name="Toggle boolean" sid="538428530092031" type="OBJ_Player">
-                                            <param id="0" name="Instance variable">Mushroom</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="693596100680365">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="500173356481641" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="844194298351649">
-                                    <conditions>
-                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="825962907050546" type="OBJ_Player" />
+                                        <condition id="-20" name="Is on mobile device" sid="420366221229613" type="System" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="446222821083218">
+                                        <event-block sid="698880004669236">
                                             <conditions>
-                                                <condition id="0" name="On key pressed" sid="786958105269572" type="Keyboard">
-                                                    <param id="0" name="Key">84</param>
+                                                <condition id="18" name="On double-tap object" sid="856531688453871" type="Touch">
+                                                    <param id="0" name="Object">OBJ_Player</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-14" name="Toggle boolean" sid="993217690999268" type="OBJ_Player">
+                                                <action id="-14" name="Toggle boolean" sid="538428530092031" type="OBJ_Player">
                                                     <param id="0" name="Instance variable">Mushroom</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="693596100680365">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="500173356481641" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="844194298351649">
+                                            <conditions>
+                                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="825962907050546" type="OBJ_Player" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="446222821083218">
+                                                    <conditions>
+                                                        <condition id="0" name="On key pressed" sid="786958105269572" type="Keyboard">
+                                                            <param id="0" name="Key">84</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-14" name="Toggle boolean" sid="993217690999268" type="OBJ_Player">
+                                                            <param id="0" name="Instance variable">Mushroom</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                             </sub-events>
+                        </event-group>
+                        <event-group description="" sid="711185320994513" title="ShellKoopa">
+                            <sub-events>
+                                <event-block sid="214626193097824">
+                                    <conditions>
+                                        <condition id="-20" name="Is on mobile device" sid="384938051750924" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="585290583685022">
+                                            <conditions>
+                                                <condition id="18" name="On double-tap object" sid="318897082537693" type="Touch">
+                                                    <param id="0" name="Object">OBJ_Koopa</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-14" name="Toggle boolean" sid="389883657130056" type="OBJ_Koopa">
+                                                    <param id="0" name="Instance variable">shell</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="601724436544614">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="266590595364008" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="100604912680380">
+                                            <conditions>
+                                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="108445002956020" type="OBJ_Koopa" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="756645830382794">
+                                                    <conditions>
+                                                        <condition id="0" name="On key pressed" sid="898392492411362" type="Keyboard">
+                                                            <param id="0" name="Key">84</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-14" name="Toggle boolean" sid="229107359263737" type="OBJ_Koopa">
+                                                            <param id="0" name="Instance variable">shell</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="690940980070298" title="Koopa Editor">
+            <sub-events>
+                <event-block sid="588996538956280">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="840326308490949" type="OBJ_Player">
+                            <param id="0" name="Instance variable">play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="523000321754786" type="OBJ_Koopa">
+                            <param id="0" name="Animation">&quot;Editor&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="110356354047304">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="807325046802927" type="OBJ_Koopa">
+                                    <param id="0" name="Instance variable">shell</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="245450451712940" type="OBJ_Koopa">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="607734305579421">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="862968795835823" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="305885523128554" type="OBJ_Koopa">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

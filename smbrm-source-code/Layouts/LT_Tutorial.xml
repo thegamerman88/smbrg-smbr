@@ -1265,44 +1265,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiledBackground" uid="88">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="MoveTo">
-                            <properties>
-                                <activated>Yes</activated>
-                                <max-speed>500</max-speed>
-                                <acceleration>350</acceleration>
-                                <deceleration>200</deceleration>
-                                <stop-by-solid>No</stop-by-solid>
-                                <continued-mode>Yes</continued-mode>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3616</x>
-                        <y>368</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="OBJ_Checkpoint" uid="89">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>

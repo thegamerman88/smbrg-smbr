@@ -696,6 +696,12 @@
                         <nivel></nivel>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="NoSave" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
