@@ -29,7 +29,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="UserMedia" version="1">User Media</plugin>
         <plugin author="Eren Ertuğrul" id="eren_DiscordRPC" version="1">DiscordRPC</plugin>
         <plugin author="Scirra" id="filechooser" version="1">File chooser</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
@@ -136,9 +135,6 @@
             </object-type>
             <object-type global="1" name="Date" sid="774368995193994">
                 <plugin id="Rex_Date" />
-            </object-type>
-            <object-type name="UserMedia" sid="194848422320479">
-                <plugin id="UserMedia" />
             </object-type>
             <object-type name="SimulateKeyEvent" sid="824490748153758">
                 <plugin id="Rex_SimulateInput" />
