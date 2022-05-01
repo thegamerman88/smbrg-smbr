@@ -56,55 +56,6 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="797834324116981">
-            <conditions>
-                <condition id="17" name="On tap object" sid="939145679111766" type="Touch">
-                    <param id="0" name="Object">OBJ_Full</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="434292456055964" type="OBJ_Full">
-                    <param id="0" name="Instance variable">OptSMBR</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="831139604802206" type="System">
-                    <param id="0" name="Variable">EX</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="939481705817091" type="OBJ_DarkTST" />
-            </actions>
-        </event-block>
-        <event-block sid="176951039957507">
-            <conditions>
-                <condition behavior="Fade" id="1" name="On fade-in finished" sid="341932268078602" type="OBJ_DarkTST" />
-                <condition id="-14" name="Compare variable" sid="817276495709590" type="System">
-                    <param id="0" name="Variable">EX</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="137639873837818" type="System">
-                    <param id="0" name="Layout">LS_Exit</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="669519165926422">
-            <conditions>
-                <condition id="-3" name="On end of layout" sid="700741392714318" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="580780767360877" type="System">
-                    <param id="0" name="Variable">NG</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="167627763006246" type="System">
-                    <param id="0" name="Variable">EX</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="774205425470653">
             <conditions>
                 <condition id="17" name="On tap object" sid="595985696564795" type="Touch">
@@ -151,11 +102,6 @@
         <event-block sid="251035740053914">
             <conditions>
                 <condition behavior="Fade" id="1" name="On fade-in finished" sid="214787292676336" type="OBJ_DarkTST" />
-                <condition id="-14" name="Compare variable" sid="266415581421212" type="System">
-                    <param id="0" name="Variable">EX</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="797498769414855" type="System">

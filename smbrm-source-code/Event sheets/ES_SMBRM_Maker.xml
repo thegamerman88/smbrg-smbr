@@ -12,7 +12,7 @@
         <variable constant="0" name="AB_save" sid="468692496440244" static="0" type="number">0</variable>
         <variable constant="0" name="A_save" sid="230197135973470" static="0" type="number">0</variable>
         <variable constant="0" name="M_save" sid="665280342104729" static="0" type="number">0</variable>
-        <include>ES_MushRomm</include>
+        <include>ES_MushRoom</include>
         <variable constant="0" name="Mobile_Erase" sid="632067265968961" static="0" type="number">0</variable>
         <variable constant="0" name="M_OB" sid="103697288614226" static="0" type="number">-1</variable>
         <include>ES_Enemies</include>
@@ -3172,11 +3172,11 @@
                                                     <actions>
                                                         <action id="-3" name="Set position" sid="549587983788222" type="OBJ_Player">
                                                             <param id="0" name="X">80</param>
-                                                            <param id="1" name="Y">864</param>
+                                                            <param id="1" name="Y">928</param>
                                                         </action>
                                                         <action id="-3" name="Set position" sid="358392737312421" type="OBJ_Cam">
                                                             <param id="0" name="X">80</param>
-                                                            <param id="1" name="Y">864</param>
+                                                            <param id="1" name="Y">928</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="624783428607026" type="Function">
                                                             <param id="0" name="Name">&quot;Play&quot;</param>
@@ -3204,11 +3204,11 @@
                                             <actions>
                                                 <action id="-3" name="Set position" sid="745704416476340" type="OBJ_Player">
                                                     <param id="0" name="X">80</param>
-                                                    <param id="1" name="Y">864</param>
+                                                    <param id="1" name="Y">928</param>
                                                 </action>
                                                 <action id="-3" name="Set position" sid="302381323511300" type="OBJ_Cam">
                                                     <param id="0" name="X">80</param>
-                                                    <param id="1" name="Y">864</param>
+                                                    <param id="1" name="Y">928</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="786607157356160" type="Function">
                                                     <param id="0" name="Name">&quot;Play&quot;</param>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ES_MushRomm</name>
+    <name>ES_MushRoom</name>
     <events>
         <event-block sid="944412455876313">
             <conditions>
@@ -15,7 +15,7 @@
                     <param id="0" name="Audio file">smb_powerup</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;pu&quot;</param>
+                    <param id="1" name="Tag (optional)">&quot;PowerUp&quot;</param>
                 </action>
                 <action id="3" name="Set volume" sid="695988191904711" type="Audio">
                     <param id="0" name="Tag">&quot;msc&quot;</param>
@@ -37,14 +37,6 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.0</param>
                 </action>
-                <action id="-10" name="Add to" sid="538429629556152" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Value">1000</param>
-                </action>
-                <action id="-10" name="Add to" sid="989427980758750" type="System">
-                    <param id="0" name="Variable">ScorePF</param>
-                    <param id="1" name="Value">1000</param>
-                </action>
                 <action id="-3" name="Create object" sid="873481185854987" type="System">
                     <param id="0" name="Object to create">TXT_ScorePopUp</param>
                     <param id="1" name="Layer">&quot;L_Objects&quot;</param>
@@ -59,7 +51,7 @@
         <event-block sid="830180655394518">
             <conditions>
                 <condition id="0" name="On ended" sid="383627592431292" type="Audio">
-                    <param id="0" name="Tag">&quot;pu&quot;</param>
+                    <param id="0" name="Tag">&quot;PowerUp&quot;</param>
                 </condition>
             </conditions>
             <actions>

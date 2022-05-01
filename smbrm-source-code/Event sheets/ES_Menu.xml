@@ -403,11 +403,7 @@
                     <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="667542031035336" type="System">
-                    <param id="0" name="Layout">LS_Loading_SMBR</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="608849223234707">
             <conditions>

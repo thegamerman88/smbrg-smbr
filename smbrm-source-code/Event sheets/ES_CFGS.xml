@@ -510,7 +510,7 @@
                     </conditions>
                     <actions>
                         <action id="1" name="Append text" sid="465108713164855" type="TXT_TXT">
-                            <param id="0" name="Text">&quot;(Opção desativada, efeitos não são suportados.)&quot;</param>
+                            <param id="0" name="Text">&quot;(Opcao desativada, efeitos nao sao suportados.)&quot;</param>
                         </action>
                         <action id="3" name="Set enabled" sid="664478457588798" type="BTTN_EFF">
                             <param id="0" name="Mode">0</param>

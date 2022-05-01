@@ -2373,22 +2373,6 @@
         </family>
     </families>
     <layout-folder>
-        <layout-folder name="Arquivado">
-            <layout-folder name="SMBR">
-                <layout-folder name="Tela Inicial">
-                    <layout>LS_Loading_SMBR.xml</layout>
-                    <layout>LT_MenuInicialSMBR.xml</layout>
-                </layout-folder>
-                <layout-folder name="Fases">
-                    <layout>TransicaoFase.xml</layout>
-                    <layout>LT_Tutorial.xml</layout>
-                    <layout>TransicaoFase1.xml</layout>
-                    <layout>LT_1-1.xml</layout>
-                    <layout>TransicaoFase2.xml</layout>
-                </layout-folder>
-            </layout-folder>
-            <layout>LT_Menu.xml</layout>
-        </layout-folder>
         <layout-folder name="Outras">
             <layout>LT_Intro.xml</layout>
             <layout>LT_Loading.xml</layout>
@@ -2416,10 +2400,8 @@
             <event-sheet>ES_Rumble.xml</event-sheet>
             <event-sheet>ES_Enemies.xml</event-sheet>
             <event-sheet>ES_Checkpoint.xml</event-sheet>
-            <event-sheet>ES_MushRomm.xml</event-sheet>
+            <event-sheet>ES_MushRoom.xml</event-sheet>
             <event-sheet>ES_BLOCK.xml</event-sheet>
-            <event-sheet>ES_PauseMenu.xml</event-sheet>
-            <event-sheet>ES_LayoutStartSMBR.xml</event-sheet>
             <event-sheet>ES_PIPE.xml</event-sheet>
             <event-sheet>Mao.xml</event-sheet>
         </event-folder>
@@ -2438,17 +2420,6 @@
             </event-folder>
             <event-folder name="Tela Inicial">
                 <event-sheet>ES_MenuInicialSMBRM.xml</event-sheet>
-            </event-folder>
-        </event-folder>
-        <event-folder name="Arquivado">
-            <event-folder name="SMBR">
-                <event-folder name="Fases">
-                    <event-sheet>ES_Level0.xml</event-sheet>
-                    <event-sheet>LT_transicao.xml</event-sheet>
-                </event-folder>
-                <event-folder name="Tela Inicial">
-                    <event-sheet>ES_MenuInicialSMBR.xml</event-sheet>
-                </event-folder>
             </event-folder>
         </event-folder>
     </event-folder>
